@@ -1,0 +1,1114 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JS,Ajax," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="三省吾身丶丶" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="续作Ajax入门（二）Ajax函数封装传统表单在提交后整个页面都刷新
+
+什么是服务器网页浏览过程分析一个完整的HTTP请求过程,通常有下面7个步骤
+
+建立TCP连接
+Web浏览器向Web服务器发送请求命令
+Web浏览器发送请求头信息
+Web服务器- 应答
+Web服务器- 发送应答头信息
+Web服务器- 向浏览器发送数据
+Web服务器- 关闭TCP连接
+如何配置自己的服务器程序(AMP)
+
+
+
+A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ajax入门（一）从0开始到一次成功的GET请求">
+<meta property="og:url" content="http://guowenfh.github.io/2015/12/18/Ajax-elementary-course-1/index.html">
+<meta property="og:site_name" content="三省吾身丶丶">
+<meta property="og:description" content="续作Ajax入门（二）Ajax函数封装传统表单在提交后整个页面都刷新
+
+什么是服务器网页浏览过程分析一个完整的HTTP请求过程,通常有下面7个步骤
+
+建立TCP连接
+Web浏览器向Web服务器发送请求命令
+Web浏览器发送请求头信息
+Web服务器- 应答
+Web服务器- 发送应答头信息
+Web服务器- 向浏览器发送数据
+Web服务器- 关闭TCP连接
+如何配置自己的服务器程序(AMP)
+
+
+
+A">
+<meta property="og:image" content="http://guowenfh.github.io/images/ajax/http.png">
+<meta property="og:image" content="http://guowenfh.github.io/images/ajax/http2.png">
+<meta property="og:updated_time" content="2016-09-11T08:24:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ajax入门（一）从0开始到一次成功的GET请求">
+<meta name="twitter:description" content="续作Ajax入门（二）Ajax函数封装传统表单在提交后整个页面都刷新
+
+什么是服务器网页浏览过程分析一个完整的HTTP请求过程,通常有下面7个步骤
+
+建立TCP连接
+Web浏览器向Web服务器发送请求命令
+Web浏览器发送请求头信息
+Web服务器- 应答
+Web服务器- 发送应答头信息
+Web服务器- 向浏览器发送数据
+Web服务器- 关闭TCP连接
+如何配置自己的服务器程序(AMP)
+
+
+
+A">
+<meta name="twitter:image" content="http://guowenfh.github.io/images/ajax/http.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6222900165502567000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://guowenfh.github.io/2015/12/18/Ajax-elementary-course-1/"/>
+
+  <title> Ajax入门（一）从0开始到一次成功的GET请求 | 三省吾身丶丶 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?23a157b5fe12ea1f925808de31def828";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">三省吾身丶丶</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">兴趣遍地都是，专注和持之以恒才是真正稀缺的。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Ajax入门（一）从0开始到一次成功的GET请求
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-18T14:38:40+08:00" content="2015-12-18">
+              2015-12-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/18/Ajax-elementary-course-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/Ajax-elementary-course-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>续作<a href="http://guowenfh.github.io/2015/12/18/Ajax-elementary-course-2-fn/">Ajax入门（二）Ajax函数封装</a><br>传统表单在提交后整个页面都刷新</p>
+</blockquote>
+<h2 id="什么是服务器"><a href="#什么是服务器" class="headerlink" title="什么是服务器"></a>什么是服务器</h2><h3 id="网页浏览过程分析"><a href="#网页浏览过程分析" class="headerlink" title="网页浏览过程分析"></a>网页浏览过程分析</h3><p>一个完整的<strong>HTTP请求</strong>过程,通常有下面7个步骤</p>
+<ol>
+<li>建立TCP连接</li>
+<li>Web浏览器向Web服务器发送请求命令</li>
+<li>Web浏览器发送请求头信息</li>
+<li>Web服务器- 应答</li>
+<li>Web服务器- 发送应答头信息</li>
+<li>Web服务器- 向浏览器发送数据</li>
+<li><p>Web服务器- 关闭TCP连接</p>
+<p><strong>如何配置自己的服务器程序(AMP)</strong></p>
+</li>
+</ol>
+<blockquote>
+<p>Ajax必须在服务器环境下才能正常使用</p>
+</blockquote>
+<ul>
+<li>我使用的WampServer程序.(支持中文)<a href="http://www.wampserver.com/en/" target="_blank" rel="external">官网连接</a>.可能速度不行,不过科学上网,大家应该都会.</li>
+<li>网上的使用教程:<a href="http://www.phpthinking.com/archives/379" target="_blank" rel="external">如何安装使用</a></li>
+<li>XAMPP–我试了一下,还是wamp简单,大家有兴趣就自己去测试了</li>
+<li>推荐使用firefox浏览器进行AJAX的调试。</li>
+</ul>
+<h2 id="Ajax原理"><a href="#Ajax原理" class="headerlink" title="Ajax原理"></a>Ajax原理</h2><blockquote>
+<p>什么是Ajax?</p>
+</blockquote>
+<ul>
+<li>无刷新数据读取<ul>
+<li>用户注册/在线聊天室</li>
+<li>理解同步和异步(基本都用异步请求).<blockquote>
+<p>同步: 客户端发起请求–等待–&gt;服务器端处理—等待–&gt;响应–&gt;页面载入 (请求错误时全部重新载入).<br>异步: 客户端发起请求—&gt;服务器端处理—&gt;响应—&gt;页面载入(填写时,即时更新,部分返回).</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h3><ul>
+<li>一个HTTP请求一般由四部分组成<ol>
+<li>HTTP请求的方法或动作如是<code>GET</code>还是<code>POST</code>请求</li>
+<li>正在请求的URL,总得知道请求的地址是什么吧?</li>
+<li>请求头,包含一些客户端环境信息,身份验证信息等</li>
+<li>请求体,也就是请求正文,请求正文中可以包含客户端提交的查询字符串信息,表单信息等等.</li>
+</ol>
+</li>
+</ul>
+<p><img src="/images/ajax/http.png" alt="HTTP请求"></p>
+<h3 id="HTTP响应"><a href="#HTTP响应" class="headerlink" title="HTTP响应"></a>HTTP响应</h3><ul>
+<li>一个<strong>HTTP响应</strong>一般由三部分组成:<ol>
+<li>一个<strong>数字</strong>和<strong>文字</strong>组成的状态码,用来显示请求是成功还是失败</li>
+<li><strong>响应头</strong>,响应头和请求头一样包含许多有用的信息,例如服务器类型,日期时间,内容类型和长度等.</li>
+<li><strong>响应体</strong>,也就是响应正文.</li>
+</ol>
+</li>
+</ul>
+<p><img src="/images/ajax/http2.png" alt="HTTP响应"></p>
+<h3 id="HTTP请求方式"><a href="#HTTP请求方式" class="headerlink" title="HTTP请求方式"></a>HTTP请求方式</h3><table>
+<thead>
+<tr>
+<th>GET</th>
+<th>POST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用于信息获取/查询(如:浏览帖子)</td>
+<td>用于修改服务器上的资源(如:用户注册)</td>
+</tr>
+<tr>
+<td>安全性低(使用<code>url</code>传递参数所有人可见)</td>
+<td>安全性一般(至少不可见)</td>
+</tr>
+<tr>
+<td>容量低(2000个字符)</td>
+<td>容量几乎无限</td>
+</tr>
+</tbody>
+</table>
+<h3 id="常见的HTTP状态码"><a href="#常见的HTTP状态码" class="headerlink" title="常见的HTTP状态码"></a>常见的HTTP状态码</h3><table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>描述</th>
+<th>原因短语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>请求成功.一般用于GET和POST方法</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>301</td>
+<td>资源移动.所请求资源移动到新的URL,浏览器自动跳转到新的URL</td>
+<td>Moved Permanently</td>
+</tr>
+<tr>
+<td>304</td>
+<td>未修改.所请求资源未修改读取缓存数据</td>
+<td>Not Modified</td>
+</tr>
+<tr>
+<td>400</td>
+<td>请求语法错误,服务器无法理解</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>404</td>
+<td>未找到资源,可以设置个性”404页面”</td>
+<td>Not Found</td>
+</tr>
+<tr>
+<td>500</td>
+<td>服务器内部错误</td>
+<td>internal Server Error</td>
+</tr>
+</tbody>
+</table>
+<h2 id="编写Ajax"><a href="#编写Ajax" class="headerlink" title="编写Ajax"></a>编写Ajax</h2><p><strong>类比打电话理解Ajax编写步骤</strong> </p>
+<table>
+<thead>
+<tr>
+<th>打电话</th>
+<th>ajax请求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.打电话</td>
+<td>1.创建Ajax对象</td>
+</tr>
+<tr>
+<td>2.拨号</td>
+<td>2.连接服务器</td>
+</tr>
+<tr>
+<td>3.建立连接</td>
+<td>3.发送请求</td>
+</tr>
+<tr>
+<td>4.听</td>
+<td>4.接受返回</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-创建Ajax对象"><a href="#1-创建Ajax对象" class="headerlink" title="1.创建Ajax对象"></a>1.创建Ajax对象</h3><ul>
+<li>IE6:<code>ActiveXObject(&quot;Microsoft.XMLHTTP&quot;)</code>;//IE6已死,可以不考虑了</li>
+<li><code>XMLHttpRequest()</code>; </li>
+</ul>
+<p>例:<code>var request = new XMLHttpRequest();</code></p>
+<h3 id="2-连接服务器"><a href="#2-连接服务器" class="headerlink" title="2.连接服务器"></a>2.连接服务器</h3><ul>
+<li><code>open(method,url,async);</code></li>
+<li>open(发送请求方法”GET/POST” ,(请求地址”文件名”) ,是否异步传输)</li>
+</ul>
+<p>例: <code>request.open(&quot;GET&quot;,&quot;get.json&quot;,true);</code></p>
+<h3 id="3-发送请求"><a href="#3-发送请求" class="headerlink" title="3.发送请求"></a>3.发送请求</h3><ul>
+<li><code>send(string)</code><ul>
+<li>在使用<code>GET</code>方式请求时无需填写参数</li>
+<li>在使用<code>POST</code>方式时参数代表着向服务器发送的数据</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//完整的GET请求</span></div><div class="line"><span class="keyword">var</span> oAjax = <span class="keyword">new</span> XMLHttpRequest();<span class="comment">//创建Ajax对象</span></div><div class="line">oAjax.open(<span class="string">"GET"</span>,<span class="string">"create.php"</span>,<span class="literal">true</span>);<span class="comment">//连接服务器</span></div><div class="line">oAjax.send();<span class="comment">//发送请求</span></div><div class="line"></div><div class="line"><span class="comment">//完整的POST发送请求</span></div><div class="line"><span class="keyword">var</span> oAjax = <span class="keyword">new</span> XMLHttpRequest();<span class="comment">//创建</span></div><div class="line">oAjax.open(<span class="string">"POST"</span>,<span class="string">"create.php"</span>,<span class="literal">true</span>);<span class="comment">//"POST"</span></div><div class="line">oAjax.setRequestHeader(<span class="string">"Content-type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);<span class="comment">//设置HTTP头信息.必须在open与send之间,否则出现异常.</span></div><div class="line">oAjax.send(<span class="string">"name=陈二狗&amp;sex=男"</span>);<span class="comment">//发送给服务器的内容</span></div></pre></td></tr></table></figure>
+<pre><code>### 4.接收返回-请求状态监控
+</code></pre><ul>
+<li>XMLHttpRequset取得响应</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>responseText</code></td>
+<td>获得字符串形式的响应数据</td>
+</tr>
+<tr>
+<td><code>responseXML</code></td>
+<td>获得XML形式的响应数据</td>
+</tr>
+<tr>
+<td><code>status</code>和<code>statusText</code></td>
+<td>以数字和文本方式返回HTTP状态码</td>
+</tr>
+<tr>
+<td><code>getAllResponseHeader()</code></td>
+<td>获取所有的响应报头</td>
+</tr>
+<tr>
+<td><code>getResponseheader()</code></td>
+<td>查询响应中的某个字段的值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong><code>onreadystatechange</code>事件</strong></p>
+<blockquote>
+<p>通过监听<code>onreadystatechange</code>事件,来判断请求的状态.</p>
+</blockquote>
+</li>
+<li><p><code>readyState</code>属性:响应返回所处状态</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>状态</th>
+<th>所处位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>(未初始化)</td>
+<td>还没有调用<code>open()</code>方法</td>
+</tr>
+<tr>
+<td>1</td>
+<td>(载入)</td>
+<td>已调用<code>send()</code>方法,正在发送请求</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(载入完成)</td>
+<td><code>send()</code>方法完成,已经收到全部响应 内容</td>
+</tr>
+<tr>
+<td>3</td>
+<td>(解析)</td>
+<td>正在解析响应内容</td>
+</tr>
+<tr>
+<td>4</td>
+<td>(完成)</td>
+<td>响应内容解析完成,<strong>可以在客户端调用了</strong></td>
+</tr>
+</tbody>
+</table>
+<p>例:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//基本完整的一个Ajax请求</span></div><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">request.open(<span class="string">"GET"</span>,<span class="string">"get.json"</span>,<span class="literal">true</span>);</div><div class="line">request.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (request.readyState === <span class="number">4</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (request.status === <span class="number">200</span>) &#123;</div><div class="line">            <span class="comment">//响应成功,做一些事情</span></div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">           <span class="comment">//响应失败,做一些事情</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="使用函数简单的封装一个get请求"><a href="#使用函数简单的封装一个get请求" class="headerlink" title="使用函数简单的封装一个get请求"></a>使用函数简单的封装一个get请求</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 一个简单的异步get请求</div><div class="line"> * <span class="doctag">@param</span> &#123;String&#125;   url     请求地址,文件名</div><div class="line"> * <span class="doctag">@param</span> &#123;Function&#125; fnSucc  请求成功时执行的函数,形参为为获取的字符串值.</div><div class="line"> * <span class="doctag">@param</span> &#123;Function&#125; fnFaild 请求失败执行的函数,可选参数</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get</span><span class="params">(url, fnSucc, fnFaild)</span> </span>&#123;</div><div class="line">    <span class="comment">//1.创建ajax对象</span></div><div class="line">    <span class="keyword">var</span> oAjax = <span class="keyword">null</span></div><div class="line">        <span class="comment">//此处必须需要使用window.的方式,表示为window对象的一个属性.不存在是值为undefined,进入else/若直接使用XMLHttpRequest在不支持的情况下会报错</span></div><div class="line">    <span class="keyword">if</span> (window.XMLHttpRequest) &#123;</div><div class="line">        oAjax = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">//IE6以上,现在应该不需要考虑IE6了</span></div><div class="line">        oAjax = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//2.连接服务器</span></div><div class="line">    <span class="comment">//open(方法,url,是否异步)</span></div><div class="line">    oAjax.open(<span class="string">"GET"</span>, url, <span class="keyword">true</span>);</div><div class="line">    <span class="comment">//3.发送请求</span></div><div class="line">    oAjax.send();</div><div class="line">    <span class="comment">//4.接收返回</span></div><div class="line">    <span class="comment">//OnRedayStateChange事件</span></div><div class="line">    oAjax.onreadystatechange = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (oAjax.readyState === <span class="number">4</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (oAjax.status === <span class="number">200</span>) &#123;</div><div class="line">                fnSucc(oAjax.responseText);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">if</span> (fnFaild) &#123;</div><div class="line">                    fnFaild();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="使用Ajax"><a href="#使用Ajax" class="headerlink" title="使用Ajax"></a>使用Ajax</h2><h3 id="基础-请求并显示静态TXT文件"><a href="#基础-请求并显示静态TXT文件" class="headerlink" title="基础:请求并显示静态TXT文件"></a>基础:请求并显示静态TXT文件</h3><ul>
+<li>字符集编码:不一致时会出现乱码</li>
+<li>缓存,阻止缓存,(使用时间对象添加)</li>
+</ul>
+<h3 id="动态数据-请求JS-或JSON-文件"><a href="#动态数据-请求JS-或JSON-文件" class="headerlink" title="动态数据:请求JS(或JSON)文件"></a>动态数据:请求JS(或JSON)文件</h3><blockquote>
+<p>注：<strong>并不推荐使用<code>eval</code>，并不推荐使用<code>eval</code>，并不推荐使用<code>eval</code></strong>。因为eval解析数据时会有一系列问题出现。这里是因为只是学习就随意点了。<br>在需要解析请求数据时，推荐使用JSON的方法<code>JSON.parse()</code>可以将一个 JSON 字符串解析成为一个 JavaScript 值。参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" rel="external">MDN-JSON</a></p>
+</blockquote>
+<ul>
+<li><code>eval</code>的使用<br>例: </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"54-8*6+4"</span>;</div><div class="line">alert(<span class="built_in">eval</span>(str)); <span class="comment">//10;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str1 = <span class="string">"[1,2,3]"</span>;   </div><div class="line"><span class="keyword">var</span> arr = <span class="built_in">eval</span>(str1);</div><div class="line">alert(arr[<span class="number">1</span>]);<span class="comment">//2</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str3 = <span class="string">"function show()&#123;alert('abc');&#125;"</span>;</div><div class="line"><span class="built_in">eval</span>(str3);</div><div class="line">show() <span class="comment">//abc</span></div></pre></td></tr></table></figure>
+<p><strong>一次成功的get请求</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//已经引入get函数</span></div><div class="line"><span class="comment">//数据文件放在同级目录下就行了。</span></div><div class="line">get(<span class="string">"json.js"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">str</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> arr = <span class="built_in">eval</span>(str);</div><div class="line">    alert(arr[<span class="number">0</span>].a);</div><div class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="string">"服务器请求失败!"</span>);</div><div class="line">&#125;);</div><div class="line"><span class="comment">//json.js存放的文件如下</span></div><div class="line"><span class="comment">/*</span></div><div class="line">    [&#123;</div><div class="line">        a: 12,</div><div class="line">        b: 5</div><div class="line">    &#125;, &#123;</div><div class="line">        a: 2,</div><div class="line">        b: 56</div><div class="line">    &#125;]</div><div class="line">*/</div><div class="line"><span class="comment">//服务器响应成功时,将返回12.</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>DOM</code>创建元素<ul>
+<li>局部刷新:请求并显示部分网页文件,使用<code>for</code>循环.</li>
+<li>这里是属于DOM操作的范围，在这里就不过多讲述了。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="guowenfh WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="guowenfh Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag">#JS</a>
+          
+            <a href="/tags/Ajax/" rel="tag">#Ajax</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/16/task0002-DOM&&event/" rel="next" title="task0002（二）- DOM + 事件">
+                <i class="fa fa-chevron-left"></i> task0002（二）- DOM + 事件
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/18/Ajax-elementary-course-2-fn/" rel="prev" title="Ajax入门（二）Ajax函数封装">
+                Ajax入门（二）Ajax函数封装 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/12/18/Ajax-elementary-course-1/"
+     data-title="Ajax入门（一）从0开始到一次成功的GET请求"
+     data-content=""
+     data-url="http://guowenfh.github.io/2015/12/18/Ajax-elementary-course-1/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/18/Ajax-elementary-course-1/"
+           data-title="Ajax入门（一）从0开始到一次成功的GET请求" data-url="http://guowenfh.github.io/2015/12/18/Ajax-elementary-course-1/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/guowenfh.jpg"
+               alt="guowenfh" />
+          <p class="site-author-name" itemprop="name">guowenfh</p>
+          <p class="site-description motion-element" itemprop="description">芝兰生于深林，不以无人而不芳。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">43</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/guowenfh" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2194745681" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/guowen921" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://segmentfault.com/u/guowenfh" target="_blank" title="S F">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  S F
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.lxxyx.win/" title="Lxxyx" target="_blank">Lxxyx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://u-hey.github.io/" title="uhey" target="_blank">uhey</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://indexof.site/" title="天桥" target="_blank">天桥</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://iwuly.com" title="老军医" target="_blank">老军医</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://tostring.site/" title="小强" target="_blank">小强</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是服务器"><span class="nav-number">1.</span> <span class="nav-text">什么是服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网页浏览过程分析"><span class="nav-number">1.1.</span> <span class="nav-text">网页浏览过程分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax原理"><span class="nav-number">2.</span> <span class="nav-text">Ajax原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求"><span class="nav-number">2.1.</span> <span class="nav-text">HTTP请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP响应"><span class="nav-number">2.2.</span> <span class="nav-text">HTTP响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求方式"><span class="nav-number">2.3.</span> <span class="nav-text">HTTP请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的HTTP状态码"><span class="nav-number">2.4.</span> <span class="nav-text">常见的HTTP状态码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写Ajax"><span class="nav-number">3.</span> <span class="nav-text">编写Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建Ajax对象"><span class="nav-number">3.1.</span> <span class="nav-text">1.创建Ajax对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-连接服务器"><span class="nav-number">3.2.</span> <span class="nav-text">2.连接服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-发送请求"><span class="nav-number">3.3.</span> <span class="nav-text">3.发送请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用函数简单的封装一个get请求"><span class="nav-number">3.4.</span> <span class="nav-text">使用函数简单的封装一个get请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Ajax"><span class="nav-number">4.</span> <span class="nav-text">使用Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础-请求并显示静态TXT文件"><span class="nav-number">4.1.</span> <span class="nav-text">基础:请求并显示静态TXT文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态数据-请求JS-或JSON-文件"><span class="nav-number">4.2.</span> <span class="nav-text">动态数据:请求JS(或JSON)文件</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">guowenfh</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"guowenfh"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="//cdn.jsdelivr.net/ua-parser.js/0.7.10/ua-parser.min.js"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
