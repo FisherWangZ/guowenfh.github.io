@@ -90,43 +90,40 @@
 
 
 
-<meta name="description" content="什么是模块?
+<meta name="description" content="该模块是核心模块，需要使用 require 导入后使用
 
-
-在 node 中，文件和模块是一一对应的，也就是一个文件就是一个模块
-每个模块都有自己的作用域
-我们使用 var 来申明的一个变量，他并不是全局的，而是属于当前模块下
-
-模块的加载与使用模块的引入在 node 中,我们使用 require(&amp;#39;模块&amp;#39;) 的形式将一个模块引入到我们的当前的文件中来。关于 require 路径的写法也有如下几种:
-
-模块路径可以是一个">
+底层方法
+fs.open(path, flags, [mode], callback):异步版的文件读取
+path: 要打开的文件的路径
+flags: 打开文件的方式 读/写，12种不同方式？
+mode: 设置文件的模式 前提是这个文件是已存在的，读/写/执行  4/2/1
+callback: 回调
+err : 文件打开失败的错误保存在e">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js 模块系统">
-<meta property="og:url" content="http://guowenfh.github.io/2016/10/15/node-module-system/index.html">
+<meta property="og:title" content="node 文件系统">
+<meta property="og:url" content="http://guowenfh.github.io/2016/10/15/node-file-system/index.html">
 <meta property="og:site_name" content="三省吾身丶丶">
-<meta property="og:description" content="什么是模块?
+<meta property="og:description" content="该模块是核心模块，需要使用 require 导入后使用
 
-
-在 node 中，文件和模块是一一对应的，也就是一个文件就是一个模块
-每个模块都有自己的作用域
-我们使用 var 来申明的一个变量，他并不是全局的，而是属于当前模块下
-
-模块的加载与使用模块的引入在 node 中,我们使用 require(&amp;#39;模块&amp;#39;) 的形式将一个模块引入到我们的当前的文件中来。关于 require 路径的写法也有如下几种:
-
-模块路径可以是一个">
-<meta property="og:updated_time" content="2016-10-15T04:15:25.000Z">
+底层方法
+fs.open(path, flags, [mode], callback):异步版的文件读取
+path: 要打开的文件的路径
+flags: 打开文件的方式 读/写，12种不同方式？
+mode: 设置文件的模式 前提是这个文件是已存在的，读/写/执行  4/2/1
+callback: 回调
+err : 文件打开失败的错误保存在e">
+<meta property="og:updated_time" content="2016-10-15T04:15:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.js 模块系统">
-<meta name="twitter:description" content="什么是模块?
+<meta name="twitter:title" content="node 文件系统">
+<meta name="twitter:description" content="该模块是核心模块，需要使用 require 导入后使用
 
-
-在 node 中，文件和模块是一一对应的，也就是一个文件就是一个模块
-每个模块都有自己的作用域
-我们使用 var 来申明的一个变量，他并不是全局的，而是属于当前模块下
-
-模块的加载与使用模块的引入在 node 中,我们使用 require(&amp;#39;模块&amp;#39;) 的形式将一个模块引入到我们的当前的文件中来。关于 require 路径的写法也有如下几种:
-
-模块路径可以是一个">
+底层方法
+fs.open(path, flags, [mode], callback):异步版的文件读取
+path: 要打开的文件的路径
+flags: 打开文件的方式 读/写，12种不同方式？
+mode: 设置文件的模式 前提是这个文件是已存在的，读/写/执行  4/2/1
+callback: 回调
+err : 文件打开失败的错误保存在e">
 
 
 
@@ -147,9 +144,9 @@
 
 
 
-  <link rel="canonical" href="http://guowenfh.github.io/2016/10/15/node-module-system/"/>
+  <link rel="canonical" href="http://guowenfh.github.io/2016/10/15/node-file-system/"/>
 
-  <title> Node.js 模块系统 | 三省吾身丶丶 </title>
+  <title> node 文件系统 | 三省吾身丶丶 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +286,7 @@
             
             
               
-                Node.js 模块系统
+                node 文件系统
               
             
           </h1>
@@ -301,7 +298,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-15T11:18:41+08:00" content="2016-10-15">
+            <time itemprop="dateCreated" datetime="2016-10-15T12:12:48+08:00" content="2016-10-15">
               2016-10-15
             </time>
           </span>
@@ -331,8 +328,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/15/node-module-system/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/node-module-system/" itemprop="commentsCount"></span>
+                <a href="/2016/10/15/node-file-system/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/node-file-system/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -361,51 +358,109 @@
 
       
         <blockquote>
-<p>什么是模块?</p>
+<p>该模块是核心模块，需要使用 require 导入后使用</p>
 </blockquote>
-<ul>
-<li>在 node 中，文件和模块是一一对应的，也就是一个文件就是一个模块</li>
-<li>每个模块都有自己的作用域</li>
-<li>我们使用 var 来申明的一个变量，他并不是全局的，而是属于当前模块下</li>
+<h3 id="底层方法"><a href="#底层方法" class="headerlink" title="底层方法"></a>底层方法</h3><ol>
+<li><code>fs.open(path, flags, [mode], callback)</code>:异步版的文件读取<ul>
+<li><code>path</code>: 要打开的文件的路径</li>
+<li><code>flags</code>: 打开文件的方式 读/写，12种不同方式？</li>
+<li><code>mode</code>: 设置文件的模式 前提是这个文件是已存在的，读/写/执行  4/2/1</li>
+<li><code>callback</code>: 回调<ul>
+<li><code>err</code> : 文件打开失败的错误保存在err里面，如果成功err为null</li>
+<li><code>fd</code> : 被打开文件的标识，和定时器</li>
 </ul>
-<h2 id="模块的加载与使用"><a href="#模块的加载与使用" class="headerlink" title="模块的加载与使用"></a>模块的加载与使用</h2><h3 id="模块的引入"><a href="#模块的引入" class="headerlink" title="模块的引入"></a>模块的引入</h3><p>在 node 中,我们使用 <code>require(&#39;模块&#39;)</code> 的形式将一个模块引入到我们的当前的文件中来。关于 <code>require</code> 路径的写法也有如下几种:</p>
-<ul>
-<li>模块路径可以是一个以 <code>/</code> 开头，表示一个 <strong>绝对路径</strong></li>
-<li>模块路径以 <code>./</code> 开头，表示当前目录出发的 <strong>相对路径</strong></li>
-<li>模块路径如果没有以 <code>/</code> 或者 <code>./</code> 开头，那么这个模块要么是 <strong>核心模块</strong> 要么是通过 <strong>npm</strong> 安装在 node_modules 文件夹下的。</li>
+</li>
 </ul>
-<p>看到上面的不同路径写法, 我们就想起来在 web 中引入当前文件夹中的文件时是不需要加上<code>./</code>的, 但在 node 中使用 <code>./</code> 或 <code>/</code> 开头的路径和不使用时,有着很大的差别。</p>
-<h3 id="模块的加载机制"><a href="#模块的加载机制" class="headerlink" title="模块的加载机制"></a>模块的加载机制</h3><ol>
-<li>首先按照加载的模块的文件名称进行查找</li>
-<li>如果没有找到，则会在模块文件名称后加上 <code>.js</code> 的后缀，进行查找</li>
-<li>如果还没有找到，则会在文件名称后加上 <code>.json</code> 的后缀，进行查找</li>
-<li>如果还没有，则会在文件名称后加上 <code>.node</code> 的后缀，进行查找</li>
-<li>最终未找到，抛出异常</li>
+</li>
+<li><code>fs.openSync(path, flags, [mode])</code>:fs.open() 的同步版，返回值为 <code>fd</code></li>
+<li><code>fs.read(fd, buffer, offset, length, position, callback)</code>:从指定的文档标识符 <code>fd</code> 读取文件数据。<ul>
+<li><code>fd</code>: 通过open方法成功打开一个文件返回的编号</li>
+<li><code>buffer</code>: buffer对象, 缓冲区，数据将会写入这里。</li>
+<li><code>offset</code>: 新的内容添加到buffer中的起始位置,向缓冲区 buffer 写入的偏移量。</li>
+<li><code>length</code>： 添加到buffer中内容的长度</li>
+<li><code>position</code>：读取的文件中的起始位置,为null，将会从文件当前的位置读取数据。</li>
+<li><code>callback</code>: 回调<ul>
+<li><code>err</code>:错误</li>
+<li><code>bytesRead</code>:buffer的长度，读取的字节</li>
+<li><code>buffer</code>: buffer对象</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>fs.readSync(fd, buffer, offset, length, position)</code>:fs.read()的同步版，返回 <code>bytesRead</code></li>
+<li><code>fs.write(fd, buffer, offset, length[, position], callback)</code>:通过文件标识fd，向指定的文件中写入buffer通过文件标识fd，向指定的文件中写入buffer.<br> /<code>fs.write(fd, data[, position[, encoding]], callback)</code>:通过指定的fd把data写入到文档中.<ul>
+<li><code>fd</code>: 打开的文件标识</li>
+<li><code>buffer</code> : 要写入的数据</li>
+<li><code>offset</code> : buffer对象中要写入的数据的起始位置</li>
+<li><code>length</code> : 要写入的buffer数据的长度</li>
+<li><code>data</code>: 如果data不是buffer对象的实例则会把值强制转化成一个字符串。</li>
+<li><code>position</code>: 是参考当前文档光标的位置，然后从该处写入数据。</li>
+<li><code>encoding</code>: 是预期得到一个字符串编码</li>
+<li><code>callback</code>:回调函数 (err, written, string)</li>
+</ul>
+</li>
+<li><code>fs.writeSync(fd, buffer, offset, length[, position])</code>/<code>fs.writeSync(fd, data[, position[, encoding]])</code></li>
+<li><code>fs.close(fd, callback)</code>:关闭一个打开的文件</li>
+<li><code>fs.closeSync(fd)</code>: fs.close() 的同步版本</li>
 </ol>
-<h3 id="模块数据的使用"><a href="#模块数据的使用" class="headerlink" title="模块数据的使用"></a>模块数据的使用</h3><p>与浏览器中不同 , 在 node 中，每一个模块都有自己的作用域，在模块中使用 var 申明的变量的作用域范围是在该模块内，而不是 node 全局的。<br>但是你忘记了使用 var 进行变量声明,恭喜你这时和浏览器中忘记使用的效果是一致的。该变量也将挂在全局对象上。<br>只不过在 <code>node</code>中，全局对象是<code>global</code>，而不是浏览器中的<code>window</code></p>
-<p>下面看一个简单的例子:</p>
-<p>我们从两个文件 <code>a.js</code> 和 <code>b.js</code> 就可以简单的看到 node 的声明变量的作用域。</p>
-<p>a.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">'这是a声明的变量'</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'这是a.js模块'</span>);</div></pre></td></tr></table></figure></p>
-<p>b.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'./2.js'</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'bbbb'</span>);</div><div class="line"><span class="built_in">console</span>.log(a);</div><div class="line"><span class="built_in">console</span>.log(global.a);</div></pre></td></tr></table></figure></p>
-<p><code>node b.js</code> 输出结果:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">这是<span class="number">2.</span>js模块</div><div class="line">bbbb</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//ReferenceError: a is not defined</span></div></pre></td></tr></table></figure></p>
-<p>至于去掉 var 之后会是怎么样,大家自己试试吧 ^ ^</p>
-<h2 id="暴露模块API"><a href="#暴露模块API" class="headerlink" title="暴露模块API"></a>暴露模块API</h2><blockquote>
-<p>module、module.exports、exports</p>
-</blockquote>
-<p>如同上面代码中所展示的，在 nodejs 中不能直接去拿到另一个模块中的变量函数等等。要让模块暴露一个API成为 <code>require</code>调用的返回值，我们就需要通过 <code>module.exports</code> 或者 <code>exports</code> 对外提供模块内部变量的访问。</p>
-<p>默认情况下，每个模块都会暴露处一个空对象，如果你想要在该对象上添加属性，那么简单的使用 <code>exports</code> 即可。</p>
-<p>看这个例子：</p>
-<p>module_a.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(exports === <span class="built_in">module</span>.exports)</div><div class="line">exports.name = <span class="string">'module_a.js'</span></div><div class="line">exports.data = <span class="string">'this is module_a.js data'</span></div><div class="line">exports.getDate = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>module_b.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./module_a.js'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.name)</div><div class="line"><span class="built_in">console</span>.log(a.data)</div><div class="line"><span class="built_in">console</span>.log(a.getDate())</div></pre></td></tr></table></figure></p>
-<p><code>node module_b.js</code>输出:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="literal">true</span></div><div class="line">module_a.js</div><div class="line">this is module_a.js data</div><div class="line">Thu Sep 22 2016 22:23:59 GMT+0800 (CST)</div></pre></td></tr></table></figure></p>
-<p>可以看到这里实际上在模块内部 <code>exports</code> 就是对于<code>module.exports</code>的引用，并且在使用<code>require</code>引入模块之后，a 是一个对象。可见外部模块通过 <code>require(模块)</code> 方法加载模块，该函数返回的就是被加载模块的 <code>module.exports</code> 对象</p>
-<p>如果这样在 <code>module.exports</code> 对象上一个一个添加属性还满足不了你的需求，你还可以将 <code>module.exports</code> 彻底重写。我们将上面的两个文件改写：</p>
-<p>module_a.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'printf: '</span> + text);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>module_b.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./module_a.js'</span>)</div><div class="line">a(<span class="string">'ok'</span>);</div></pre></td></tr></table></figure></p>
-<p><code>node module_b.js</code>输出:<code>printf: ok</code></p>
-<p>这样有一个需要注意的地方是：直接覆盖 <code>exports</code> 或者 <code>module.exports</code>让模块导出一个值，这样做会破坏 <code>exports</code> 和  <code>module.exports</code> 的引用关系。</p>
-<p>这是对于 node 的模块系统的学习，理解有限，如果有错误之处，请指出，谢谢！</p>
-<p>本文地址：<a href="https://guowenfh.github.io/2016/10/15/node-module-system/">https://guowenfh.github.io/2016/10/15/node-module-system/</a></p>
+<h3 id="更易用的方法"><a href="#更易用的方法" class="headerlink" title="更易用的方法"></a>更易用的方法</h3><ol>
+<li><code>fs.writeFlie(filename, data, [options], callback)</code>:<br> 异步的将数据写入一个文件,如果文件不存在则新建, 如果文件原先存在，会被替换。<ul>
+<li><code>filename</code> : 文件路径，</li>
+<li><code>data</code> : data 可以是一个string，也可以是一个原生buffer。</li>
+<li><code>options</code> : 选项<ul>
+<li><code>encoding</code> :文件编码default = ‘utf8’</li>
+<li><code>mode</code> : default = 438 (aka 0666 in Octal)</li>
+<li><code>flag</code> : default = ‘a’</li>
+</ul>
+</li>
+<li><code>callback</code> : 回调函数</li>
+</ul>
+</li>
+<li><code>fs.writeFileSync(filename, data, [options])</code>：fs.writeFile的同步版本。</li>
+<li><code>fs.appendFile(filename, data, [options], callback)</code>：<br> 异步的将数据添加到一个文件的尾部，如果文件不存在，会创建一个新的文件。<ul>
+<li><code>filename</code> : 文件路径，</li>
+<li><code>data</code> : data 可以是一个string，也可以是一个原生buffer。</li>
+<li><code>options</code> : 选项<ul>
+<li><code>encoding</code> :文件编码default = ‘utf8’</li>
+<li><code>mode</code> : default = 438 (aka 0666 in Octal)</li>
+<li><code>flag</code> : default = ‘a’</li>
+</ul>
+</li>
+<li><code>callback</code> : 回调函数</li>
+</ul>
+</li>
+<li><code>fs.appendFileSync(filename, data, [options])</code>:fs.appendFile的同步版本。</li>
+<li><code>fs.exists(path, callback)</code>:检查指定路径的文件或者目录是否存在。<ul>
+<li><code>path</code>:路径</li>
+<li><code>callback</code>: callback 传入的参数指明存在 (true) 或者不存在 (false).</li>
+</ul>
+</li>
+<li><code>fs.existsSync(path)</code>:fs.exists 函数的同步版。</li>
+<li><code>fs.readFile(filename, [options], callback)</code>:异步读取一个文件的全部内容<ul>
+<li><code>filename</code>:文件路径</li>
+<li><code>options</code>:<ul>
+<li><code>encoding</code>:  default = null,如果未指定编码方式，原生buffer就会被返回。</li>
+<li><code>flag</code>: default = ‘r’</li>
+</ul>
+</li>
+<li><code>callback</code> :(err, data), data 就是文件的内容</li>
+</ul>
+</li>
+<li><code>fs.readFileSync(filename, [options])</code>:fs.readFile的同步版本。 返回文件名为 filename 的文件内容。</li>
+<li><code>fs.unlink(path, callback)</code>:删除一个文件,回调函数（callback）只接受一个参数：可能出现的异常信息.</li>
+<li><code>fs.unlinkSync(path):fs.unlink()</code>: 的同步版本</li>
+<li><code>fs.rename(oldPath, newPath, callback)</code>:异步版本的重命名函数.完成时的回调函数(callback)只接受一个参数:可能出现的异常信息.</li>
+<li><code>fs.renameSync(oldPath, newPath)</code>:fs.rename() 的同步版本 </li>
+<li><code>fs.stat(path, callback)</code>:读取文件的状态信息,callback,接收两个参数： (err, stats) ，其中 stats 是一个 fs.Stats 对象。 </li>
+<li><code>fs.statSync(path, callback)</code>:fs.stat() 的同步版本,返回一个 fs.Stats 实例。</li>
+<li><code>fs.watch(filename, [options], [callback])</code>:观察指定路径的改变，filename 路径可以是文件或者目录。<br>回调函数得到两个参数 (event, filename)。其中 event 是 ‘rename’（重命名）或者 ‘change’（改变），而 filename 则是触发事件的文件名。</li>
+</ol>
+<h3 id="文件夹处理"><a href="#文件夹处理" class="headerlink" title="文件夹处理"></a>文件夹处理</h3><ol>
+<li><code>fs.mkdir(path, [mode], callback)</code> :创建文件夹，回调函数只接受一个参数：可能出现的异常信息。－－－》<code>fs.mkdirSync(path, [mode])</code>同步版</li>
+<li><code>fs.rmkdir(path, callback)</code>:删除文件夹，回调函数只接受一个参数：可能出现的异常信息。－－－》<code>fs.rmdirSync(path)</code>同步版</li>
+<li><code>fs.readdir(path, callback)</code>:读取 path 路径所在文件夹的内容。<br> 回调函数 (callback) 接受两个参数 (err, files) 其中 files 是一个存储目录中所包含的文件名称的数组，数组中不包括 ‘.’ 和 ‘..’</li>
+<li><code>fs.readdirSync(path)</code>:同步版的 readdir(). 返回文件名数组，其中不包括 ‘.’ 和 ‘..’ 目录.</li>
+</ol>
 
       
     </div>
@@ -458,17 +513,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/29/eslint-config-npmbace/" rel="next" title="eslint 使用实践">
-                <i class="fa fa-chevron-left"></i> eslint 使用实践
+              <a href="/2016/10/15/node-global-object/" rel="next" title="process 对象与 Buffer 类">
+                <i class="fa fa-chevron-left"></i> process 对象与 Buffer 类
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/15/node-global-object/" rel="prev" title="process 对象与 Buffer 类">
-                process 对象与 Buffer 类 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -483,10 +534,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/10/15/node-module-system/"
-     data-title="Node.js 模块系统"
+        <div class="ds-share flat" data-thread-key="2016/10/15/node-file-system/"
+     data-title="node 文件系统"
      data-content=""
-     data-url="http://guowenfh.github.io/2016/10/15/node-module-system/">
+     data-url="http://guowenfh.github.io/2016/10/15/node-file-system/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -516,8 +567,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/15/node-module-system/"
-           data-title="Node.js 模块系统" data-url="http://guowenfh.github.io/2016/10/15/node-module-system/">
+      <div class="ds-thread" data-thread-key="2016/10/15/node-file-system/"
+           data-title="node 文件系统" data-url="http://guowenfh.github.io/2016/10/15/node-file-system/">
       </div>
     
   </div>
@@ -683,7 +734,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块的加载与使用"><span class="nav-number">1.</span> <span class="nav-text">模块的加载与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的引入"><span class="nav-number">1.1.</span> <span class="nav-text">模块的引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的加载机制"><span class="nav-number">1.2.</span> <span class="nav-text">模块的加载机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块数据的使用"><span class="nav-number">1.3.</span> <span class="nav-text">模块数据的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#暴露模块API"><span class="nav-number">2.</span> <span class="nav-text">暴露模块API</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#底层方法"><span class="nav-number">1.</span> <span class="nav-text">底层方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更易用的方法"><span class="nav-number">2.</span> <span class="nav-text">更易用的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件夹处理"><span class="nav-number">3.</span> <span class="nav-text">文件夹处理</span></a></li></ol></div>
             
           </div>
         </section>
