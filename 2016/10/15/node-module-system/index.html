@@ -114,7 +114,7 @@
 模块的加载与使用模块的引入在 node 中,我们使用 require(&amp;#39;模块&amp;#39;) 的形式将一个模块引入到我们的当前的文件中来。关于 require 路径的写法也有如下几种:
 
 模块路径可以是一个">
-<meta property="og:updated_time" content="2016-10-15T03:32:53.000Z">
+<meta property="og:updated_time" content="2016-10-15T03:35:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js 模块系统">
 <meta name="twitter:description" content="什么是模块?
@@ -238,16 +238,6 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -399,7 +389,7 @@
 <p>b.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'./2.js'</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'bbbb'</span>);</div><div class="line"><span class="built_in">console</span>.log(a);</div><div class="line"><span class="built_in">console</span>.log(global.a);</div></pre></td></tr></table></figure></p>
 <p><code>node b.js</code> 输出结果:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">这是<span class="number">2.</span>js模块</div><div class="line">bbbb</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//ReferenceError: a is not defined</span></div></pre></td></tr></table></figure></p>
 <p>至于去掉 var 之后会是怎么样,大家自己试试吧 ^ ^</p>
-<h3 id="暴露模块API"><a href="#暴露模块API" class="headerlink" title="暴露模块API"></a>暴露模块API</h3><blockquote>
+<h2 id="暴露模块API"><a href="#暴露模块API" class="headerlink" title="暴露模块API"></a>暴露模块API</h2><blockquote>
 <p>module、module.exports、exports</p>
 </blockquote>
 <p>如同上面代码中所展示的，在 nodejs 中不能直接去拿到另一个模块中的变量函数等等。要让模块暴露一个API成为 <code>require</code>调用的返回值，我们就需要通过 <code>module.exports</code> 或者 <code>exports</code> 对外提供模块内部变量的访问。</p>
@@ -576,10 +566,10 @@
 
           
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
+              
                 <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+              
             </div>
           
 
@@ -690,7 +680,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块的加载与使用"><span class="nav-number">1.</span> <span class="nav-text">模块的加载与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的引入"><span class="nav-number">1.1.</span> <span class="nav-text">模块的引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的加载机制"><span class="nav-number">1.2.</span> <span class="nav-text">模块的加载机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块数据的使用"><span class="nav-number">1.3.</span> <span class="nav-text">模块数据的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#暴露模块API"><span class="nav-number">1.4.</span> <span class="nav-text">暴露模块API</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块的加载与使用"><span class="nav-number">1.</span> <span class="nav-text">模块的加载与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的引入"><span class="nav-number">1.1.</span> <span class="nav-text">模块的引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的加载机制"><span class="nav-number">1.2.</span> <span class="nav-text">模块的加载机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块数据的使用"><span class="nav-number">1.3.</span> <span class="nav-text">模块数据的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#暴露模块API"><span class="nav-number">2.</span> <span class="nav-text">暴露模块API</span></a></li></ol></div>
             
           </div>
         </section>
