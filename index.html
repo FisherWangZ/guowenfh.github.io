@@ -264,6 +264,119 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/15/node-http/" itemprop="url">
+                  http 模块
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-15T12:38:52+08:00" content="2016-10-15">
+              2016-10-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/15/node-http/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/node-http/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          一个网站的加载流程粗略的流程大概如下：
+
+用户通过浏览器发送一个http的请求到指定的主机
+服务器接收到该请求，对该请求进行分析和处理
+服务器处理完成以后，返回对应的数据到用户机器
+浏览器接收服务器返回的数据，并根据接收到的进行分析和处理
+
+最简单的web服务器我们需要搭建一个 http 的服务器，用于处理用户发送的 http 请求，在 node 中有 http 核心模块可以在很简单的几句话就帮我们启动一个服务器。123456789101112131415// 导入http模块:var http = require('http');// 创建http server，并传入回调函数:var server = http.createServer(function (request, respon
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/15/node-http/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/15/node-file-system/" itemprop="url">
                   node 文件系统
                 </a>
@@ -915,159 +1028,6 @@ __dirname : 返回 当前模块文件所在目录 解析后的绝对路径
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/03/javascript-this-closure/" itemprop="url">
-                  Javascript中this与闭包学习笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-03T00:30:29+08:00" content="2016-08-03">
-              2016-08-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JS深度学习/" itemprop="url" rel="index">
-                    <span itemprop="name">JS深度学习</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/03/javascript-this-closure/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/03/javascript-this-closure/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          理解 Javascript中的this基于不同的调用方式this的指向也会有所不同，调用方式大致有如下几种：
-
-
-
-调用方式
-表达式
-
-
-
-
-构造函数调用
-new Foo();
-
-
-对象方法调用
-o.method();
-
-
-函数直接调用
-foo();
-
-
-call/apply/bind
-func.call(o);
-
-
-
-现在就来看看这些不同的调用模式，this的指向会有怎么样的区别：
-构造函数调用模式123456789function Person(name,age)&#123;    this.name = name;    this.age = age;    this.sayName  = function()&#123;        console.info(this.name);
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/03/javascript-this-closure/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1113,7 +1073,7 @@ func.call(o);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">47</span>
+              <span class="site-state-item-count">48</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
