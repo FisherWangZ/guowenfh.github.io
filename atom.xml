@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guowenfh.github.io/"/>
-  <updated>2016-10-15T03:35:16.000Z</updated>
+  <updated>2016-10-15T03:37:11.000Z</updated>
   <id>http://guowenfh.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://guowenfh.github.io/2016/10/15/node-module-system/"/>
     <id>http://guowenfh.github.io/2016/10/15/node-module-system/</id>
     <published>2016-10-15T03:18:41.000Z</published>
-    <updated>2016-10-15T03:35:16.000Z</updated>
+    <updated>2016-10-15T03:37:11.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>什么是模块?</p>
@@ -67,6 +67,7 @@
 <p><code>node module_b.js</code>输出:<code>printf: ok</code></p>
 <p>这样有一个需要注意的地方是：直接覆盖 <code>exports</code> 或者 <code>module.exports</code>让模块导出一个值，这样做会破坏 <code>exports</code> 和  <code>module.exports</code> 的引用关系。</p>
 <p>这是对于 node 的模块系统的学习，理解有限，如果有错误之处，请指出，谢谢！</p>
+<p>本文地址：<a href="https://guowenfh.github.io/2016/10/15/node-module-system/">https://guowenfh.github.io/2016/10/15/node-module-system/</a></p>
 ]]></content>
     
     <summary type="html">
