@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="webpack," />
+  <meta name="keywords" content="Node.js," />
 
 
 
@@ -90,34 +90,43 @@
 
 
 
-<meta name="description" content="这是一系列文章，此系列所有的练习都存在了我的github仓库中vue-webpack，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：
+<meta name="description" content="什么是模块?
 
-webpack入坑之旅（一）不是开始的开始
-webpack入坑之旅（二）loader入门
-webpack入坑之旅（三）webpack.config入门
-webpack入坑之旅（四）扬帆起航
-webpack入坑之旅（五）加载vue">
+
+在 node 中，文件和模块是一一对应的，也就是一个文件就是一个模块
+每个模块都有自己的作用域
+我们使用 var 来申明的一个变量，他并不是全局的，而是属于当前模块下
+
+模块的加载与使用模块的引入在 node 中,我们使用 require(&amp;#39;模块&amp;#39;) 的形式将一个模块引入到我们的当前的文件中来。关于 require 路径的写法也有如下几种:
+
+模块路径可以是一个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webpack入坑之旅（三）webpack.config入门">
-<meta property="og:url" content="http://guowenfh.github.io/2016/03/24/vue-webpack-03-config/index.html">
+<meta property="og:title" content="Node.js 模块系统">
+<meta property="og:url" content="http://guowenfh.github.io/2016/10/15/node-module-system/index.html">
 <meta property="og:site_name" content="三省吾身丶丶">
-<meta property="og:description" content="这是一系列文章，此系列所有的练习都存在了我的github仓库中vue-webpack，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：
+<meta property="og:description" content="什么是模块?
 
-webpack入坑之旅（一）不是开始的开始
-webpack入坑之旅（二）loader入门
-webpack入坑之旅（三）webpack.config入门
-webpack入坑之旅（四）扬帆起航
-webpack入坑之旅（五）加载vue">
-<meta property="og:updated_time" content="2016-09-11T08:24:40.000Z">
+
+在 node 中，文件和模块是一一对应的，也就是一个文件就是一个模块
+每个模块都有自己的作用域
+我们使用 var 来申明的一个变量，他并不是全局的，而是属于当前模块下
+
+模块的加载与使用模块的引入在 node 中,我们使用 require(&amp;#39;模块&amp;#39;) 的形式将一个模块引入到我们的当前的文件中来。关于 require 路径的写法也有如下几种:
+
+模块路径可以是一个">
+<meta property="og:updated_time" content="2016-10-15T03:30:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webpack入坑之旅（三）webpack.config入门">
-<meta name="twitter:description" content="这是一系列文章，此系列所有的练习都存在了我的github仓库中vue-webpack，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：
+<meta name="twitter:title" content="Node.js 模块系统">
+<meta name="twitter:description" content="什么是模块?
 
-webpack入坑之旅（一）不是开始的开始
-webpack入坑之旅（二）loader入门
-webpack入坑之旅（三）webpack.config入门
-webpack入坑之旅（四）扬帆起航
-webpack入坑之旅（五）加载vue">
+
+在 node 中，文件和模块是一一对应的，也就是一个文件就是一个模块
+每个模块都有自己的作用域
+我们使用 var 来申明的一个变量，他并不是全局的，而是属于当前模块下
+
+模块的加载与使用模块的引入在 node 中,我们使用 require(&amp;#39;模块&amp;#39;) 的形式将一个模块引入到我们的当前的文件中来。关于 require 路径的写法也有如下几种:
+
+模块路径可以是一个">
 
 
 
@@ -138,9 +147,9 @@ webpack入坑之旅（五）加载vue">
 
 
 
-  <link rel="canonical" href="http://guowenfh.github.io/2016/03/24/vue-webpack-03-config/"/>
+  <link rel="canonical" href="http://guowenfh.github.io/2016/10/15/node-module-system/"/>
 
-  <title> webpack入坑之旅（三）webpack.config入门 | 三省吾身丶丶 </title>
+  <title> Node.js 模块系统 | 三省吾身丶丶 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -290,7 +299,7 @@ webpack入坑之旅（五）加载vue">
             
             
               
-                webpack入坑之旅（三）webpack.config入门
+                Node.js 模块系统
               
             
           </h1>
@@ -302,8 +311,8 @@ webpack入坑之旅（五）加载vue">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-24T17:28:14+08:00" content="2016-03-24">
-              2016-03-24
+            <time itemprop="dateCreated" datetime="2016-10-15T11:18:41+08:00" content="2016-10-15">
+              2016-10-15
             </time>
           </span>
 
@@ -316,8 +325,8 @@ webpack入坑之旅（五）加载vue">
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端框架/" itemprop="url" rel="index">
-                    <span itemprop="name">前端框架</span>
+                  <a href="/categories/node/" itemprop="url" rel="index">
+                    <span itemprop="name">node</span>
                   </a>
                 </span>
 
@@ -332,8 +341,8 @@ webpack入坑之旅（五）加载vue">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/24/vue-webpack-03-config/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/vue-webpack-03-config/" itemprop="commentsCount"></span>
+                <a href="/2016/10/15/node-module-system/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/node-module-system/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -361,38 +370,51 @@ webpack入坑之旅（五）加载vue">
       
 
       
-        <p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
+        <blockquote>
+<p>什么是模块?</p>
+</blockquote>
 <ul>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a> </li>
-<li><a href="http://guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
+<li>在 node 中，文件和模块是一一对应的，也就是一个文件就是一个模块</li>
+<li>每个模块都有自己的作用域</li>
+<li>我们使用 var 来申明的一个变量，他并不是全局的，而是属于当前模块下</li>
 </ul>
-<p>在上面我们已经尝试过了两种对于loader的使用方式，无论是在<code>require</code>的时候编写我们<code>loader</code>的前缀，还是在我们的命令行中进根据扩展名来自动绑定我们的<code>loader</code>，显然都不够自动化，在需要编译的语言继续增加的情况下，显然会是一个噩梦。<br>所以webapck实际上为我们提供了一个简单的方法，下面就一起来看看。</p>
-<h2 id="了解webpack配置"><a href="#了解webpack配置" class="headerlink" title="了解webpack配置"></a>了解webpack配置</h2><p>Webpack在执行的时候，除了在命令行传入参数，还可以通过指定的配置文件来执行。默认情况下，会搜索当前目录的<code>webpack.config.js</code>文件，这个文件是一个 <code>node.js</code> 模块，返回一个 <code>json</code> 格式的配置信息对象，或者通过 <code>--config</code> 选项来指定配置文件。</p>
-<p>所以现在我们就来新建一个<code>webpack.config.js</code>，在里面填写进下面的内容：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Webpack = <span class="built_in">require</span>(<span class="string">"webpack"</span>);</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    entry: [<span class="string">"./entry.js"</span>],</div><div class="line">    output: &#123;</div><div class="line">        path: __dirname,</div><div class="line">        filename: <span class="string">"bundle.js"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="built_in">module</span>: &#123;</div><div class="line">        loaders: [&#123;</div><div class="line">            test: <span class="regexp">/\.css$/</span>,</div><div class="line">            loader: <span class="string">"style!css"</span></div><div class="line">        &#125;]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>我们现在仅仅需要运行:<code>webpack</code>，如果你的配置没有问题的话，可以在命令行中看到正确的输出，因为这个命令会自动在当前目录中查找<code>webpack.config.js</code>的配置文件，并按照里面定义的规则来进行执行。</p>
-<p>去修改我们的css文件吧，感受一下它的便利。</p>
-<p>上面我们仅仅是使用了这个配置文件，我们肯定想在实际的工作环境中，自我对于项目进行针对性的配置。下面我们就先来简单的了解一下里面参数的意义：</p>
+<h2 id="模块的加载与使用"><a href="#模块的加载与使用" class="headerlink" title="模块的加载与使用"></a>模块的加载与使用</h2><h3 id="模块的引入"><a href="#模块的引入" class="headerlink" title="模块的引入"></a>模块的引入</h3><p>在 node 中,我们使用 <code>require(&#39;模块&#39;)</code> 的形式将一个模块引入到我们的当前的文件中来。关于 <code>require</code> 路径的写法也有如下几种:</p>
 <ul>
-<li><code>entry</code>：指入口文件的配置项，它是一个数组的原因是webpack允许多个入口点。 当然如果你只有一个入口的话，也可以直接使用双引号<code>&quot;./entry.js&quot;</code></li>
-<li><code>output</code>：配置打包结果，<code>path</code>定义了输出的文件夹，filename则定义了打包结果文件的名称</li>
-<li><code>module</code>：定义了对模块的处理逻辑，这里可以用<code>loaders</code>定义了一系列的加载器，以及一些正则。当需要加载的文件匹配test的正则时，就会调用后面的<code>loader</code>对文件进行处理，这正是<code>webpack</code>强大的原因。</li>
+<li>模块路径可以是一个以 <code>/</code> 开头，表示一个 <strong>绝对路径</strong></li>
+<li>模块路径以 <code>./</code> 开头，表示当前目录出发的 <strong>相对路径</strong></li>
+<li>模块路径如果没有以 <code>/</code> 或者 <code>./</code> 开头，那么这个模块要么是 <strong>核心模块</strong> 要么是通过 <strong>npm</strong> 安装在 node_modules 文件夹下的。</li>
 </ul>
-<p>在这里仅仅能做一些很简单的介绍，如果想要真正做到在项目中的实际应用，还需要大量的练习与尝试。在此暂时不做过多的探究。等真正用到了再记录下来。</p>
-<h3 id="了解webpack插件"><a href="#了解webpack插件" class="headerlink" title="了解webpack插件"></a>了解webpack插件</h3><p>下面就来看看<code>webpack</code>中的插件：</p>
-<p>插件可以完成更多loader不能完成的功能。插件的使用一般是在<code>webpack.config.js</code>中的<code>plugins</code> 选项中指定。</p>
-<p><code>Webpack</code>本身内置了一些常用的插件，还可以通过npm安装第三方插件。</p>
-<p>接下来，我们从一个最简单的，用来给输出的文件头部添加注释信息<code>BannerPlugin</code>的内置插件来实践插件的配置和运行。</p>
-<p>修改<code>webpack.config.js，</code>添加 plugins配置项：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Webpack = <span class="built_in">require</span>(<span class="string">"webpack"</span>);<span class="comment">//必须引入</span></div><div class="line"><span class="built_in">module</span>:&#123;</div><div class="line">&#125;,</div><div class="line">plugins: [</div><div class="line">    <span class="keyword">new</span> Webpack.BannerPlugin(<span class="string">"这里是打包文件头部注释！"</span>)<span class="comment">//注意这是一个数组..</span></div><div class="line">]</div></pre></td></tr></table></figure>
-<p>运行正确的话应该是这样的，打开<code>bundle.js</code>，会发现在文件头部已经有了我们添加的注释：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! 这里是打包文件头部注释 */</span></div><div class="line"><span class="comment">/******/</span> (<span class="function"><span class="keyword">function</span>(<span class="params">modules</span>) </span>&#123; <span class="comment">// webpackBootstrap</span></div><div class="line"><span class="comment">/******/</span>    <span class="comment">// The module cache</span></div><div class="line"><span class="comment">/******/</span>    <span class="keyword">var</span> installedModules = &#123;&#125;;</div><div class="line">        <span class="comment">/***  省略 ***/</span></div><div class="line">        &#125;)</div></pre></td></tr></table></figure>
-<p>最简单的插件使用方式就是这样的了，就如上面一样的，平淡无奇。</p>
-<p>如果看到了这里，相信你对于<code>webpack</code>的最基本的了解应该就差不多了，下面正式进入实战的阶段，来看看我们的一些<code>loader</code>到底是怎么样使用的。</p>
+<p>看到上面的不同路径写法, 我们就想起来在 web 中引入当前文件夹中的文件时是不需要加上<code>./</code>的, 但在 node 中使用 <code>./</code> 或 <code>/</code> 开头的路径和不使用时,有着很大的差别。</p>
+<h3 id="模块的加载机制"><a href="#模块的加载机制" class="headerlink" title="模块的加载机制"></a>模块的加载机制</h3><ol>
+<li>首先按照加载的模块的文件名称进行查找</li>
+<li>如果没有找到，则会在模块文件名称后加上 <code>.js</code> 的后缀，进行查找</li>
+<li>如果还没有找到，则会在文件名称后加上 <code>.json</code> 的后缀，进行查找</li>
+<li>如果还没有，则会在文件名称后加上 <code>.node</code> 的后缀，进行查找</li>
+<li>最终未找到，抛出异常</li>
+</ol>
+<h3 id="模块数据的使用"><a href="#模块数据的使用" class="headerlink" title="模块数据的使用"></a>模块数据的使用</h3><p>与浏览器中不同 , 在 node 中，每一个模块都有自己的作用域，在模块中使用 var 申明的变量的作用域范围是在该模块内，而不是 node 全局的。<br>但是你忘记了使用 var 进行变量声明,恭喜你这时和浏览器中忘记使用的效果是一致的。该变量也将挂在全局对象上。<br>只不过在 <code>node</code>中，全局对象是<code>global</code>，而不是浏览器中的<code>window</code></p>
+<p>下面看一个简单的例子:</p>
+<p>我们从两个文件 <code>a.js</code> 和 <code>b.js</code> 就可以简单的看到 node 的声明变量的作用域。</p>
+<p>a.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">'这是a声明的变量'</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'这是a.js模块'</span>);</div></pre></td></tr></table></figure></p>
+<p>b.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'./2.js'</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'bbbb'</span>);</div><div class="line"><span class="built_in">console</span>.log(a);</div><div class="line"><span class="built_in">console</span>.log(global.a);</div></pre></td></tr></table></figure></p>
+<p><code>node b.js</code> 输出结果:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">这是<span class="number">2.</span>js模块</div><div class="line">bbbb</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//ReferenceError: a is not defined</span></div></pre></td></tr></table></figure></p>
+<p>至于去掉 var 之后会是怎么样,大家自己试试吧 ^ ^</p>
+<h3 id="暴露模块API"><a href="#暴露模块API" class="headerlink" title="暴露模块API"></a>暴露模块API</h3><blockquote>
+<p>module、module.exports、exports</p>
+</blockquote>
+<p>如同上面代码中所展示的，在 nodejs 中不能直接去拿到另一个模块中的变量函数等等。要让模块暴露一个API成为 <code>require</code>调用的返回值，我们就需要通过 <code>module.exports</code> 或者 <code>exports</code> 对外提供模块内部变量的访问。</p>
+<p>默认情况下，每个模块都会暴露处一个空对象，如果你想要在该对象上添加属性，那么简单的使用 <code>exports</code> 即可。</p>
+<p>看这个例子：</p>
+<p>module_a.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(exports === <span class="built_in">module</span>.exports)</div><div class="line">exports.name = <span class="string">'module_a.js'</span></div><div class="line">exports.data = <span class="string">'this is module_a.js data'</span></div><div class="line">exports.getDate = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>module_b.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./module_a.js'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.name)</div><div class="line"><span class="built_in">console</span>.log(a.data)</div><div class="line"><span class="built_in">console</span>.log(a.getDate())</div></pre></td></tr></table></figure></p>
+<p><code>node module_b.js</code>输出:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="literal">true</span></div><div class="line">module_a.js</div><div class="line">this is module_a.js data</div><div class="line">Thu Sep 22 2016 22:23:59 GMT+0800 (CST)</div></pre></td></tr></table></figure></p>
+<p>可以看到这里实际上在模块内部 <code>exports</code> 就是对于<code>module.exports</code>的引用，并且在使用<code>require</code>引入模块之后，a 是一个对象。可见外部模块通过 <code>require(模块)</code> 方法加载模块，该函数返回的就是被加载模块的 <code>module.exports</code> 对象</p>
+<p>如果这样在 <code>module.exports</code> 对象上一个一个添加属性还满足不了你的需求，你还可以将 <code>module.exports</code> 彻底重写。我们将上面的两个文件改写：</p>
+<p>module_a.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'printf: '</span> + text);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>module_b.js:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./module_a.js'</span>)</div><div class="line">a(<span class="string">'ok'</span>);</div></pre></td></tr></table></figure></p>
+<p><code>node module_b.js</code>输出:<code>printf: ok</code></p>
+<p>这样有一个需要注意的地方是：直接覆盖 <code>exports</code> 或者 <code>module.exports</code>让模块导出一个值，这样做会破坏 <code>exports</code> 和  <code>module.exports</code> 的引用关系。</p>
+<p>这是对于 node 的模块系统的学习，理解有限，如果有错误之处，请指出，谢谢！</p>
 
       
     </div>
@@ -436,7 +458,7 @@ webpack入坑之旅（五）加载vue">
       
         <div class="post-tags">
           
-            <a href="/tags/webpack/" rel="tag">#webpack</a>
+            <a href="/tags/Node-js/" rel="tag">#Node.js</a>
           
         </div>
       
@@ -445,17 +467,13 @@ webpack入坑之旅（五）加载vue">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/24/vue-webpack-02-deploy/" rel="next" title="webpack入坑之旅（二）loader入门">
-                <i class="fa fa-chevron-left"></i> webpack入坑之旅（二）loader入门
+              <a href="/2016/09/29/eslint-config-npmbace/" rel="next" title="eslint 使用实践">
+                <i class="fa fa-chevron-left"></i> eslint 使用实践
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/24/vue-webpack-04-custom/" rel="prev" title="webpack入坑之旅（四）扬帆起航">
-                webpack入坑之旅（四）扬帆起航 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -470,10 +488,10 @@ webpack入坑之旅（五）加载vue">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/03/24/vue-webpack-03-config/"
-     data-title="webpack入坑之旅（三）webpack.config入门"
+        <div class="ds-share flat" data-thread-key="2016/10/15/node-module-system/"
+     data-title="Node.js 模块系统"
      data-content=""
-     data-url="http://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">
+     data-url="http://guowenfh.github.io/2016/10/15/node-module-system/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -503,8 +521,8 @@ webpack入坑之旅（五）加载vue">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/24/vue-webpack-03-config/"
-           data-title="webpack入坑之旅（三）webpack.config入门" data-url="http://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">
+      <div class="ds-thread" data-thread-key="2016/10/15/node-module-system/"
+           data-title="Node.js 模块系统" data-url="http://guowenfh.github.io/2016/10/15/node-module-system/">
       </div>
     
   </div>
@@ -670,7 +688,7 @@ webpack入坑之旅（五）加载vue">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#了解webpack配置"><span class="nav-number">1.</span> <span class="nav-text">了解webpack配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#了解webpack插件"><span class="nav-number">1.1.</span> <span class="nav-text">了解webpack插件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块的加载与使用"><span class="nav-number">1.</span> <span class="nav-text">模块的加载与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的引入"><span class="nav-number">1.1.</span> <span class="nav-text">模块的引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的加载机制"><span class="nav-number">1.2.</span> <span class="nav-text">模块的加载机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块数据的使用"><span class="nav-number">1.3.</span> <span class="nav-text">模块数据的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#暴露模块API"><span class="nav-number">1.4.</span> <span class="nav-text">暴露模块API</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
