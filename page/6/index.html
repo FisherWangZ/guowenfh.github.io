@@ -264,6 +264,135 @@
             
               
                 
+                <a class="post-title-link" href="/2016/01/03/jQuery-06-toolFunction/" itemprop="url">
+                  jQuery入门笔记之（六）工具函数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-03T22:20:57+08:00" content="2016-01-03">
+              2016-01-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/jQuery/" itemprop="url" rel="index">
+                    <span itemprop="name">jQuery</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/03/jQuery-06-toolFunction/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/jQuery-06-toolFunction/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+工具函数直接依附于 jQuery 对象，针对 jQuery 对象本身定义的方法，它是全局性的函数。主要提供比如字符串、数组、对象等操作方面的遍历。
+
+字符串操作去除字符串左右空格的工具函数：$.trim()。这个函数我在task0002的部分已经用正则实现了。如下：
+12345678function trim(str) &#123;    var result = "";    result = str.replace(/^\s+|\s+$/g, ""); //使用正则进行字符串替换    return result;&#125;//下面是jQuery中的使用方法var str = "         guowen      ";alert($.trim(str));//可以看到空格被去除
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/03/jQuery-06-toolFunction/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/03/jQuery-05-Ajax/" itemprop="url">
                   jQuery入门笔记之（五）jQuery中的Ajax
                 </a>
@@ -475,132 +604,6 @@ Ajax中的load()方法12345678910/** * Ajax中的load方法（局部方法，可
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/01/01/jQuery-04-animation/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/31/setControlWorks/" itemprop="url">
-                  jQuery入门笔记之（三）事件详解
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-31T11:42:43+08:00" content="2015-12-31">
-              2015-12-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/jQuery/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/31/setControlWorks/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/31/setControlWorks/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          sad 
-
-          
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/31/setControlWorks/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
