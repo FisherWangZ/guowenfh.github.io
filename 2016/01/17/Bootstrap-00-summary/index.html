@@ -160,14 +160,15 @@ Bootstrap 是由Twitter推出的一个用于快速开发 Web 应用程序和网�
   <script type="text/javascript">
     (function() {
         var oldUrl = window.location.href;
-        if(/guowenfh.github.io/i.test(oldUrl)){
-          window.location.href = oldUrl.replace(/guowenfh.github.io/i,'blog.guowenfh.com');
+        if(/https{0,1}\:\/\/guowenfh.github.io/i.test(oldUrl)){
+          window.location.href = oldUrl.replace(/guowenfh.github.io/i,'http://blog.guowenfh.com');
         }
         if( /blog.guowenfh.com/i.test(window.location.href)  && localStorage.getItem('click-top-inform')!=='click'){
           var wrap = document.querySelector('body');
           var content = document.createElement('div');
           content.innerHTML= '为了方便管理，本博客已购买域名，访问原站，将自动跳转至该新地址。（该提示点击删除）';
           content.style.textAlign='center';
+          content.style.color='red';
           content.style.position = 'relative';
           content.style.padding = '10px 20px';
           content.className="blog-top-inform";
