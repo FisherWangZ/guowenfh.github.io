@@ -156,22 +156,22 @@ jQuery选择器，若未作特别说明，获取的都是元素集合。
     (function() {
         var oldUrl = window.location.href;
         if(/https{0,1}\:\/\/guowenfh.github.io/i.test(oldUrl)){
-          window.location.href = oldUrl.replace(/https{0,1}\:\/\/guowenfh.github.io/i,'http://blog.guowenfh.com');
+          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'http://blog.guowenfh.com');
         }
         if( /blog.guowenfh.com/i.test(window.location.href)  && localStorage.getItem('click-top-inform')!=='click'){
-          var wrap = document.querySelector('body');
+          var wrap = document.body;
           var content = document.createElement('div');
-          content.innerHTML= '为了方便管理，本博客已购买该域名，访问原站，将自动跳转至该新地址。（点击此处删除该提示）';
-          content.style.textAlign='center';
-          content.style.color='red';
+          content.innerHTML= '为了方便管理，本博客已购买该域名，访问原站，将自动跳转至该新地址<a href="//blog.guowenfh.com">blog.guowenfh.com</a>。（点击此处删除该提示）';
+          content.style.textAlign = 'center';
+          content.style.color = 'red';
           content.style.position = 'relative';
           content.style.padding = '10px 20px';
-          content.className="blog-top-inform";
+          content.className = "blog-top-inform";
           content.addEventListener('click',function(){
             localStorage.setItem('click-top-inform','click');
             document.querySelector('.blog-top-inform').style.display='none';
           },false)
-          wrap.insertBefore(content,document.querySelector('.container'));
+          wrap.insertBefore(content,wrap.querySelector('script'));
         }
     })();
   </script>
@@ -502,7 +502,7 @@ jQuery选择器，若未作特别说明，获取的都是元素集合。
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$(</span><span class="string">'#box+p'</span>).css(<span class="string">'color'</span>,<span class="string">'red'</span>);<span class="regexp">//</span>下一个同级节点</div><div class="line"><span class="variable">$(</span><span class="string">'#box'</span>).<span class="keyword">next</span>(<span class="string">'p'</span>).css(<span class="string">'color'</span>,<span class="string">'red'</span>);<span class="regexp">//</span>和<span class="keyword">next</span>选择器等价</div></pre></td></tr></table></figure>
 </li>
 <li><p>jQuery为nextAll选择器提供了一个等价的方法nextAll()：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#box ~ p'</span>).css(<span class="string">'color'</span>,<span class="string">'red'</span>);<span class="comment">//后面所有同级节点</span></div><div class="line">$(<span class="string">'#box'</span>).nextAll(<span class="string">'p'</span>).css(<span class="string">'color'</span>, <span class="string">'red'</span>); <span class="comment">//和 nextAll 选择器等价</span></div></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$(</span><span class="string">'#box ~ p'</span>).css(<span class="string">'color'</span>,<span class="string">'red'</span>);<span class="regexp">//</span>后面所有同级节点</div><div class="line"><span class="variable">$(</span><span class="string">'#box'</span>).nextAll(<span class="string">'p'</span>).css(<span class="string">'color'</span>, <span class="string">'red'</span>); <span class="regexp">//</span>和 nextAll 选择器等价</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p><strong>需要注意的是：</strong></p>
