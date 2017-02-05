@@ -290,6 +290,132 @@
             
               
                 
+                <a class="post-title-link" href="/2017/02/05/2017/es6-react-life-cycle/" itemprop="url">
+                  一张图学习 ES6 中的 React 生命周期与流程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-05T16:44:07+08:00" content="2017-02-05">
+              2017-02-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JS深度学习/" itemprop="url" rel="index">
+                    <span itemprop="name">JS深度学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/05/2017/es6-react-life-cycle/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/05/2017/es6-react-life-cycle/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          如题。一张图学习 ES6 中的 React 生命周期与流程。
+
+          
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/02/05/2017/es6-react-life-cycle/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/31/annual-report-2016/" itemprop="url">
                   2017，一切才刚刚开始。
                 </a>
@@ -943,139 +1069,6 @@ fs.read(fd, buffer, offset, length, position, callbac
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/15/node-global-object/" itemprop="url">
-                  process 对象与 Buffer 类
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-15T11:40:29+08:00" content="2016-10-15">
-              2016-10-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/15/node-global-object/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/node-global-object/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-在上一篇博客中，我们一起对于 node 的模块机制有了一点点的了解，当时我们就知道了在 node 中的全局对象是 global 而不是浏览器中的 window 它们有一部分属性方法是相同的，比如：clearInterval / clearTimeout / setInterval / setTimeout / console。他们的用法和在浏览器中的用法是一样的，接下来我们就来看看那些在 node 中所特有全局属性和方法。
-
-我们先来稍微跑个题，看看与上一个篇博客的中介绍的 模块系统相关 的两个属性，还是可以模块的路径有关：
-
-__filename : 返回 当前模块文件解析后的绝对路径
-__dirname : 返回 当前模块文件所在目录 解析后的绝对路径
-
-注意：它们可以直接使用，但是实
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/15/node-global-object/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1121,7 +1114,7 @@ __dirname : 返回 当前模块文件所在目录 解析后的绝对路径
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-count">52</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1138,7 +1131,7 @@ __dirname : 返回 当前模块文件所在目录 解析后的绝对路径
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

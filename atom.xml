@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guowenfh.github.io/"/>
-  <updated>2016-12-31T15:28:37.000Z</updated>
+  <updated>2017-02-05T08:48:23.000Z</updated>
   <id>http://guowenfh.github.io/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一张图学习 ES6 中的 React 生命周期与流程</title>
+    <link href="http://guowenfh.github.io/2017/02/05/2017/es6-react-life-cycle/"/>
+    <id>http://guowenfh.github.io/2017/02/05/2017/es6-react-life-cycle/</id>
+    <published>2017-02-05T08:44:07.000Z</published>
+    <updated>2017-02-05T08:48:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如题。<br>一张图学习 ES6 中的 React 生命周期与流程。<br><img src="http://ww1.sinaimg.cn/large/82d12951gy1fcfn6l85jfj20z1152n23" alt="ES6中的React生命周期与流程"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如题。&lt;br&gt;一张图学习 ES6 中的 React 生命周期与流程。&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/82d12951gy1fcfn6l85jfj20z1152n23&quot; alt=&quot;ES6中的React生命周期与流程&quot;&gt;&lt;/p
+    
+    </summary>
+    
+      <category term="JS深度学习" scheme="http://guowenfh.github.io/categories/JS%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="JS" scheme="http://guowenfh.github.io/tags/JS/"/>
+    
+      <category term="React" scheme="http://guowenfh.github.io/tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title>2017，一切才刚刚开始。</title>
@@ -1648,88 +1673,6 @@
     <summary type="html">
     
       &lt;p&gt;这是一系列文章，此系列所有的练习都存在了我的github仓库中&lt;a href=&quot;https://github.com/guowenfh/vue-webpack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vue-webpack&lt;/a&gt; 在本人有了新的理解
-    
-    </summary>
-    
-      <category term="前端框架" scheme="http://guowenfh.github.io/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="webpack" scheme="http://guowenfh.github.io/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>webpack入坑之旅（一）不是开始的开始</title>
-    <link href="http://guowenfh.github.io/2016/03/24/vue-webpack-01-base/"/>
-    <id>http://guowenfh.github.io/2016/03/24/vue-webpack-01-base/</id>
-    <published>2016-03-24T09:05:58.000Z</published>
-    <updated>2016-11-26T16:16:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>最近学习框架，选择了vue，然后接触到了vue中的单文件组件，官方推荐使用 Webpack + vue-loader构建这些单文件 Vue 组件，于是就开始了webpack的入坑之旅。<br>因为原来没有用过任何的构建工具与模块化工具，所以本系列会十分的基础。并且可能有很多不正确的地方，希望大家谅解，并指出错误帮助改进。谢谢！</p>
-</blockquote>
-<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
-<ul>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a> </li>
-<li><a href="http://guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
-</ul>
-<h2 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack"></a>什么是webpack</h2><blockquote>
-<p>其实不是特别想写这个东西，但貌似所有的教程都有这个。随便写两句吧。可以直接跳过。 </p>
-</blockquote>
-<p>Webpack 是德国开发者 Tobias Koppers 开发的模块加载器兼打包工具，在webpack中，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。因此, Webpack 当中 js 可以引用 css, css 中可以嵌入图片 dataUrl。<br>对应各种不同文件类型的资源, Webpack 有对应的模块 loader比如vue用的是<code>vue-loader</code>当然这是后话，在后面我们再来说。</p>
-<p>请看下图：<br><img src="/images/vue-webpack/00-webpack-base.png" alt="webpack"></p>
-<p>官网查看：<a href="https://github.com/webpack/webpack" target="_blank" rel="external">https://github.com/webpack/webpack</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>前提：因为webpack是一个基于node的项目，所以首先需要确保你的电脑里面已经安装了<code>node.js</code>，以及<code>npm</code>。在这里我使用的版本是：<code>node：v5.8.0  ，npm：3.7.3</code>,若是版本问题，请更新到最新版。<br>若是有出现npm安装过慢的情况，可以使用<a href="https://github.com/Pana/nrm" target="_blank" rel="external">nrm</a>这个项目来进行npm源地址的切换。</p>
-<p>首先我们直接进行全局的安装，运行如下命令：<code>npm install webpack -g</code>，可能需要一点时间。</p>
-<p>安装成功后，在命令行输入<code>webpack -h</code>即可查看当前安装的版本信息。以及可以使用的指令。   </p>
-<p>当然，我们都应该将webapck安装到当前的项目依赖中，此时就可以使用项目的本这样就可以使用项目本地版本的 Webpack。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 确保已经进入项目目录</span></div><div class="line"><span class="comment"># 确定已经有 package.json，没有就通过</span></div><div class="line">npm init </div><div class="line"><span class="comment"># 创建，直接一路回车就好，后面再来详细说里面的内容。</span></div><div class="line"><span class="comment"># 安装 webpack 依赖</span></div><div class="line"></div><div class="line">npm install webpack --save-dev</div><div class="line"><span class="comment"># 简单的写法：-_-,缩写形式 </span></div><div class="line">npm i webpack -D</div><div class="line"><span class="comment"># –save：模块名将被添加到dependencies，可以简化为参数-S。</span></div><div class="line"><span class="comment"># –save-dev: 模块名将被添加到devDependencies，可以简化为参数-D。</span></div></pre></td></tr></table></figure>
-<p>安装好之后我们的<code>package.json</code>的目录应该是这样的：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"first-demo"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">"this is my first-demo"</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"author"</span>: <span class="string">"guowenfh"</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"MIT"</span>,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;&#125;,</div><div class="line">  <span class="attr">"devDependencies"</span>: &#123;</div><div class="line">    <span class="attr">"webpack"</span>: <span class="string">"^1.12.14"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>既然环境都已经安装好了，那么我们就开始来用webpack进行我们的第一个打包运行程序吧！</p>
-<p>首先创建一个静态页面 <code>index.html</code> 和一个 JS 入口文件 <code>entry.js</code>,（这里你想用什么名字都可以，只需要在打包的时候读取文件为该名字就好，不过，到时候就知道这个名字的含义啦！）：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- index.html --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 注意这里引入的不是我们创建的文件，而是用webpack生成的文件 --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*** entry.js ***/</span></div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'app'</span>).innerHTML=<span class="string">"这是我第一个打包成功的程序"</span>;</div></pre></td></tr></table></figure>
-<p>文件都已经创建成功了，那么就开始我们的打包吧！</p>
-<p><code>webpack entry.js bundle.js</code></p>
-<p>在浏览器中打开<code>index.html</code>，就能看到我们设置的文字啦！：<strong>这是我第一个打包成功的程序</strong></p>
-<p>这么简单的功能直接在html中引入不就好了吗？确实是这样的，不过我们这才刚刚开始嘛，不要急。</p>
-<p>下面我们再来增加一个文件，名为<code>first.js</code>内容如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> h2= <span class="built_in">document</span>.createElement(<span class="string">"h2"</span>)</div><div class="line">h2.innerHTML=<span class="string">"不是吧，那么快第二个打包程序啦！"</span>;</div><div class="line"><span class="built_in">document</span>.body.appendChild(h2);</div></pre></td></tr></table></figure>
-<p>更改 <code>entry.js</code>:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'app'</span>).innerHTML=<span class="string">"这是我第一个打包成功的程序"</span>;</div><div class="line"><span class="comment">//添加</span></div><div class="line"><span class="built_in">require</span>(<span class="string">"./first.js"</span>);</div></pre></td></tr></table></figure>
-<p>再来进行一次重复的工作，再打包一次。<code>webpack entry.js bundle.js</code>，如果成功，打包过程会显示日志：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Hash: b1cfe7ff9d75ce235dc9</div><div class="line">Version: webpack 1.12.14</div><div class="line">Time: 54ms</div><div class="line">    Asset     Size  Chunks             Chunk Names</div><div class="line">bundle.js  1.82 kB       0  [emitted]  main</div><div class="line">   [0] ./entry.js 208 bytes &#123;0&#125; [built]</div><div class="line">   [1] ./first.js 145 bytes &#123;0&#125; [built]</div></pre></td></tr></table></figure>
-<p><code>Webpack</code> 会分析入口文件，<strong>解析包含依赖关系的各个文件</strong>。这些文件（模块）都打包到 <code>bundle.js</code> 。<code>Webpack</code> 会给每个模块分配一个唯一的 <code>id</code> 并通过这个 <code>id</code> 索引和访问模块。在页面启动时，会先执行 <code>entry.js</code> 中的代码，其它模块会在运行 <code>require</code> 的时候再执行。</p>
-<p>刷新浏览器，可以发现我们的刚刚的代码已经生效，又有了新的文字出现。</p>
-<p>好吧，我知道这么简单的你们不屑于看，等下我们升个级。</p>
-<blockquote>
-<p>下面是参考文档，也相当于一个汇总吧，有很多我还没实践到，还是可以多看看，好文章应该贴出来</p>
-</blockquote>
-<ul>
-<li><a href="http://www.hubwiz.com/course/5670d0a77e7d40946afc5e65/" target="_blank" rel="external">webpack入门 - 汇智网</a></li>
-<li><a href="https://segmentfault.com/a/1190000002552008" target="_blank" rel="external">Webpack 怎么用</a></li>
-<li><a href="https://segmentfault.com/a/1190000002551952" target="_blank" rel="external">Webpack 入门指迷</a></li>
-<li><a href="https://github.com/vikingmute/webpack-for-fools/blob/master/entries/chapter-1.md" target="_blank" rel="external">Webpack傻瓜式指南（一）</a></li>
-<li><a href="https://github.com/vikingmute/webpack-for-fools/blob/master/entries/chapter-2.md" target="_blank" rel="external">Webpack傻瓜式指南（二）</a></li>
-<li><a href="http://jiongks.name/blog/just-vue/" target="_blank" rel="external">Vue + webpack 项目实践</a></li>
-<li><a href="http://www.w3ctech.com/topic/1557" target="_blank" rel="external">webpack 入门及实践</a></li>
-<li><a href="http://javascript.ruanyifeng.com/#nodejs" target="_blank" rel="external">JavaScript 标准参考教程（alpha）–Node.js</a></li>
-<li><a href="https://github.com/ruanyf/webpack-demos" target="_blank" rel="external">应该是最好懂的Webpack教程—阮一峰</a> 还没敲呢，应该全部敲一遍的。</li>
-<li><a href="http://www.h-simon.com/42/" target="_blank" rel="external">webpack常用配置总结</a></li>
-<li><a href="https://segmentfault.com/a/1190000004505747" target="_blank" rel="external">Express结合Webpack的全栈自动刷新</a></li>
-<li><a href="http://cn.vuejs.org/guide/" target="_blank" rel="external">Vue.js官方教程</a></li>
-<li><a href="http://vuejs.github.io/vue-router/zh-cn/" target="_blank" rel="external">vue-router文档</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;最近学习框架，选择了vue，然后接触到了vue中的单文件组件，官方推荐使用 Webpack + vue-loader构建这些单文件 Vue 组件，于是就开始了webpack的入坑之旅。&lt;br&gt;因为原来没有用过任何的构建工具与模块化工具，所以本系列会
     
     </summary>
     
