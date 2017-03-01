@@ -294,6 +294,140 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/01/2017/es6-base-features-note/" itemprop="url">
+                  ES6 简单特性学习记录
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-01T23:26:07+08:00" content="2017-03-01">
+              2017-03-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JS深度学习/" itemprop="url" rel="index">
+                    <span itemprop="name">JS深度学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/01/2017/es6-base-features-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/01/2017/es6-base-features-note/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          变量定义的新方式：let/ constlet 特性：
+
+不允许重复声明
+没有变量提升（预解析）
+块级作用域（一对 {} 包括的区域称为一个代码块，let 声明的变量只在该代码块起作用）
+
+例子1 ：简单的打印数据
+使用 var:123for(var i = 0; i&lt;10 ; i++ )&#123;    setTimeout(()=&gt;console.log(i)) // 执行10次，全都打印 10&#125;
+使用 let:123for(let i = 0; i&lt;10 ; i++ )&#123;    setTimeout(()=&gt;console.log(i)) // 执行10次，打印 0 - 9&#125;
+之前我们要实现这样的打印，必须使用闭包：12345for
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/01/2017/es6-base-features-note/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/02/05/2017/es6-react-life-cycle/" itemprop="url">
                   一张图学习 ES6 中的 React 生命周期与流程
                 </a>
@@ -932,147 +1066,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/15/node-file-system/" itemprop="url">
-                  node 文件系统
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-15T12:12:48+08:00" content="2016-10-15">
-              2016-10-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/15/node-file-system/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/node-file-system/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-该模块是核心模块，需要使用 require 导入后使用
-
-底层方法
-fs.open(path, flags, [mode], callback):异步版的文件读取
-path: 要打开的文件的路径
-flags: 打开文件的方式 读/写，12种不同方式？
-mode: 设置文件的模式 前提是这个文件是已存在的，读/写/执行  4/2/1
-callback: 回调
-err : 文件打开失败的错误保存在err里面，如果成功err为null
-fd : 被打开文件的标识，和定时器
-
-
-
-
-fs.openSync(path, flags, [mode]):fs.open() 的同步版，返回值为 fd
-fs.read(fd, buffer, offset, length, position, callbac
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/15/node-file-system/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1118,7 +1111,7 @@ fs.read(fd, buffer, offset, length, position, callbac
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">52</span>
+              <span class="site-state-item-count">53</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1135,7 +1128,7 @@ fs.read(fd, buffer, offset, length, position, callbac
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

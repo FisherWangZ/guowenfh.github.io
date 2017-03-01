@@ -294,6 +294,147 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/15/node-file-system/" itemprop="url">
+                  node 文件系统
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-15T12:12:48+08:00" content="2016-10-15">
+              2016-10-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/node/" itemprop="url" rel="index">
+                    <span itemprop="name">node</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/15/node-file-system/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/node-file-system/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+该模块是核心模块，需要使用 require 导入后使用
+
+底层方法
+fs.open(path, flags, [mode], callback):异步版的文件读取
+path: 要打开的文件的路径
+flags: 打开文件的方式 读/写，12种不同方式？
+mode: 设置文件的模式 前提是这个文件是已存在的，读/写/执行  4/2/1
+callback: 回调
+err : 文件打开失败的错误保存在err里面，如果成功err为null
+fd : 被打开文件的标识，和定时器
+
+
+
+
+fs.openSync(path, flags, [mode]):fs.open() 的同步版，返回值为 fd
+fs.read(fd, buffer, offset, length, position, callbac
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/15/node-file-system/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/15/node-global-object/" itemprop="url">
                   process 对象与 Buffer 类
                 </a>
@@ -957,176 +1098,6 @@ func.call(o);
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/31/javascriptFunctionBasic/" itemprop="url">
-                  JavaScript函数学习笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-31T20:03:45+08:00" content="2016-07-31">
-              2016-07-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JS深度学习/" itemprop="url" rel="index">
-                    <span itemprop="name">JS深度学习</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/31/javascriptFunctionBasic/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/31/javascriptFunctionBasic/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          函数
-函数式一块javascript代码，定义一次，可以被多次调用与执行，JS中的函数也是对象，所以JS函数可以像其他对象那样操作，和传递，所以也称函数对象函数的参数列表相当于函数的人口，return相当于函数的出口，函数本身就是一种数据类型，函数是可以嵌套定义的。
-
-函数基础####　定义函数的方式
-有三种方式可以定义函数。并且有着如下区别：
-
-
-
-定义方式：
-function 语句（函数声明）
-Function 构造函数
-函数表达式
-
-
-
-
-解析时机：
-优先解析(声明前置)
-顺序解析
-顺序解析(声明提前，赋值不提前)
-
-
-允许匿名：
-有名
-匿名
-匿名
-
-
-形式：
-句子
-表达式
-表达式
-
-
-性质：
-静态
-动态
-静态
-
-
-作用域：
-具有函数的作用域
-顶级函数(顶级作用域)
-具有函数作用域
-
-
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/31/javascriptFunctionBasic/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1172,7 +1143,7 @@ Function 构造函数
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">52</span>
+              <span class="site-state-item-count">53</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1189,7 +1160,7 @@ Function 构造函数
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
