@@ -100,14 +100,14 @@
 <meta property="og:description" content="最近学习框架，选择了vue，然后接触到了vue中的单文件组件，官方推荐使用 Webpack + vue-loader构建这些单文件 Vue 组件，于是就开始了webpack的入坑之旅。因为原来没有用过任何的构建工具与模块化工具，所以本系列会十分的基础。并且可能有很多不正确的地方，希望大家谅解，并指出错误帮助改进。谢谢！
 
 这是一系列文章，此系列所有的练习都存在了我的github仓库中vue-we">
-<meta property="og:image" content="http://guowenfh.github.io/images/vue-webpack/00-webpack-base.png">
-<meta property="og:updated_time" content="2017-04-23T04:12:44.000Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewippstssj20go083wg6.jpg">
+<meta property="og:updated_time" content="2017-04-23T04:51:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack入坑之旅（一）不是开始的开始">
 <meta name="twitter:description" content="最近学习框架，选择了vue，然后接触到了vue中的单文件组件，官方推荐使用 Webpack + vue-loader构建这些单文件 Vue 组件，于是就开始了webpack的入坑之旅。因为原来没有用过任何的构建工具与模块化工具，所以本系列会十分的基础。并且可能有很多不正确的地方，希望大家谅解，并指出错误帮助改进。谢谢！
 
 这是一系列文章，此系列所有的练习都存在了我的github仓库中vue-we">
-<meta name="twitter:image" content="http://guowenfh.github.io/images/vue-webpack/00-webpack-base.png">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewippstssj20go083wg6.jpg">
 
 
 
@@ -380,20 +380,20 @@
 <li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
 <li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
 <li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a> </li>
+<li><a href="http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
 <li><a href="http://guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
 </ul>
 <h2 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack"></a>什么是webpack</h2><blockquote>
-<p>其实不是特别想写这个东西，但貌似所有的教程都有这个。随便写两句吧。可以直接跳过。 </p>
+<p>其实不是特别想写这个东西，但貌似所有的教程都有这个。随便写两句吧。可以直接跳过。</p>
 </blockquote>
 <p>Webpack 是德国开发者 Tobias Koppers 开发的模块加载器兼打包工具，在webpack中，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。因此, Webpack 当中 js 可以引用 css, css 中可以嵌入图片 dataUrl。<br>对应各种不同文件类型的资源, Webpack 有对应的模块 loader比如vue用的是<code>vue-loader</code>当然这是后话，在后面我们再来说。</p>
-<p>请看下图：<br><img src="/images/vue-webpack/00-webpack-base.png" alt="webpack"></p>
+<p>请看下图：<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fewippstssj20go083wg6.jpg" alt="webpack"></p>
 <p>官网查看：<a href="https://github.com/webpack/webpack" target="_blank" rel="external">https://github.com/webpack/webpack</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>前提：因为webpack是一个基于node的项目，所以首先需要确保你的电脑里面已经安装了<code>node.js</code>，以及<code>npm</code>。在这里我使用的版本是：<code>node：v5.8.0  ，npm：3.7.3</code>,若是版本问题，请更新到最新版。<br>若是有出现npm安装过慢的情况，可以使用<a href="https://github.com/Pana/nrm" target="_blank" rel="external">nrm</a>这个项目来进行npm源地址的切换。</p>
 <p>首先我们直接进行全局的安装，运行如下命令：<code>npm install webpack -g</code>，可能需要一点时间。</p>
-<p>安装成功后，在命令行输入<code>webpack -h</code>即可查看当前安装的版本信息。以及可以使用的指令。   </p>
+<p>安装成功后，在命令行输入<code>webpack -h</code>即可查看当前安装的版本信息。以及可以使用的指令。</p>
 <p>当然，我们都应该将webapck安装到当前的项目依赖中，此时就可以使用项目的本这样就可以使用项目本地版本的 Webpack。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 确保已经进入项目目录</span></div><div class="line"><span class="comment"># 确定已经有 package.json，没有就通过</span></div><div class="line">npm init </div><div class="line"><span class="comment"># 创建，直接一路回车就好，后面再来详细说里面的内容。</span></div><div class="line"><span class="comment"># 安装 webpack 依赖</span></div><div class="line"></div><div class="line">npm install webpack --save-dev</div><div class="line"><span class="comment"># 简单的写法：-_-,缩写形式 </span></div><div class="line">npm i webpack -D</div><div class="line"><span class="comment"># –save：模块名将被添加到dependencies，可以简化为参数-S。</span></div><div class="line"><span class="comment"># –save-dev: 模块名将被添加到devDependencies，可以简化为参数-D。</span></div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 确保已经进入项目目录</span></div><div class="line"><span class="comment"># 确定已经有 package.json，没有就通过</span></div><div class="line">npm init</div><div class="line"><span class="comment"># 创建，直接一路回车就好，后面再来详细说里面的内容。</span></div><div class="line"><span class="comment"># 安装 webpack 依赖</span></div><div class="line"></div><div class="line">npm install webpack --save-dev</div><div class="line"><span class="comment"># 简单的写法：-_-,缩写形式</span></div><div class="line">npm i webpack -D</div><div class="line"><span class="comment"># –save：模块名将被添加到dependencies，可以简化为参数-S。</span></div><div class="line"><span class="comment"># –save-dev: 模块名将被添加到devDependencies，可以简化为参数-D。</span></div></pre></td></tr></table></figure>
 <p>安装好之后我们的<code>package.json</code>的目录应该是这样的：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"first-demo"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">"this is my first-demo"</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"author"</span>: <span class="string">"guowenfh"</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"MIT"</span>,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;&#125;,</div><div class="line">  <span class="attr">"devDependencies"</span>: &#123;</div><div class="line">    <span class="attr">"webpack"</span>: <span class="string">"^1.12.14"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>既然环境都已经安装好了，那么我们就开始来用webpack进行我们的第一个打包运行程序吧！</p>
 <p>首先创建一个静态页面 <code>index.html</code> 和一个 JS 入口文件 <code>entry.js</code>,（这里你想用什么名字都可以，只需要在打包的时候读取文件为该名字就好，不过，到时候就知道这个名字的含义啦！）：</p>
