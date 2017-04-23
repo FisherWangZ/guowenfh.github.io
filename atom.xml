@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guowenfh.github.io/"/>
-  <updated>2017-04-22T08:02:24.000Z</updated>
+  <updated>2017-04-23T04:12:44.000Z</updated>
   <id>http://guowenfh.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://guowenfh.github.io/2017/04/21/2017/html5-label-category/"/>
     <id>http://guowenfh.github.io/2017/04/21/2017/html5-label-category/</id>
     <published>2017-04-21T15:45:12.000Z</published>
-    <updated>2017-04-22T08:02:24.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>文章是很早之前的笔记，做了一些属性上的补充，现发布到博客中来</p>
@@ -273,7 +273,7 @@
     <link href="http://guowenfh.github.io/2017/03/01/2017/es6-base-features-note/"/>
     <id>http://guowenfh.github.io/2017/03/01/2017/es6-base-features-note/</id>
     <published>2017-03-01T15:26:07.000Z</published>
-    <updated>2017-03-10T07:40:53.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="变量定义的新方式：let-const"><a href="#变量定义的新方式：let-const" class="headerlink" title="变量定义的新方式：let/ const"></a>变量定义的新方式：<code>let</code>/ <code>const</code></h2><p><strong><code>let</code> 特性：</strong></p>
 <ol>
@@ -352,7 +352,7 @@
     <link href="http://guowenfh.github.io/2017/02/05/2017/es6-react-life-cycle/"/>
     <id>http://guowenfh.github.io/2017/02/05/2017/es6-react-life-cycle/</id>
     <published>2017-02-05T08:44:07.000Z</published>
-    <updated>2017-03-01T15:28:04.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>如题。<br>一张图学习 ES6 中的 React 生命周期与流程。<br><img src="http://ww1.sinaimg.cn/large/82d12951gy1fcfn6l85jfj20z1152n23" alt="ES6中的React生命周期与流程"></p>
 ]]></content>
@@ -379,7 +379,7 @@
     <link href="http://guowenfh.github.io/2016/12/31/annual-report-2016/"/>
     <id>http://guowenfh.github.io/2016/12/31/annual-report-2016/</id>
     <published>2016-12-31T15:22:39.000Z</published>
-    <updated>2016-12-31T15:28:37.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>又是一年结束，明天就是2017了，这一年做了很多事：实习、毕业、工作。广州、丽江、重庆、北京、长沙、杭州、走了5个城市。开心、懊恼、苦涩各种心境。从一个编程的门外汉真正成为了一个初级前端开发工程师。也算是人生又一个新的起点吧。</p>
 <h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>先说说博客，从第一篇博客开始到现在一年零一个月了。一共 50 篇，博客总字数为：338202，产量不算高。不过值得高兴的是一年下来总流量量有 <code>15W</code>，应该还算不错吧。不仅是对自己学习的一个记录，应该也帮助到了不少人。终于把域名买了 <a href="http://blog.guowenfh.com" target="_blank" rel="external">blog.guowenfh.com</a></p>
@@ -418,7 +418,7 @@
     <link href="http://guowenfh.github.io/2016/11/27/selfControlWorks/"/>
     <id>http://guowenfh.github.io/2016/11/27/selfControlWorks/</id>
     <published>2016-11-26T16:13:13.000Z</published>
-    <updated>2016-11-27T15:35:24.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第一周：我要做，我不要，我想要：什么是意志力？为什么意志力至关重要？"><a href="#第一周：我要做，我不要，我想要：什么是意志力？为什么意志力至关重要？" class="headerlink" title="第一周：我要做，我不要，我想要：什么是意志力？为什么意志力至关重要？"></a>第一周：我要做，我不要，我想要：什么是意志力？为什么意志力至关重要？</h2><p><strong>意志力第一法则：认识你自己</strong></p>
 <p>当我们做一件事的时候，我们能意识到自己在做什么，也知道我们为什么这样做。<br>但愿我们还能知道，在做这件事情之前我们需要做些什么，这样我们就会三思而后行。</p>
@@ -613,7 +613,7 @@
     <link href="http://guowenfh.github.io/2016/10/30/thoughtReport-2016-10-30/"/>
     <id>http://guowenfh.github.io/2016/10/30/thoughtReport-2016-10-30/</id>
     <published>2016-10-30T14:40:04.000Z</published>
-    <updated>2016-11-23T05:54:02.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="引子："><a href="#引子：" class="headerlink" title="引子："></a>引子：</h2><p>和一个朋友聊天，说到为什么一直没谈恋爱。然后了解到她不想找同龄的男生，因为同龄的男生大多数都不够成熟，她不想又做恋人又做妈妈，教一个小男孩怎么成熟怎样长大。这样太累，也走不远。</p>
 <p>如遭雷击，然后想起来一本小说里有一个类似的对话：</p>
@@ -649,7 +649,7 @@
     <link href="http://guowenfh.github.io/2016/10/15/node-http/"/>
     <id>http://guowenfh.github.io/2016/10/15/node-http/</id>
     <published>2016-10-15T04:38:52.000Z</published>
-    <updated>2016-11-26T16:17:06.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>一个网站的加载流程粗略的流程大概如下：</p>
 <ol>
@@ -733,7 +733,7 @@
     <link href="http://guowenfh.github.io/2016/10/15/node-file-system/"/>
     <id>http://guowenfh.github.io/2016/10/15/node-file-system/</id>
     <published>2016-10-15T04:12:48.000Z</published>
-    <updated>2016-10-15T04:43:42.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该模块是核心模块，需要使用 require 导入后使用</p>
@@ -864,7 +864,7 @@
     <link href="http://guowenfh.github.io/2016/10/15/node-global-object/"/>
     <id>http://guowenfh.github.io/2016/10/15/node-global-object/</id>
     <published>2016-10-15T03:40:29.000Z</published>
-    <updated>2016-10-15T04:15:33.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>在上一篇博客中，我们一起对于 node 的模块机制有了一点点的了解，当时我们就知道了在 node 中的全局对象是 <code>global</code> 而不是浏览器中的 <code>window</code> 它们有一部分属性方法是相同的，<br>比如：<code>clearInterval</code> / <code>clearTimeout</code> / <code>setInterval</code> / <code>setTimeout</code> / <code>console</code>。他们的用法和在浏览器中的用法是一样的，接下来我们就来看看那些在 node 中所特有全局属性和方法。</p>
@@ -986,7 +986,7 @@
     <link href="http://guowenfh.github.io/2016/10/15/node-module-system/"/>
     <id>http://guowenfh.github.io/2016/10/15/node-module-system/</id>
     <published>2016-10-15T03:18:41.000Z</published>
-    <updated>2016-10-15T04:15:25.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>什么是模块?</p>
@@ -1060,7 +1060,7 @@
     <link href="http://guowenfh.github.io/2016/09/29/eslint-config-npmbace/"/>
     <id>http://guowenfh.github.io/2016/09/29/eslint-config-npmbace/</id>
     <published>2016-09-28T16:32:14.000Z</published>
-    <updated>2016-09-28T16:36:24.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文地址：<a href="http://guowenfh.github.io/2016/09/29/eslint-config-npmbace/">http://guowenfh.github.io/2016/08/07/eslint-config-npmbace/</a></p>
 <blockquote>
@@ -1138,7 +1138,7 @@
     <link href="http://guowenfh.github.io/2016/08/07/ESLint-Rules/"/>
     <id>http://guowenfh.github.io/2016/08/07/ESLint-Rules/</id>
     <published>2016-08-07T02:04:04.000Z</published>
-    <updated>2016-09-11T08:24:40.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>因为前几天发现 CSDN上有直接把我文章 复制过去然后标原创的情况，以后会统一在博客头部加入原文链接~</p>
@@ -1208,7 +1208,7 @@
     <link href="http://guowenfh.github.io/2016/08/03/javascript-this-closure/"/>
     <id>http://guowenfh.github.io/2016/08/03/javascript-this-closure/</id>
     <published>2016-08-02T16:30:29.000Z</published>
-    <updated>2016-09-11T08:24:40.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="理解-Javascript中的this"><a href="#理解-Javascript中的this" class="headerlink" title="理解 Javascript中的this"></a>理解 <code>Javascript</code>中的<code>this</code></h3><p>基于不同的调用方式this的指向也会有所不同，调用方式大致有如下几种：</p>
 <table>
@@ -1308,7 +1308,7 @@
     <link href="http://guowenfh.github.io/2016/07/31/javascriptFunctionBasic/"/>
     <id>http://guowenfh.github.io/2016/07/31/javascriptFunctionBasic/</id>
     <published>2016-07-31T12:03:45.000Z</published>
-    <updated>2016-09-11T08:24:40.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><blockquote>
 <p>函数式一块javascript代码，定义一次，可以被多次调用与执行，JS中的函数也是对象，所以JS函数可以像其他对象那样操作，和传递，所以也称函数对象<br>函数的参数列表相当于函数的人口，<code>return</code>相当于函数的出口，函数本身就是一种数据类型，函数是可以嵌套定义的。</p>
@@ -1429,7 +1429,7 @@
     <link href="http://guowenfh.github.io/2016/07/24/JavaScript-ArrayMethod/"/>
     <id>http://guowenfh.github.io/2016/07/24/JavaScript-ArrayMethod/</id>
     <published>2016-07-24T12:46:15.000Z</published>
-    <updated>2016-09-11T08:24:40.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><blockquote>
 <p>在ECMAScript中数组是非常常用的引用类型了。ECMAScript所定义的数组和其他语言中的数组有着很大的区别。那么首先要说的就是数组也是一种对象。</p>
@@ -1536,7 +1536,7 @@
     <link href="http://guowenfh.github.io/2016/07/08/JavaScript-scopeChain/"/>
     <id>http://guowenfh.github.io/2016/07/08/JavaScript-scopeChain/</id>
     <published>2016-07-07T16:45:23.000Z</published>
-    <updated>2017-03-01T15:46:37.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>无论什么语言中，作用域都是一个十分重要的概念，在JavaScript中也不例外，作用域定义了变量或者函数有权访问的范围，决定了它们各自的行为。要理解JavaScript中的作用域首先就要知道：在<code>let</code>出现之前，JS中变量的作用域只有两种：全局作用域和局部作用域。（本文也只讨论这两种作用域）</p>
@@ -1602,7 +1602,7 @@
     <link href="http://guowenfh.github.io/2016/07/03/thoughtReport-2016-07-03/"/>
     <id>http://guowenfh.github.io/2016/07/03/thoughtReport-2016-07-03/</id>
     <published>2016-07-03T09:14:29.000Z</published>
-    <updated>2016-09-11T08:24:40.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>闲来无事，翻了翻朋友圈，看到自己年初定下的几个小目标，突然想到原来王自如的思想汇报，我觉得自己也应该要反思一下自己，正好写下来做一个沉淀。</p>
@@ -1677,7 +1677,7 @@
     <link href="http://guowenfh.github.io/2016/03/28/vue-webpack-06-router/"/>
     <id>http://guowenfh.github.io/2016/03/28/vue-webpack-06-router/</id>
     <published>2016-03-28T05:57:57.000Z</published>
-    <updated>2016-09-11T08:24:40.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
 <ul>
@@ -1769,7 +1769,7 @@
     <link href="http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/"/>
     <id>http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/</id>
     <published>2016-03-25T03:57:50.000Z</published>
-    <updated>2016-09-11T08:24:40.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
 <ul>
@@ -1834,7 +1834,7 @@
     <link href="http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/"/>
     <id>http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/</id>
     <published>2016-03-24T09:28:34.000Z</published>
-    <updated>2016-09-11T08:24:40.000Z</updated>
+    <updated>2017-04-23T04:12:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
 <ul>

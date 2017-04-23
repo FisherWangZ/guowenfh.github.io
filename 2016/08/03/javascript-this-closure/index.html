@@ -153,7 +153,7 @@ func.call(o);
 现在就来看看这些不同的调用模式，this的指向会有怎么样的区别：
 构造函数调用">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/82d12951gw1f6emf8rigdj208l07tglm.jpg">
-<meta property="og:updated_time" content="2016-09-11T08:24:40.000Z">
+<meta property="og:updated_time" content="2017-04-23T04:12:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript中this与闭包学习笔记">
 <meta name="twitter:description" content="理解 Javascript中的this基于不同的调用方式this的指向也会有所不同，调用方式大致有如下几种：
@@ -237,7 +237,7 @@ func.call(o);
     (function() {
         var oldUrl = window.location.href;
         if(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i.test(oldUrl)){
-          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'http://blog.guowenfh.com');
+          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'//blog.guowenfh.com');
         }
         // if( /blog.guowenfh.com/i.test(window.location.href)  && localStorage.getItem('click-top-inform')!=='click'){
         //   var wrap = document.body;

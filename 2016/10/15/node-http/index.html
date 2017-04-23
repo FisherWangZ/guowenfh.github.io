@@ -110,7 +110,7 @@
 浏览器接收服务器返回的数据，并根据接收到的进行分析和处理
 
 最简单的web服务器我们需要搭建一个 http 的服务器，用于处理用户发送的 http 请求，在 node 中有 http 核心模块可以在很简单的几句话就帮我">
-<meta property="og:updated_time" content="2016-11-26T16:17:06.000Z">
+<meta property="og:updated_time" content="2017-04-23T04:12:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http 模块">
 <meta name="twitter:description" content="一个网站的加载流程粗略的流程大概如下：
@@ -172,7 +172,7 @@
     (function() {
         var oldUrl = window.location.href;
         if(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i.test(oldUrl)){
-          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'http://blog.guowenfh.com');
+          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'//blog.guowenfh.com');
         }
         // if( /blog.guowenfh.com/i.test(window.location.href)  && localStorage.getItem('click-top-inform')!=='click'){
         //   var wrap = document.body;

@@ -100,7 +100,7 @@
 <meta property="og:description" content="无论什么语言中，作用域都是一个十分重要的概念，在JavaScript中也不例外，作用域定义了变量或者函数有权访问的范围，决定了它们各自的行为。要理解JavaScript中的作用域首先就要知道：在let出现之前，JS中变量的作用域只有两种：全局作用域和局部作用域。（本文也只讨论这两种作用域）
 
 全局作用域全局作用域是最外围的一个执行环境，可以在代码的任何地方访问到。在浏览器中，我们的全局作用域就是">
-<meta property="og:updated_time" content="2017-03-01T15:46:37.000Z">
+<meta property="og:updated_time" content="2017-04-23T04:12:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript作用域学习笔记">
 <meta name="twitter:description" content="无论什么语言中，作用域都是一个十分重要的概念，在JavaScript中也不例外，作用域定义了变量或者函数有权访问的范围，决定了它们各自的行为。要理解JavaScript中的作用域首先就要知道：在let出现之前，JS中变量的作用域只有两种：全局作用域和局部作用域。（本文也只讨论这两种作用域）
@@ -157,7 +157,7 @@
     (function() {
         var oldUrl = window.location.href;
         if(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i.test(oldUrl)){
-          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'http://blog.guowenfh.com');
+          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'//blog.guowenfh.com');
         }
         // if( /blog.guowenfh.com/i.test(window.location.href)  && localStorage.getItem('click-top-inform')!=='click'){
         //   var wrap = document.body;
