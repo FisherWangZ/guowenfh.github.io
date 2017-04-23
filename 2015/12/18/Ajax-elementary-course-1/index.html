@@ -126,9 +126,9 @@ Web服务器- 关闭TCP连接
 
 
 A">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1feuqytyw96j20ez06fgn0.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1feuqytjxc1j20et076wfn.jpg">
-<meta property="og:updated_time" content="2017-04-23T04:12:44.000Z">
+<meta property="og:image" content="http://guowenfh.github.io//ws1.sinaimg.cn/large/82d12951gy1feuqytyw96j20ez06fgn0.jpg">
+<meta property="og:image" content="http://guowenfh.github.io//ws1.sinaimg.cn/large/82d12951gy1feuqytjxc1j20et076wfn.jpg">
+<meta property="og:updated_time" content="2017-04-23T12:14:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ajax入门（一）从0开始到一次成功的GET请求">
 <meta name="twitter:description" content="续作Ajax入门（二）Ajax函数封装传统表单在提交后整个页面都刷新
@@ -147,7 +147,7 @@ Web服务器- 关闭TCP连接
 
 
 A">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82d12951gy1feuqytyw96j20ez06fgn0.jpg">
+<meta name="twitter:image" content="http://guowenfh.github.io//ws1.sinaimg.cn/large/82d12951gy1feuqytyw96j20ez06fgn0.jpg">
 
 
 
@@ -412,7 +412,7 @@ A">
 
       
         <blockquote>
-<p>续作<a href="http://guowenfh.github.io/2015/12/18/Ajax-elementary-course-2-fn/">Ajax入门（二）Ajax函数封装</a><br>传统表单在提交后整个页面都刷新</p>
+<p>续作<a href="//guowenfh.github.io/2015/12/18/Ajax-elementary-course-2-fn/">Ajax入门（二）Ajax函数封装</a><br>传统表单在提交后整个页面都刷新</p>
 </blockquote>
 <h2 id="什么是服务器"><a href="#什么是服务器" class="headerlink" title="什么是服务器"></a>什么是服务器</h2><h3 id="网页浏览过程分析"><a href="#网页浏览过程分析" class="headerlink" title="网页浏览过程分析"></a>网页浏览过程分析</h3><p>一个完整的<strong>HTTP请求</strong>过程,通常有下面7个步骤</p>
 <ol>
@@ -457,7 +457,7 @@ A">
 </ol>
 </li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1feuqytyw96j20ez06fgn0.jpg" alt="HTTP请求"></p>
+<p><img src="//ws1.sinaimg.cn/large/82d12951gy1feuqytyw96j20ez06fgn0.jpg" alt="HTTP请求"></p>
 <h3 id="HTTP响应"><a href="#HTTP响应" class="headerlink" title="HTTP响应"></a>HTTP响应</h3><ul>
 <li>一个<strong>HTTP响应</strong>一般由三部分组成:<ol>
 <li>一个<strong>数字</strong>和<strong>文字</strong>组成的状态码,用来显示请求是成功还是失败</li>
@@ -466,7 +466,7 @@ A">
 </ol>
 </li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1feuqytjxc1j20et076wfn.jpg" alt="HTTP响应"></p>
+<p><img src="//ws1.sinaimg.cn/large/82d12951gy1feuqytjxc1j20et076wfn.jpg" alt="HTTP响应"></p>
 <h3 id="HTTP请求方式"><a href="#HTTP请求方式" class="headerlink" title="HTTP请求方式"></a>HTTP请求方式</h3><table>
 <thead>
 <tr>
@@ -530,7 +530,7 @@ A">
 </tr>
 </tbody>
 </table>
-<h2 id="编写Ajax"><a href="#编写Ajax" class="headerlink" title="编写Ajax"></a>编写Ajax</h2><p><strong>类比打电话理解Ajax编写步骤</strong> </p>
+<h2 id="编写Ajax"><a href="#编写Ajax" class="headerlink" title="编写Ajax"></a>编写Ajax</h2><p><strong>类比打电话理解Ajax编写步骤</strong></p>
 <table>
 <thead>
 <tr>
@@ -559,7 +559,7 @@ A">
 </table>
 <h3 id="1-创建Ajax对象"><a href="#1-创建Ajax对象" class="headerlink" title="1.创建Ajax对象"></a>1.创建Ajax对象</h3><ul>
 <li>IE6:<code>ActiveXObject(&quot;Microsoft.XMLHTTP&quot;)</code>;//IE6已死,可以不考虑了</li>
-<li><code>XMLHttpRequest()</code>; </li>
+<li><code>XMLHttpRequest()</code>;</li>
 </ul>
 <p>例:<code>var request = new XMLHttpRequest();</code></p>
 <h3 id="2-连接服务器"><a href="#2-连接服务器" class="headerlink" title="2.连接服务器"></a>2.连接服务器</h3><ul>
@@ -662,12 +662,12 @@ A">
 <li>缓存,阻止缓存,(使用时间对象添加)</li>
 </ul>
 <h3 id="动态数据-请求JS-或JSON-文件"><a href="#动态数据-请求JS-或JSON-文件" class="headerlink" title="动态数据:请求JS(或JSON)文件"></a>动态数据:请求JS(或JSON)文件</h3><blockquote>
-<p>注：<strong>并不推荐使用<code>eval</code>，并不推荐使用<code>eval</code>，并不推荐使用<code>eval</code></strong>。因为eval解析数据时会有一系列问题出现。这里是因为只是学习就随意点了。<br>在需要解析请求数据时，推荐使用JSON的方法<code>JSON.parse()</code>可以将一个 JSON 字符串解析成为一个 JavaScript 值。参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" rel="external">MDN-JSON</a></p>
+<p>注：<strong>并不推荐使用<code>eval</code>，并不推荐使用<code>eval</code>，并不推荐使用<code>eval</code></strong>。因为eval解析数据时会有一系列问题出现。这里是因为只是学习就随意点了。<br>在需要解析请求数据时，推荐使用JSON的方法<code>JSON.parse()</code>可以将一个 JSON 字符串解析成为一个 JavaScript 值。参考<a href="//developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON">MDN-JSON</a></p>
 </blockquote>
 <ul>
-<li><code>eval</code>的使用<br>例: </li>
+<li><code>eval</code>的使用<br>例:</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"54-8*6+4"</span>;</div><div class="line">alert(<span class="built_in">eval</span>(str)); <span class="comment">//10;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str1 = <span class="string">"[1,2,3]"</span>;   </div><div class="line"><span class="keyword">var</span> arr = <span class="built_in">eval</span>(str1);</div><div class="line">alert(arr[<span class="number">1</span>]);<span class="comment">//2</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str3 = <span class="string">"function show()&#123;alert('abc');&#125;"</span>;</div><div class="line"><span class="built_in">eval</span>(str3);</div><div class="line">show() <span class="comment">//abc</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"54-8*6+4"</span>;</div><div class="line">alert(<span class="built_in">eval</span>(str)); <span class="comment">//10;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str1 = <span class="string">"[1,2,3]"</span>;</div><div class="line"><span class="keyword">var</span> arr = <span class="built_in">eval</span>(str1);</div><div class="line">alert(arr[<span class="number">1</span>]);<span class="comment">//2</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str3 = <span class="string">"function show()&#123;alert('abc');&#125;"</span>;</div><div class="line"><span class="built_in">eval</span>(str3);</div><div class="line">show() <span class="comment">//abc</span></div></pre></td></tr></table></figure>
 <p><strong>一次成功的get请求</strong></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//已经引入get函数</span></div><div class="line"><span class="comment">//数据文件放在同级目录下就行了。</span></div><div class="line">get(<span class="string">"json.js"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">str</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> arr = <span class="built_in">eval</span>(str);</div><div class="line">    alert(arr[<span class="number">0</span>].a);</div><div class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="string">"服务器请求失败!"</span>);</div><div class="line">&#125;);</div><div class="line"><span class="comment">//json.js存放的文件如下</span></div><div class="line"><span class="comment">/*</span></div><div class="line">    [&#123;</div><div class="line">        a: 12,</div><div class="line">        b: 5</div><div class="line">    &#125;, &#123;</div><div class="line">        a: 2,</div><div class="line">        b: 56</div><div class="line">    &#125;]</div><div class="line">*/</div><div class="line"><span class="comment">//服务器响应成功时,将返回12.</span></div></pre></td></tr></table></figure>
 <ul>

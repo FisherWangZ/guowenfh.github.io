@@ -108,7 +108,7 @@ webpack入坑之旅（二）loader入门
 webpack入坑之旅（三）webpack.config入门
 webpack入坑之旅（四）扬帆起航
 webpack入坑之旅（五）加载vue">
-<meta property="og:updated_time" content="2017-04-23T04:12:44.000Z">
+<meta property="og:updated_time" content="2017-04-23T12:14:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack入坑之旅（五）加载vue单文件组件">
 <meta name="twitter:description" content="这是一系列文章，此系列所有的练习都存在了我的github仓库中vue-webpack，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：
@@ -381,14 +381,14 @@ webpack入坑之旅（五）加载vue">
       
 
       
-        <p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
+        <p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="//github.com/guowenfh/vue-webpack">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
 <ul>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a> </li>
-<li><a href="http://guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
+<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
+<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
+<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
+<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
+<li><a href="//guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
+<li><a href="//guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
 </ul>
 <h2 id="需要什么？"><a href="#需要什么？" class="headerlink" title="需要什么？"></a>需要什么？</h2><p>在经过前面的四个练习，相信已经对于<code>webapck</code>有了一定的了解，现在我们就来一个综合案例，进一步加深对于<code>webpack</code>的理解。</p>
 <p>首先我们应该思考要解析<code>.vue</code>类型的文件，需要什么样的东西？应该按照什么样的步骤来？我们应该怎么去搭建这个项目？</p>
@@ -417,7 +417,7 @@ webpack入坑之旅（五）加载vue">
 <p><strong>注意点三：</strong></p>
 <p>注意<code>package.json</code>的loader安装中的<code>&quot;vue-hot-reload-api&quot;: &quot;^1.2.2&quot;</code>。它有可能是导致你不能自动刷新的凶手(我现在都没搞明白到底该安装，还是取消)</p>
 <h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>步骤都走完了，因为在上面的<code>package.json</code>中已经进行了<code>scripts</code>项的配置。运行<code>npm start</code>，打开<code>localhost:8080</code></p>
-<p>可以看到设置的背景色已经出来了,去改变一下背景颜色？data？template？ </p>
+<p>可以看到设置的背景色已经出来了,去改变一下背景颜色？data？template？</p>
 <p>看看浏览器会不会自动刷新？</p>
 <hr>
 <p>如果你按照我的步骤，并且，npm包安装没有错误的话，应该就能成功了。</p>

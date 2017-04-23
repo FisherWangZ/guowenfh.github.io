@@ -120,11 +120,11 @@
 这里直接可以利用原来写过的util.js。所以应该不是特别难。主要考察对字符串的操作，以及正则表达式的使用
 
 任务描述在task0002目录下创建一个task0002_1.html文件，以及一个js目录和">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewio59lnrj20bm089jri.jpg">
-<meta property="og:image" content="https://github.com/baidu-ife/ife/raw/master/2015_spring/task/task0002/img/task0002_sug.png">
-<meta property="og:image" content="https://github.com/baidu-ife/ife/raw/master/2015_spring/task/task0002/img/task0002_drag.png">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewio5ne1oj20jg0bygm0.jpg">
-<meta property="og:updated_time" content="2017-04-23T04:50:19.000Z">
+<meta property="og:image" content="http://guowenfh.github.io//ws1.sinaimg.cn/large/82d12951gy1fewio59lnrj20bm089jri.jpg">
+<meta property="og:image" content="http://guowenfh.github.io//github.com/baidu-ife/ife/raw/master/2015_spring/task/task0002/img/task0002_sug.png">
+<meta property="og:image" content="http://guowenfh.github.io//github.com/baidu-ife/ife/raw/master/2015_spring/task/task0002/img/task0002_drag.png">
+<meta property="og:image" content="http://guowenfh.github.io//ws1.sinaimg.cn/large/82d12951gy1fewio5ne1oj20jg0bygm0.jpg">
+<meta property="og:updated_time" content="2017-04-23T12:14:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="task0002（四）- 练习：数据处理、轮播及交互">
 <meta name="twitter:description" content="包括5部分：
@@ -140,7 +140,7 @@
 这里直接可以利用原来写过的util.js。所以应该不是特别难。主要考察对字符串的操作，以及正则表达式的使用
 
 任务描述在task0002目录下创建一个task0002_1.html文件，以及一个js目录和">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewio59lnrj20bm089jri.jpg">
+<meta name="twitter:image" content="http://guowenfh.github.io//ws1.sinaimg.cn/large/82d12951gy1fewio59lnrj20bm089jri.jpg">
 
 
 
@@ -412,7 +412,7 @@
 <li>小练习4：输入提示框</li>
 <li>小练习5：界面拖拽交互</li>
 </ul>
-<p><a href="https://github.com/guowenfh/IFE/tree/master/task0002" target="_blank" rel="external">源码地址</a><br><a href="http://guowenfh.github.io/IFE/task0002/index.html">task0002 在线Demo</a></p>
+<p><a href="//github.com/guowenfh/IFE/tree/master/task0002">源码地址</a><br><a href="//guowenfh.github.io/IFE/task0002/index.html">task0002 在线Demo</a></p>
 <h2 id="小练习1：处理用户输入"><a href="#小练习1：处理用户输入" class="headerlink" title="小练习1：处理用户输入"></a>小练习1：处理用户输入</h2><blockquote>
 <p>这里直接可以利用原来写过的<code>util.js</code>。所以应该不是特别难。主要考察对字符串的操作，以及正则表达式的使用</p>
 </blockquote>
@@ -449,7 +449,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"user_input"</span> <span class="attr">id</span>=<span class="string">"user_input"</span> <span class="attr">cols</span>=<span class="string">"45"</span> <span class="attr">rows</span>=<span class="string">"10"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>处理并输出<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>输入的爱好数量不能超过10个，或什么都不输入<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"user_output"</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>js:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> <span class="title">handle_1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> inp = $(<span class="string">"#user_input"</span>);</div><div class="line">    <span class="keyword">var</span> out = $(<span class="string">"#user_output"</span>);</div><div class="line">    $.click(<span class="string">"#btn"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> value = inp.value.split(<span class="regexp">/\n|\s+|\,|\，|\、|\;|\；/</span>); <span class="comment">//分割成数组。</span></div><div class="line">        <span class="keyword">var</span> unValue = uniqArray(value); <span class="comment">//数组去重</span></div><div class="line">        <span class="keyword">var</span> i = <span class="number">0</span>;</div><div class="line">        <span class="keyword">var</span> len = unValue.length;</div><div class="line">        <span class="keyword">if</span> (len &gt; <span class="number">10</span> || unValue == <span class="string">""</span>) &#123;</div><div class="line">            $(<span class="string">"p"</span>).style.disautoPlay = <span class="string">"block"</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            $(<span class="string">"p"</span>).style.disautoPlay = <span class="string">"none"</span>;</div><div class="line">            <span class="keyword">for</span> (; i &lt; len; i++) &#123;</div><div class="line">                <span class="keyword">var</span> trimValue = trim(unValue[i]); <span class="comment">//对每一项进行去除首尾空格操作</span></div><div class="line">                <span class="built_in">console</span>.log(trimValue);</div><div class="line">                <span class="keyword">if</span> (trimValue !== <span class="string">""</span>) &#123; <span class="comment">//只有在去除首尾空格后不为空的数组才输出。</span></div><div class="line">                    out.innerHTML += <span class="string">"&lt;label&gt;"</span> + <span class="string">"&lt;input type='checkbox'&gt;"</span> + trimValue + <span class="string">"&lt;/label&gt;"</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
-<p>在线演示：<strong><a href="http://guowenfh.github.io/IFE/task0002/task0002_1.html">小练习1：处理兴趣列表</a></strong></p>
+<p>在线演示：<strong><a href="//guowenfh.github.io/IFE/task0002/task0002_1.html">小练习1：处理兴趣列表</a></strong></p>
 <h2 id="小练习2：日期对象的使用"><a href="#小练习2：日期对象的使用" class="headerlink" title="小练习2：日期对象的使用"></a>小练习2：日期对象的使用</h2><h3 id="任务描述-1"><a href="#任务描述-1" class="headerlink" title="任务描述"></a>任务描述</h3><p>在和上一任务同一目录下面创建一个<code>task0002_2.html</code>文件，在<code>js</code>目录中创建<code>task0002_2.js</code>，并在其中编码，实现一个倒计时功能。</p>
 <ul>
 <li>界面首先有一个文本输入框，允许按照特定的格式<code>YYYY-MM-DD</code>输入年月日；</li>
@@ -462,9 +462,9 @@
 <p><code>new Date()</code>。如果没有输入任何参数，则Date的构造器会依据系统设置的当前时间来创建一个Date对象。表示当前系统时间。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//时间对象创建的几种方式。</span></div><div class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"December 17, 1995 03:24:00"</span>);</div><div class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"1995-12-17T03:24:00"</span>);</div><div class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>,<span class="number">11</span>,<span class="number">17</span>);</div><div class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>,<span class="number">11</span>,<span class="number">17</span>,<span class="number">3</span>,<span class="number">24</span>,<span class="number">0</span>);</div></pre></td></tr></table></figure>
 <ul>
-<li>Date对象中处理时间和日期的常用方法：详细内容在<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="external">MDN</a>上</li>
+<li>Date对象中处理时间和日期的常用方法：详细内容在<a href="//developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">MDN</a>上</li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fewio59lnrj20bm089jri.jpg" alt="日期对象常用方法"></p>
+<p><img src="//ws1.sinaimg.cn/large/82d12951gy1fewio59lnrj20bm089jri.jpg" alt="日期对象常用方法"></p>
 <h4 id="正式开始："><a href="#正式开始：" class="headerlink" title="正式开始："></a>正式开始：</h4><ol>
 <li>创建时间处理函数，使用正则表达式，处理输入的值，<code>value.match(/(^\d{4})-(\d{2})-(\d{2}$)/);</code>用到了match方法和正则的分组，在我写的正则博客里应该有过详细介绍了。这里也不过的说明了。</li>
 <li>使用目标时间的<code>getTime()</code>毫秒数减去得到当前的毫秒数，得到相差的毫秒数。处理它：<strong>（注意毫秒的问题）</strong><ul>
@@ -480,7 +480,7 @@
 </li>
 <li>给按钮添加点击事件，在点击时，调用刚刚编写的的时间处理函数。</li>
 </ol>
-<p>在线演示：<strong><a href="http://guowenfh.github.io/IFE/task0002/task0002_2.html">小练习2：倒计时</a></strong></p>
+<p>在线演示：<strong><a href="//guowenfh.github.io/IFE/task0002/task0002_2.html">小练习2：倒计时</a></strong></p>
 <h2 id="小练习3：轮播图组件"><a href="#小练习3：轮播图组件" class="headerlink" title="小练习3：轮播图组件"></a>小练习3：轮播图组件</h2><h3 id="任务描述-2"><a href="#任务描述-2" class="headerlink" title="任务描述"></a>任务描述</h3><p>在和上一任务同一目录下面创建一个<code>task0002_3.html</code>文件，在<code>js</code>目录中创建<code>task0002_3.js</code>，并在其中编码，实现一个轮播图的功能。</p>
 <ul>
 <li>图片数量及URL均在HTML中写好</li>
@@ -490,7 +490,7 @@
 </ul>
 <p>效果示例：<a href="http://echarts.baidu.com/" target="_blank" rel="external">http://echarts.baidu.com/</a> 上面的轮播图（不需要做左右两个箭头）</p>
 <h3 id="实现思路-1"><a href="#实现思路-1" class="headerlink" title="实现思路:"></a>实现思路:</h3><blockquote>
-<p>主要是对于考察对于定时器，以及事件绑定的处理，以及动画效果，为此我专门写了一篇博客《<a href="http://guowenfh.github.io/2015/12/21/JS-Animated-Frames/">JS完美运动框架的封装过程</a>》。 这里就直接使用里面封装好的函数了。</p>
+<p>主要是对于考察对于定时器，以及事件绑定的处理，以及动画效果，为此我专门写了一篇博客《<a href="//guowenfh.github.io/2015/12/21/JS-Animated-Frames/">JS完美运动框架的封装过程</a>》。 这里就直接使用里面封装好的函数了。</p>
 <p>本来都要放弃组件的编写了，只想按照常规方法来写个轮播图就好，但是在先把小练习4完成的情况下，就发现了一种新方法，可以帮助我完成这个任务（强烈建议先看小练习四！）使用<code>nextElementNode</code>,图片向左切换。（不涉及任何css，我假设css都会了，也没有用到特别难css属性）</p>
 </blockquote>
 <p><strong>该轮播图有依赖函数。主要使用到以下函数：</strong></p>
@@ -604,8 +604,8 @@
 </li>
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">delegateEvent(createSpan, <span class="string">"span"</span>, <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> heightLi = $(<span class="string">".Slideshow-nav .active"</span>); <span class="comment">//高亮的待选li</span></div><div class="line">    <span class="keyword">var</span> leftIndex = !getIndex(<span class="keyword">this</span>); <span class="comment">//点击左时为true，点击又为false</span></div><div class="line">    <span class="comment">//移动的目标值，默认正向</span></div><div class="line">    play(leftIndex);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>至此，我们的轮播图组件就完成了！ 需要配合CSS使用。 通过这次封装，收益良多，感兴趣的话可以看看<a href="https://github.com/guowenfh/IFE/tree/master/task0002" target="_blank" rel="external">源码</a></p>
-<p>在线演示：<strong><a href="http://guowenfh.github.io/IFE/task0002/task0002_3.html">小练习3：图片轮播组件</a></strong></p>
+<p>至此，我们的轮播图组件就完成了！ 需要配合CSS使用。 通过这次封装，收益良多，感兴趣的话可以看看<a href="//github.com/guowenfh/IFE/tree/master/task0002">源码</a></p>
+<p>在线演示：<strong><a href="//guowenfh.github.io/IFE/task0002/task0002_3.html">小练习3：图片轮播组件</a></strong></p>
 <h2 id="小练习4：输入提示框"><a href="#小练习4：输入提示框" class="headerlink" title="小练习4：输入提示框"></a>小练习4：输入提示框</h2><h3 id="任务描述-3"><a href="#任务描述-3" class="headerlink" title="任务描述"></a>任务描述</h3><p>在和上一任务同一目录下面创建一个<code>task0002_4.html</code>文件，在<code>js</code>目录中创建<code>task0002_4.js</code>，并在其中编码，实现一个类似百度搜索框的输入提示的功能。</p>
 <p>要求如下：</p>
 <ul>
@@ -623,7 +623,7 @@
 <li>自己搭建一个后端Server，使用Ajax来获取提示数据</li>
 </ul>
 <p>示例：</p>
-<p><img src="https://github.com/baidu-ife/ife/raw/master/2015_spring/task/task0002/img/task0002_sug.png" alt="示例"></p>
+<p><img src="//github.com/baidu-ife/ife/raw/master/2015_spring/task/task0002/img/task0002_sug.png" alt="示例"></p>
 <h3 id="实现思路-2"><a href="#实现思路-2" class="headerlink" title="实现思路"></a>实现思路</h3><p>这里我并没有一开始就直接进行数据获取的部分，而是进行了任务分解，如下：</p>
 <h4 id="第一阶段-1"><a href="#第一阶段-1" class="headerlink" title="第一阶段"></a>第一阶段</h4><ol>
 <li>先在使用写好的<code>ul&gt;li</code>标签下，。添加3个事件<code>mouseover</code>、<code>mouseout</code>、<code>click</code>。实现点击li使其值变成输入框内的值。（直接使用事件代理）</li>
@@ -657,7 +657,7 @@
 <li>因为是使用的事件代理，直接对<code>ul</code>添加事件，所以需要修改的部分不是很多。</li>
 <li><code>click</code>和<code>enter</code>部分获取的值，因为<code>span</code>标签的存在，需要使用正则进行处理，输出删除<code>span</code>后的值。</li>
 </ul>
-<p>在线演示：<strong><a href="http://guowenfh.github.io/IFE/task0002/task0002_4.html">小练习4：输入框即时提示</a></strong></p>
+<p>在线演示：<strong><a href="//guowenfh.github.io/IFE/task0002/task0002_4.html">小练习4：输入框即时提示</a></strong></p>
 <h2 id="小练习5：界面拖拽交互"><a href="#小练习5：界面拖拽交互" class="headerlink" title="小练习5：界面拖拽交互"></a>小练习5：界面拖拽交互</h2><ul>
 <li>实现一个可拖拽交互的界面</li>
 <li>如示例图，左右两侧各有一个容器，里面的选项可以通过拖拽来左右移动</li>
@@ -666,7 +666,7 @@
 <li>拖拽到什么位置认为是可以添加到新容器的规则自己定</li>
 <li>注意交互中良好的用户体验和使用引导</li>
 </ul>
-<p><img src="https://github.com/baidu-ife/ife/raw/master/2015_spring/task/task0002/img/task0002_drag.png" alt="示例"></p>
+<p><img src="//github.com/baidu-ife/ife/raw/master/2015_spring/task/task0002/img/task0002_drag.png" alt="示例"></p>
 <h3 id="实现思路："><a href="#实现思路：" class="headerlink" title="实现思路："></a>实现思路：</h3><h4 id="第一步：封装拖拽函数"><a href="#第一步：封装拖拽函数" class="headerlink" title="第一步：封装拖拽函数"></a>第一步：封装拖拽函数</h4><blockquote>
 <p>开一个DEMO页面，实践如下：</p>
 </blockquote>
@@ -703,7 +703,7 @@
 <li>调用函数，把对象从文档流布局，变成绝对定位布局。</li>
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 布局转换函数</div><div class="line"> * @param &#123;HTMLElment&#125; element  HTML对象</div><div class="line"> * @param &#123;string&#125;     childEle 其内需要转换的标签名</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">toPosition</span>(<span class="params">element, childEle</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> eleArr = element.getElementsByTagName(childEle);</div><div class="line">    <span class="keyword">var</span> aPos = [];</div><div class="line">    <span class="comment">//</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = eleArr.length; i &lt; len; i++) &#123;</div><div class="line">        aPos[i] = &#123;</div><div class="line">            <span class="attr">left</span>: eleArr[i].offsetLeft,</div><div class="line">            <span class="attr">top</span>: eleArr[i].offsetTop</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = eleArr.length; i &lt; len; i++) &#123;</div><div class="line">        eleArr[i].style.left = aPos[i].left + <span class="string">"px"</span>;</div><div class="line">        eleArr[i].style.top = aPos[i].top + <span class="string">"px"</span>;</div><div class="line">        eleArr[i].style.position = <span class="string">"absolute"</span>;</div><div class="line">        eleArr[i].style.margin = <span class="string">"0"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>在线演示：<strong><a href="http://guowenfh.github.io/IFE/task0002/task0002_5.html">小练习5：拖拽交互</a></strong></p>
+<p>在线演示：<strong><a href="//guowenfh.github.io/IFE/task0002/task0002_5.html">小练习5：拖拽交互</a></strong></p>
 <h4 id="第三步：实现拖拽"><a href="#第三步：实现拖拽" class="headerlink" title="第三步：实现拖拽"></a>第三步：实现拖拽</h4><blockquote>
 <p>前面我们已经实现了<code>setDrag(element)</code>函数，常规方法就是直使用循环，然后传入<code>element</code>。</p>
 </blockquote>
@@ -711,7 +711,7 @@
 <p>特别简单，只需要对上面写的函数进行一些简单的改装。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">delegateEvent(parentElement, <span class="string">"li"</span>, <span class="string">"mousedown"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</div><div class="line"><span class="comment">//此处是原函数中的内容。</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>现在知道为什么上面的函数会用到this了吧？</strong></p>
-<h4 id="第四步：碰撞检测函数"><a href="#第四步：碰撞检测函数" class="headerlink" title="第四步：碰撞检测函数"></a>第四步：碰撞检测函数</h4><p>先来看张图：<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fewio5ne1oj20jg0bygm0.jpg" alt="碰撞检测示意图"></p>
+<h4 id="第四步：碰撞检测函数"><a href="#第四步：碰撞检测函数" class="headerlink" title="第四步：碰撞检测函数"></a>第四步：碰撞检测函数</h4><p>先来看张图：<br><img src="//ws1.sinaimg.cn/large/82d12951gy1fewio5ne1oj20jg0bygm0.jpg" alt="碰撞检测示意图"></p>
 <p>是不是有瞬间豁然开朗的感觉呢？</p>
 <p>获取相关值，只需要考虑不碰不上的情况就行了！。如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 碰撞检测函数</div><div class="line"> * @param   &#123;object&#125;  obj1 对象1</div><div class="line"> * @param   &#123;object&#125;  obj2 对象2</div><div class="line"> * @returns &#123;boolean&#125; 碰撞时返回true，否则反正false</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hitDetection</span>(<span class="params">obj1, obj2</span>) </span>&#123;</div><div class="line">    <span class="comment">//对象1的相关值</span></div><div class="line">    <span class="keyword">var</span> l1 = obj1.offsetLeft;</div><div class="line">    <span class="keyword">var</span> r1 = obj1.offsetLeft + obj1.offsetWidth;</div><div class="line">    <span class="keyword">var</span> t1 = obj1.offsetTop;</div><div class="line">    <span class="keyword">var</span> b1 = obj1.offsetTop + obj1.offsetHeight;</div><div class="line">    <span class="comment">//对象2的相关值</span></div><div class="line">    <span class="keyword">var</span> l2 = obj2.offsetLeft;</div><div class="line">    <span class="keyword">var</span> r2 = obj2.offsetLeft + obj2.offsetWidth;</div><div class="line">    <span class="keyword">var</span> t2 = obj2.offsetTop;</div><div class="line">    <span class="keyword">var</span> b2 = obj2.offsetTop + obj2.offsetHeight;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (r1 &lt; l1 || l1 &gt; r2 || b1 &lt; t2 || t1 &gt; b2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//没碰上</span></div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>

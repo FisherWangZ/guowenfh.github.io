@@ -112,7 +112,7 @@ flags: 打开文件的方式 读/写，12种不同方式？
 mode: 设置文件的模式 前提是这个文件是已存在的，读/写/执行  4/2/1
 callback: 回调
 err : 文件打开失败的错误保存在e">
-<meta property="og:updated_time" content="2017-04-23T04:12:44.000Z">
+<meta property="og:updated_time" content="2017-04-23T12:11:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node 文件系统">
 <meta name="twitter:description" content="该模块是核心模块，需要使用 require 导入后使用
@@ -480,8 +480,8 @@ err : 文件打开失败的错误保存在e">
 <li><code>fs.unlink(path, callback)</code>:删除一个文件,回调函数（callback）只接受一个参数：可能出现的异常信息.</li>
 <li><code>fs.unlinkSync(path):fs.unlink()</code>: 的同步版本</li>
 <li><code>fs.rename(oldPath, newPath, callback)</code>:异步版本的重命名函数.完成时的回调函数(callback)只接受一个参数:可能出现的异常信息.</li>
-<li><code>fs.renameSync(oldPath, newPath)</code>:fs.rename() 的同步版本 </li>
-<li><code>fs.stat(path, callback)</code>:读取文件的状态信息,callback,接收两个参数： (err, stats) ，其中 stats 是一个 fs.Stats 对象。 </li>
+<li><code>fs.renameSync(oldPath, newPath)</code>:fs.rename() 的同步版本</li>
+<li><code>fs.stat(path, callback)</code>:读取文件的状态信息,callback,接收两个参数： (err, stats) ，其中 stats 是一个 fs.Stats 对象。</li>
 <li><code>fs.statSync(path, callback)</code>:fs.stat() 的同步版本,返回一个 fs.Stats 实例。</li>
 <li><code>fs.watch(filename, [options], [callback])</code>:观察指定路径的改变，filename 路径可以是文件或者目录。<br>回调函数得到两个参数 (event, filename)。其中 event 是 ‘rename’（重命名）或者 ‘change’（改变），而 filename 则是触发事件的文件名。</li>
 </ol>
@@ -492,7 +492,7 @@ err : 文件打开失败的错误保存在e">
 <li><code>fs.readdirSync(path)</code>:同步版的 readdir(). 返回文件名数组，其中不包括 ‘.’ 和 ‘..’ 目录.</li>
 </ol>
 <p>这是对于 node 的文件系统 的学习，仅仅过了一遍api，了解了一下处理流程，理解有限，如果有错误之处，请指出，谢谢！</p>
-<p>本文地址：<a href="https://guowenfh.github.io/2016/10/15/node-file-system/">https://guowenfh.github.io/2016/10/15/node-file-system/</a></p>
+<p>本文地址：<a href="//guowenfh.github.io/2016/10/15/node-file-system/">//guowenfh.github.io/2016/10/15/node-file-system/</a></p>
 
       
     </div>

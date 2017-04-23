@@ -102,7 +102,7 @@
 
 一个手机号码匹配的进化历程
 实例代码依托于:RegExpObj.test(String)，其含义是测试正则表达式与指定字符串是否匹">
-<meta property="og:updated_time" content="2017-04-23T04:12:44.000Z">
+<meta property="og:updated_time" content="2017-04-23T12:14:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式-基础实战篇">
 <meta name="twitter:description" content="在理论基础篇之后呢,应该就对正则表达式有了一些了解.比如说如何去创建一个正则表达式以及其中的匹配规则等等.那么就开始正则表达式的实战吧!建议把所有的实例在console窗口敲一遍.例子中展现的只是一部分,配合《正则表达式-理论基础篇》SF地址、原址使用效果更佳哦!
@@ -373,7 +373,7 @@
 
       
         <blockquote>
-<p>在理论基础篇之后呢,应该就对正则表达式有了一些了解.比如说如何去创建一个正则表达式以及其中的匹配规则等等.那么就开始正则表达式的实战吧!<br>建议把所有的实例在console窗口敲一遍.例子中展现的只是一部分,配合《正则表达式-理论基础篇》<a href="http://segmentfault.com/a/1190000003977848" target="_blank" rel="external">SF地址</a>、<a href="http://guowenfh.github.io/2015/12/01/Regexp-basis/">原址</a>使用效果更佳哦!</p>
+<p>在理论基础篇之后呢,应该就对正则表达式有了一些了解.比如说如何去创建一个正则表达式以及其中的匹配规则等等.那么就开始正则表达式的实战吧!<br>建议把所有的实例在console窗口敲一遍.例子中展现的只是一部分,配合《正则表达式-理论基础篇》<a href="http://segmentfault.com/a/1190000003977848" target="_blank" rel="external">SF地址</a>、<a href="//guowenfh.github.io/2015/12/01/Regexp-basis/">原址</a>使用效果更佳哦!</p>
 </blockquote>
 <h2 id="一个手机号码匹配的进化历程"><a href="#一个手机号码匹配的进化历程" class="headerlink" title="一个手机号码匹配的进化历程"></a>一个手机号码匹配的进化历程</h2><blockquote>
 <p>实例代码依托于:<code>RegExpObj.test(String)</code>，其含义是测试正则表达式与指定字符串是否匹配。成功匹配返回<code>true</code></p>
@@ -388,7 +388,7 @@
 <h3 id="第二阶段-锚点-指定匹配位置"><a href="#第二阶段-锚点-指定匹配位置" class="headerlink" title="第二阶段-锚点:指定匹配位置"></a>第二阶段-锚点:指定匹配位置</h3><ul>
 <li><code>^</code>匹配起始位置</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^http:/.test("http://www.163.com");//true</div><div class="line">/^http:/.test("ahttp://www.163.com");//false</div><div class="line">/^http:/.test("https://www.163.com");//false</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^http:/.test("http://www.163.com");//true</div><div class="line">/^http:/.test("ahttp://www.163.com");//false</div><div class="line">/^http:/.test("//www.163.com");//false</div></pre></td></tr></table></figure>
 <ul>
 <li><code>$</code>匹配结尾位置</li>
 </ul>
@@ -429,7 +429,7 @@
 <li><code>{n,m}</code>:n到m次。<code>?</code>：<code>{0,1}</code></li>
 <li><code>+</code>:<code>{1,}</code>。<code>*</code>:<code>{0,}</code></li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/\d*/.test("abc");//true</div><div class="line">/\d+/.test("abc");//false</div><div class="line">/\d+/.test("1abc");//true</div><div class="line">/^https?:/.test("http://www.163.com");//true</div><div class="line">/^https?:/.test("https://www.163.com");//true</div><div class="line">/^https?:/.test("httpss://www.163.com");//false</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/\d*/.test("abc");//true</div><div class="line">/\d+/.test("abc");//false</div><div class="line">/\d+/.test("1abc");//true</div><div class="line">/^https?:/.test("http://www.163.com");//true</div><div class="line">/^https?:/.test("//www.163.com");//true</div><div class="line">/^https?:/.test("httpss://www.163.com");//false</div></pre></td></tr></table></figure>
 <ul>
 <li>此时我们的匹配手机号码的正则表达式就到了<strong>最后阶段</strong>了</li>
 </ul>

@@ -152,8 +152,8 @@ func.call(o);
 
 现在就来看看这些不同的调用模式，this的指向会有怎么样的区别：
 构造函数调用">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/82d12951gw1f6emf8rigdj208l07tglm.jpg">
-<meta property="og:updated_time" content="2017-04-23T04:12:44.000Z">
+<meta property="og:image" content="http://guowenfh.github.io//ww4.sinaimg.cn/large/82d12951gw1f6emf8rigdj208l07tglm.jpg">
+<meta property="og:updated_time" content="2017-04-23T12:18:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript中this与闭包学习笔记">
 <meta name="twitter:description" content="理解 Javascript中的this基于不同的调用方式this的指向也会有所不同，调用方式大致有如下几种：
@@ -185,7 +185,7 @@ func.call(o);
 
 现在就来看看这些不同的调用模式，this的指向会有怎么样的区别：
 构造函数调用">
-<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/82d12951gw1f6emf8rigdj208l07tglm.jpg">
+<meta name="twitter:image" content="http://guowenfh.github.io//ww4.sinaimg.cn/large/82d12951gw1f6emf8rigdj208l07tglm.jpg">
 
 
 
@@ -486,7 +486,7 @@ func.call(o);
 <p>下面就就可以看一下常见的两个方案：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 取消 handle函数的定义，直接在对象的方法中使用this</span></div><div class="line">double2: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.value = add(<span class="keyword">this</span>.value, <span class="keyword">this</span>.value);</div><div class="line">&#125;,</div><div class="line"><span class="comment">// 使用变量保存外部函数的this。</span></div><div class="line">double3: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">handle</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        that.value = add(that.value, that.value);</div><div class="line">    &#125;</div><div class="line">    handle();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="使用-call-apply与bind-手动改变-this"><a href="#使用-call-apply与bind-手动改变-this" class="headerlink" title="使用 call/apply与bind 手动改变 this"></a>使用 <code>call</code>/<code>apply</code>与<code>bind</code> 手动改变 this</h4><p>先来看下面这样一段代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x, y</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.x = x;</div><div class="line">    <span class="keyword">this</span>.y = y;</div><div class="line">&#125;</div><div class="line">Point.prototype.move = <span class="function"><span class="keyword">function</span>(<span class="params">stepX, stepY</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.x += stepX;</div><div class="line">    <span class="keyword">this</span>.y += stepY;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Point(<span class="number">0</span>, <span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(p);<span class="comment">//&#123;x: 0, y: 0&#125;</span></div><div class="line">p.move(<span class="number">2</span>,<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(p);<span class="comment">//&#123;x: 2, y: 2&#125;</span></div><div class="line"><span class="keyword">var</span> circle = &#123;<span class="attr">x</span>:<span class="number">1</span>,<span class="attr">y</span>:<span class="number">1</span>,<span class="attr">r</span>:<span class="number">1</span>&#125;;</div><div class="line">p.move.apply(circle, [<span class="number">2</span>,<span class="number">1</span>]);</div><div class="line"><span class="built_in">console</span>.info(circle);<span class="comment">//&#123;x: 3, y: 2, r: 1&#125;</span></div></pre></td></tr></table></figure></p>
-<p>我们使用<code>Point</code>构造函数可以创建出一个点，在其原型上有一个<code>move</code>方法可以使这个点坐标移动。<br>之后我们又创建<code>circle</code>对象，有x/y/r属性（把它想象成一个圆），之后我们的需求是：将这个圆的圆心移动，我们就使用了<code>apply</code>来借用<code>move</code>方法，最终将圆移动了位置，最终效果如下图：<br><img src="http://ww4.sinaimg.cn/large/82d12951gw1f6emf8rigdj208l07tglm.jpg" alt="apply使用圆示意图"></p>
+<p>我们使用<code>Point</code>构造函数可以创建出一个点，在其原型上有一个<code>move</code>方法可以使这个点坐标移动。<br>之后我们又创建<code>circle</code>对象，有x/y/r属性（把它想象成一个圆），之后我们的需求是：将这个圆的圆心移动，我们就使用了<code>apply</code>来借用<code>move</code>方法，最终将圆移动了位置，最终效果如下图：<br><img src="//ww4.sinaimg.cn/large/82d12951gw1f6emf8rigdj208l07tglm.jpg" alt="apply使用圆示意图"></p>
 <ul>
 <li><code>function.prototype.apply/call</code></li>
 </ul>

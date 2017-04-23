@@ -100,14 +100,14 @@
 <meta property="og:description" content="最近学习框架，选择了vue，然后接触到了vue中的单文件组件，官方推荐使用 Webpack + vue-loader构建这些单文件 Vue 组件，于是就开始了webpack的入坑之旅。因为原来没有用过任何的构建工具与模块化工具，所以本系列会十分的基础。并且可能有很多不正确的地方，希望大家谅解，并指出错误帮助改进。谢谢！
 
 这是一系列文章，此系列所有的练习都存在了我的github仓库中vue-we">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewippstssj20go083wg6.jpg">
-<meta property="og:updated_time" content="2017-04-23T04:51:12.000Z">
+<meta property="og:image" content="http://guowenfh.github.io//ws1.sinaimg.cn/large/82d12951gy1fewippstssj20go083wg6.jpg">
+<meta property="og:updated_time" content="2017-04-23T12:33:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack入坑之旅（一）不是开始的开始">
 <meta name="twitter:description" content="最近学习框架，选择了vue，然后接触到了vue中的单文件组件，官方推荐使用 Webpack + vue-loader构建这些单文件 Vue 组件，于是就开始了webpack的入坑之旅。因为原来没有用过任何的构建工具与模块化工具，所以本系列会十分的基础。并且可能有很多不正确的地方，希望大家谅解，并指出错误帮助改进。谢谢！
 
 这是一系列文章，此系列所有的练习都存在了我的github仓库中vue-we">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewippstssj20go083wg6.jpg">
+<meta name="twitter:image" content="http://guowenfh.github.io//ws1.sinaimg.cn/large/82d12951gy1fewippstssj20go083wg6.jpg">
 
 
 
@@ -374,22 +374,22 @@
         <blockquote>
 <p>最近学习框架，选择了vue，然后接触到了vue中的单文件组件，官方推荐使用 Webpack + vue-loader构建这些单文件 Vue 组件，于是就开始了webpack的入坑之旅。<br>因为原来没有用过任何的构建工具与模块化工具，所以本系列会十分的基础。并且可能有很多不正确的地方，希望大家谅解，并指出错误帮助改进。谢谢！</p>
 </blockquote>
-<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
+<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="//github.com/guowenfh/vue-webpack">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
 <ul>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
-<li><a href="http://guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
+<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
+<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
+<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
+<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
+<li><a href="//guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
+<li><a href="//guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
 </ul>
 <h2 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack"></a>什么是webpack</h2><blockquote>
 <p>其实不是特别想写这个东西，但貌似所有的教程都有这个。随便写两句吧。可以直接跳过。</p>
 </blockquote>
 <p>Webpack 是德国开发者 Tobias Koppers 开发的模块加载器兼打包工具，在webpack中，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。因此, Webpack 当中 js 可以引用 css, css 中可以嵌入图片 dataUrl。<br>对应各种不同文件类型的资源, Webpack 有对应的模块 loader比如vue用的是<code>vue-loader</code>当然这是后话，在后面我们再来说。</p>
-<p>请看下图：<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fewippstssj20go083wg6.jpg" alt="webpack"></p>
-<p>官网查看：<a href="https://github.com/webpack/webpack" target="_blank" rel="external">https://github.com/webpack/webpack</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>前提：因为webpack是一个基于node的项目，所以首先需要确保你的电脑里面已经安装了<code>node.js</code>，以及<code>npm</code>。在这里我使用的版本是：<code>node：v5.8.0  ，npm：3.7.3</code>,若是版本问题，请更新到最新版。<br>若是有出现npm安装过慢的情况，可以使用<a href="https://github.com/Pana/nrm" target="_blank" rel="external">nrm</a>这个项目来进行npm源地址的切换。</p>
+<p>请看下图：<br><img src="//ws1.sinaimg.cn/large/82d12951gy1fewippstssj20go083wg6.jpg" alt="webpack"></p>
+<p>官网查看：<a href="//github.com/webpack/webpack">//github.com/webpack/webpack</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>前提：因为webpack是一个基于node的项目，所以首先需要确保你的电脑里面已经安装了<code>node.js</code>，以及<code>npm</code>。在这里我使用的版本是：<code>node：v5.8.0  ，npm：3.7.3</code>,若是版本问题，请更新到最新版。<br>若是有出现npm安装过慢的情况，可以使用<a href="//github.com/Pana/nrm">nrm</a>这个项目来进行npm源地址的切换。</p>
 <p>首先我们直接进行全局的安装，运行如下命令：<code>npm install webpack -g</code>，可能需要一点时间。</p>
 <p>安装成功后，在命令行输入<code>webpack -h</code>即可查看当前安装的版本信息。以及可以使用的指令。</p>
 <p>当然，我们都应该将webapck安装到当前的项目依赖中，此时就可以使用项目的本这样就可以使用项目本地版本的 Webpack。</p>
@@ -417,18 +417,18 @@
 </blockquote>
 <ul>
 <li><a href="http://www.hubwiz.com/course/5670d0a77e7d40946afc5e65/" target="_blank" rel="external">webpack入门 - 汇智网</a></li>
-<li><a href="https://segmentfault.com/a/1190000002552008" target="_blank" rel="external">Webpack 怎么用</a></li>
-<li><a href="https://segmentfault.com/a/1190000002551952" target="_blank" rel="external">Webpack 入门指迷</a></li>
-<li><a href="https://github.com/vikingmute/webpack-for-fools/blob/master/entries/chapter-1.md" target="_blank" rel="external">Webpack傻瓜式指南（一）</a></li>
-<li><a href="https://github.com/vikingmute/webpack-for-fools/blob/master/entries/chapter-2.md" target="_blank" rel="external">Webpack傻瓜式指南（二）</a></li>
+<li><a href="//segmentfault.com/a/1190000002552008">Webpack 怎么用</a></li>
+<li><a href="//segmentfault.com/a/1190000002551952">Webpack 入门指迷</a></li>
+<li><a href="//github.com/vikingmute/webpack-for-fools/blob/master/entries/chapter-1.md">Webpack傻瓜式指南（一）</a></li>
+<li><a href="//github.com/vikingmute/webpack-for-fools/blob/master/entries/chapter-2.md">Webpack傻瓜式指南（二）</a></li>
 <li><a href="http://jiongks.name/blog/just-vue/" target="_blank" rel="external">Vue + webpack 项目实践</a></li>
-<li><a href="http://www.w3ctech.com/topic/1557" target="_blank" rel="external">webpack 入门及实践</a></li>
+<li><a href="//www.w3ctech.com/topic/1557">webpack 入门及实践</a></li>
 <li><a href="http://javascript.ruanyifeng.com/#nodejs" target="_blank" rel="external">JavaScript 标准参考教程（alpha）–Node.js</a></li>
-<li><a href="https://github.com/ruanyf/webpack-demos" target="_blank" rel="external">应该是最好懂的Webpack教程—阮一峰</a> 还没敲呢，应该全部敲一遍的。</li>
+<li><a href="//github.com/ruanyf/webpack-demos">应该是最好懂的Webpack教程—阮一峰</a> 还没敲呢，应该全部敲一遍的。</li>
 <li><a href="http://www.h-simon.com/42/" target="_blank" rel="external">webpack常用配置总结</a></li>
-<li><a href="https://segmentfault.com/a/1190000004505747" target="_blank" rel="external">Express结合Webpack的全栈自动刷新</a></li>
-<li><a href="http://cn.vuejs.org/guide/" target="_blank" rel="external">Vue.js官方教程</a></li>
-<li><a href="http://vuejs.github.io/vue-router/zh-cn/" target="_blank" rel="external">vue-router文档</a></li>
+<li><a href="//segmentfault.com/a/1190000004505747">Express结合Webpack的全栈自动刷新</a></li>
+<li><a href="//cn.vuejs.org/guide/">Vue.js官方教程</a></li>
+<li><a href="//vuejs.github.io/vue-router/zh-cn/">vue-router文档</a></li>
 </ul>
 
       
