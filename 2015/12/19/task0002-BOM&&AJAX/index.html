@@ -5,16 +5,22 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
 
 
 
@@ -69,7 +75,7 @@
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="JS,百度前端技术学院,task0002," />
@@ -83,60 +89,65 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
 
 
 
-<meta name="description" content="BOM实现以下函数
-判断是否为IE浏览器
-这里应该说一下，在从网上了解到的资料来看，在对于某个功能事件的时候不要去做浏览器检测，而应该做特性检测。这样更符合要求，且浏览器的UserAgent可人为修改
-需要实现的话，ie11的版本号中并没有msie:。只能通过rv:获得。所以需进行一些处理。但是该属性同样可以返回火狐浏览器的版本号- -。所以还需要多加一层判断。查找是否存在Trident\/7.0">
+<meta name="description" content="BOM实现以下函数 判断是否为IE浏览器 这里应该说一下，在从网上了解到的资料来看，在对于某个功能事件的时候不要去做浏览器检测，而应该做特性检测。这样更符合要求，且浏览器的UserAgent可人为修改 需要实现的话，ie11的版本号中并没有msie:。只能通过rv:获得。所以需进行一些处理。但是该属性同样可以返回火狐浏览器的版本号- -。所以还需要多加一层判断。查找是否存在Trident\/7.0">
+<meta name="keywords" content="JS,百度前端技术学院,task0002">
 <meta property="og:type" content="article">
 <meta property="og:title" content="task0002（三）- BOM + AJAX">
 <meta property="og:url" content="http://guowenfh.github.io/2015/12/19/task0002-BOM&&AJAX/index.html">
 <meta property="og:site_name" content="三省吾身丶丶">
-<meta property="og:description" content="BOM实现以下函数
-判断是否为IE浏览器
-这里应该说一下，在从网上了解到的资料来看，在对于某个功能事件的时候不要去做浏览器检测，而应该做特性检测。这样更符合要求，且浏览器的UserAgent可人为修改
-需要实现的话，ie11的版本号中并没有msie:。只能通过rv:获得。所以需进行一些处理。但是该属性同样可以返回火狐浏览器的版本号- -。所以还需要多加一层判断。查找是否存在Trident\/7.0">
-<meta property="og:updated_time" content="2017-04-23T12:14:01.000Z">
+<meta property="og:description" content="BOM实现以下函数 判断是否为IE浏览器 这里应该说一下，在从网上了解到的资料来看，在对于某个功能事件的时候不要去做浏览器检测，而应该做特性检测。这样更符合要求，且浏览器的UserAgent可人为修改 需要实现的话，ie11的版本号中并没有msie:。只能通过rv:获得。所以需进行一些处理。但是该属性同样可以返回火狐浏览器的版本号- -。所以还需要多加一层判断。查找是否存在Trident\/7.0">
+<meta property="og:updated_time" content="2017-05-05T06:02:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="task0002（三）- BOM + AJAX">
-<meta name="twitter:description" content="BOM实现以下函数
-判断是否为IE浏览器
-这里应该说一下，在从网上了解到的资料来看，在对于某个功能事件的时候不要去做浏览器检测，而应该做特性检测。这样更符合要求，且浏览器的UserAgent可人为修改
-需要实现的话，ie11的版本号中并没有msie:。只能通过rv:获得。所以需进行一些处理。但是该属性同样可以返回火狐浏览器的版本号- -。所以还需要多加一层判断。查找是否存在Trident\/7.0">
+<meta name="twitter:description" content="BOM实现以下函数 判断是否为IE浏览器 这里应该说一下，在从网上了解到的资料来看，在对于某个功能事件的时候不要去做浏览器检测，而应该做特性检测。这样更符合要求，且浏览器的UserAgent可人为修改 需要实现的话，ie11的版本号中并没有msie:。只能通过rv:获得。所以需进行一些处理。但是该属性同样可以返回火狐浏览器的版本号- -。所以还需要多加一层判断。查找是否存在Trident\/7.0">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post"},
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 6222900165502567000,
+      userId: 'undefined',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="http://guowenfh.github.io/2015/12/19/task0002-BOM&&AJAX/"/>
 
-  <title> task0002（三）- BOM + AJAX | 三省吾身丶丶 </title>
+
+
+
+
+  <title>task0002（三）- BOM + AJAX | 三省吾身丶丶</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+
+
 
 
 
@@ -156,29 +167,6 @@
 
 
 
-  <script type="text/javascript">
-    (function() {
-        var oldUrl = window.location.href;
-        if(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i.test(oldUrl)){
-          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'//blog.guowenfh.com');
-        }
-        // if( /blog.guowenfh.com/i.test(window.location.href)  && localStorage.getItem('click-top-inform')!=='click'){
-        //   var wrap = document.body;
-        //   var content = document.createElement('div');
-        //   content.innerHTML= '为了方便管理，本博客已购买该域名，访问原站，将自动跳转至该新地址。（点击此处删除该提示）';
-        //   content.style.textAlign = 'center';
-        //   content.style.color = 'red';
-        //   content.style.position = 'relative';
-        //   content.style.padding = '10px 20px';
-        //   content.className = "blog-top-inform";
-        //   content.addEventListener('click',function(){
-        //     localStorage.setItem('click-top-inform','click');
-        //     document.querySelector('.blog-top-inform').style.display='none';
-        //   },false)
-        //   wrap.insertBefore(content,wrap.querySelector('script'));
-        // }
-    })();
-  </script>
 
 
 
@@ -192,29 +180,33 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">三省吾身丶丶</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">三省吾身丶丶</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">兴趣遍地都是，专注和持之以恒才是真正稀缺的。</p>
+      
   </div>
-  <p class="site-subtitle">兴趣遍地都是，专注和持之以恒才是真正稀缺的。</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -271,6 +263,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -284,49 +278,64 @@
     
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guowenfh.github.io/2015/12/19/task0002-BOM&&AJAX/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="guowenfh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewv9toa2xj206y06ygnp.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三省吾身丶丶">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                task0002（三）- BOM + AJAX
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">task0002（三）- BOM + AJAX</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-19T00:08:41+08:00" content="2015-12-19">
-              2015-12-19
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-19T00:08:41+08:00">
+                2015-12-19
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/前端技术/" itemprop="url" rel="index">
                     <span itemprop="name">前端技术</span>
                   </a>
@@ -334,7 +343,6 @@
 
                 
                 
-
               
             </span>
           
@@ -342,29 +350,34 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/19/task0002-BOM&&AJAX/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/19/task0002-BOM&&AJAX/" itemprop="commentsCount"></span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2015/12/19/task0002-BOM&&AJAX/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
-              &nbsp; | &nbsp;
-              <span class="page-pv"><i class="fa fa-file-o"></i>
-              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-              </span>
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -456,7 +469,7 @@
 <li>onfail: 失败时的调用函数</li>
 </ul>
 <h3 id="实现如下："><a href="#实现如下：" class="headerlink" title="实现如下："></a>实现如下：</h3><blockquote>
-<p>专门用两篇博客来记录了一下AJAX的学习过程，以及该函数的完成过程<br><a href="//guowenfh.github.io/2015/12/18/Ajax-elementary-course-1/">Ajax入门（一）从0开始到一次成功的GET请求</a><br><a href="//guowenfh.github.io/2015/12/18/Ajax-elementary-course-2-fn/">Ajax入门（二）Ajax函数封装</a></p>
+<p>专门用两篇博客来记录了一下AJAX的学习过程，以及该函数的完成过程<br><a href="https://guowenfh.github.io/2015/12/18/Ajax-elementary-course-1/">Ajax入门（一）从0开始到一次成功的GET请求</a><br><a href="https://guowenfh.github.io/2015/12/18/Ajax-elementary-course-2-fn/">Ajax入门（二）Ajax函数封装</a></p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * AJAX函数封装</div><div class="line"> * @param &#123;string&#125; url     请求地址（必须）</div><div class="line"> * @param &#123;object&#125; options 发送请求的选项参数</div><div class="line"> *   @config &#123;string&#125; [options.type] 请求发送的类型。默认为GET。</div><div class="line"> *   @config &#123;Object&#125; [options.data] 需要发送的数据。</div><div class="line"> *   @config &#123;Function&#125; [options.onsuccess] 请求成功时触发，function(oAjax.responseText, oAjax)。（必须）</div><div class="line"> *   @config &#123;Function&#125; [options.onfail] 请求失败时触发，function(oAjax)。(oAJax为XMLHttpRequest对象)</div><div class="line"> *</div><div class="line"> *@returns &#123;XMLHttpRequest&#125; 发送请求的XMLHttpRequest对象</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ajax</span>(<span class="params">url, options</span>) </span>&#123;</div><div class="line">    <span class="comment">//1.创建ajax对象</span></div><div class="line">    <span class="keyword">var</span> oAjax = <span class="literal">null</span>;</div><div class="line">        <span class="comment">/**</span></div><div class="line">         * 此处必须需要使用window.的方式,表示为window对象的一个属性.不存在时值为undefined,进入else</div><div class="line">         * 若直接使用XMLHttpRequest,在不支持的情况下会报错</div><div class="line">         **/</div><div class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123;</div><div class="line">        <span class="comment">//IE6以上</span></div><div class="line">        oAjax = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        oAjax = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//2.连接服务器</span></div><div class="line">    <span class="comment">//open(方法,url,是否异步)</span></div><div class="line">    <span class="keyword">var</span> param = <span class="string">""</span>; <span class="comment">//请求参数。</span></div><div class="line">    <span class="comment">//只有data存在，且为对象使才执行</span></div><div class="line">    <span class="keyword">var</span> data = options.data ? options.data : <span class="number">-1</span>; <span class="comment">//缓存data</span></div><div class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> (data) === <span class="string">"object"</span>) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> data) &#123; <span class="comment">//请求参数拼接</span></div><div class="line">            <span class="keyword">if</span> (data.hasOwnProperty(key)) &#123;</div><div class="line">                param += key + <span class="string">"="</span> + data[key] + <span class="string">"&amp;"</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        param.replace(<span class="regexp">/&amp;$/</span>, <span class="string">""</span>);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        param = <span class="string">"timestamp="</span> + <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//3.发送请求</span></div><div class="line">    <span class="keyword">var</span> type = options.type ? options.type.toUpperCase() : <span class="string">"GET"</span>;</div><div class="line">    <span class="keyword">if</span> (type === <span class="string">"GET"</span>) &#123;</div><div class="line">        oAjax.open(<span class="string">"GET"</span>, url + <span class="string">"?"</span> + param, <span class="literal">true</span>);</div><div class="line">        oAjax.send();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        oAjax.open(<span class="string">"POST"</span>, url, <span class="literal">true</span>);</div><div class="line">        oAjax.setRequestHeader(<span class="string">"Content-type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">        oAjax.send(param);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//4.接收返回</span></div><div class="line">    <span class="comment">//OnRedayStateChange事件</span></div><div class="line">    oAjax.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (oAjax.readyState === <span class="number">4</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (oAjax.status === <span class="number">200</span>) &#123;</div><div class="line">                <span class="comment">//请求成功。形参为获取到的字符串形式的响应数据</span></div><div class="line">                options.onsuccess(oAjax.responseText, oAjax);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="comment">//先判断是否存在请求失败函数</span></div><div class="line">                <span class="comment">//存在时，形参为XMLHttpRequest对象，便于进行错误进行处理</span></div><div class="line">                <span class="keyword">if</span> (options.onfail) &#123;</div><div class="line">                    options.onfail(oAjax);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> oAjax;<span class="comment">//发送请求的XMLHttpRequest对象</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
@@ -497,17 +510,43 @@
       
     </div>
 
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      guowenfh
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://guowenfh.github.io/2015/12/19/task0002-BOM&&AJAX/" title="task0002（三）- BOM + AJAX">http://guowenfh.github.io/2015/12/19/task0002-BOM&&AJAX/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/JS/" rel="tag">#JS</a>
+            <a href="/tags/JS/" rel="tag"># JS</a>
           
-            <a href="/tags/百度前端技术学院/" rel="tag">#百度前端技术学院</a>
+            <a href="/tags/百度前端技术学院/" rel="tag"># 百度前端技术学院</a>
           
-            <a href="/tags/task0002/" rel="tag">#task0002</a>
+            <a href="/tags/task0002/" rel="tag"># task0002</a>
           
         </div>
+      
+
+      
+        
       
 
       
@@ -519,6 +558,8 @@
               </a>
             
           </div>
+
+          <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
@@ -539,25 +580,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/12/19/task0002-BOM&&AJAX/"
-     data-title="task0002（三）- BOM + AJAX"
-     data-content=""
-     data-url="http://guowenfh.github.io/2015/12/19/task0002-BOM&&AJAX/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -565,16 +587,11 @@
           </div>
           
 
-  <p>热评文章</p>
-  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
-
 
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/19/task0002-BOM&&AJAX/"
-           data-title="task0002（三）- BOM + AJAX" data-url="http://guowenfh.github.io/2015/12/19/task0002-BOM&&AJAX/">
-      </div>
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     
   </div>
 
@@ -607,34 +624,43 @@
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://ws1.sinaimg.cn/large/82d12951gy1fewv9toa2xj206y06ygnp.jpg"
                alt="guowenfh" />
           <p class="site-author-name" itemprop="name">guowenfh</p>
-          <p class="site-description motion-element" itemprop="description">芝兰生于深林，不以无人而不芳。</p>
+           
+              <p class="site-description motion-element" itemprop="description">芝兰生于深林，不以无人而不芳。</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">54</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -734,19 +760,29 @@
           </div>
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BOM"><span class="nav-number">1.</span> <span class="nav-text">BOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断是否为IE浏览器"><span class="nav-number">1.1.</span> <span class="nav-text">判断是否为IE浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie相关"><span class="nav-number">1.2.</span> <span class="nav-text">Cookie相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是cokie"><span class="nav-number">1.2.1.</span> <span class="nav-text">什么是cokie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置cookie"><span class="nav-number">1.2.2.</span> <span class="nav-text">设置cookie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取cookie值"><span class="nav-number">1.2.3.</span> <span class="nav-text">获取cookie值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除cookies"><span class="nav-number">1.2.4.</span> <span class="nav-text">删除cookies</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展阅读："><span class="nav-number">1.3.</span> <span class="nav-text">扩展阅读：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sessionStorage、localStorage-和-cookie-之间的区别"><span class="nav-number">1.3.1.</span> <span class="nav-text">sessionStorage、localStorage 和 cookie 之间的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax"><span class="nav-number">2.</span> <span class="nav-text">Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任务描述"><span class="nav-number">2.1.</span> <span class="nav-text">任务描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现如下："><span class="nav-number">2.2.</span> <span class="nav-text">实现如下：</span></a></li></ol></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -769,6 +805,7 @@
   <span class="author" itemprop="copyrightHolder">guowenfh</span>
 </div>
 
+
 <div class="powered-by">
   由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
@@ -780,31 +817,40 @@
   </a>
 </div>
 
+
         
-
 <div class="busuanzi-count">
-
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
   
 
   
-    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
-  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
   
 </div>
-
 
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -824,6 +870,15 @@
 
 
   
+
+
+
+
+
+
+
+
+
 
 
 
@@ -849,67 +904,95 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
 
 
   
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"guowenfh"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
 
   
-    
-    <script src="//cdn.bootcss.com/UAParser.js/0.7.12/ua-parser.min.js"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+
   
 
+
+
+
+	
 
 
 
 
 
   
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "c500c0eb4c10453886b4c541529f172f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
   
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 

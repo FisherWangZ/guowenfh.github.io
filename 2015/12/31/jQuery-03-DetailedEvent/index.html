@@ -5,16 +5,22 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
 
 
 
@@ -69,7 +75,7 @@
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="jQuery," />
@@ -83,57 +89,65 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
 
 
 
-<meta name="description" content="在JavaScript 有一个非常重要的功能，就是事件驱动。如果你的网页需要与用户进行交互的话，就不可能不用到事件。它在页面完全加载后，用户通过鼠标或键盘触发页面中绑定事件的元素即可触发。jQuery为开发者更有效率的编写事件行为，封装了大量事件方法供我们使用。
-
-基础事件一. 绑定事件如果你学习过原生的javascript事件，比如常用的事件：click、dblclick、mousedown、">
+<meta name="description" content="在JavaScript 有一个非常重要的功能，就是事件驱动。如果你的网页需要与用户进行交互的话，就不可能不用到事件。它在页面完全加载后，用户通过鼠标或键盘触发页面中绑定事件的元素即可触发。jQuery为开发者更有效率的编写事件行为，封装了大量事件方法供我们使用。  基础事件一. 绑定事件如果你学习过原生的javascript事件，比如常用的事件：click、dblclick、mousedown、">
+<meta name="keywords" content="jQuery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery入门笔记之（三）事件详解">
 <meta property="og:url" content="http://guowenfh.github.io/2015/12/31/jQuery-03-DetailedEvent/index.html">
 <meta property="og:site_name" content="三省吾身丶丶">
-<meta property="og:description" content="在JavaScript 有一个非常重要的功能，就是事件驱动。如果你的网页需要与用户进行交互的话，就不可能不用到事件。它在页面完全加载后，用户通过鼠标或键盘触发页面中绑定事件的元素即可触发。jQuery为开发者更有效率的编写事件行为，封装了大量事件方法供我们使用。
-
-基础事件一. 绑定事件如果你学习过原生的javascript事件，比如常用的事件：click、dblclick、mousedown、">
-<meta property="og:updated_time" content="2017-04-23T12:14:01.000Z">
+<meta property="og:description" content="在JavaScript 有一个非常重要的功能，就是事件驱动。如果你的网页需要与用户进行交互的话，就不可能不用到事件。它在页面完全加载后，用户通过鼠标或键盘触发页面中绑定事件的元素即可触发。jQuery为开发者更有效率的编写事件行为，封装了大量事件方法供我们使用。  基础事件一. 绑定事件如果你学习过原生的javascript事件，比如常用的事件：click、dblclick、mousedown、">
+<meta property="og:updated_time" content="2017-05-05T06:02:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery入门笔记之（三）事件详解">
-<meta name="twitter:description" content="在JavaScript 有一个非常重要的功能，就是事件驱动。如果你的网页需要与用户进行交互的话，就不可能不用到事件。它在页面完全加载后，用户通过鼠标或键盘触发页面中绑定事件的元素即可触发。jQuery为开发者更有效率的编写事件行为，封装了大量事件方法供我们使用。
-
-基础事件一. 绑定事件如果你学习过原生的javascript事件，比如常用的事件：click、dblclick、mousedown、">
+<meta name="twitter:description" content="在JavaScript 有一个非常重要的功能，就是事件驱动。如果你的网页需要与用户进行交互的话，就不可能不用到事件。它在页面完全加载后，用户通过鼠标或键盘触发页面中绑定事件的元素即可触发。jQuery为开发者更有效率的编写事件行为，封装了大量事件方法供我们使用。  基础事件一. 绑定事件如果你学习过原生的javascript事件，比如常用的事件：click、dblclick、mousedown、">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post"},
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 6222900165502567000,
+      userId: 'undefined',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="http://guowenfh.github.io/2015/12/31/jQuery-03-DetailedEvent/"/>
 
-  <title> jQuery入门笔记之（三）事件详解 | 三省吾身丶丶 </title>
+
+
+
+
+  <title>jQuery入门笔记之（三）事件详解 | 三省吾身丶丶</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+
+
 
 
 
@@ -153,29 +167,6 @@
 
 
 
-  <script type="text/javascript">
-    (function() {
-        var oldUrl = window.location.href;
-        if(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i.test(oldUrl)){
-          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'//blog.guowenfh.com');
-        }
-        // if( /blog.guowenfh.com/i.test(window.location.href)  && localStorage.getItem('click-top-inform')!=='click'){
-        //   var wrap = document.body;
-        //   var content = document.createElement('div');
-        //   content.innerHTML= '为了方便管理，本博客已购买该域名，访问原站，将自动跳转至该新地址。（点击此处删除该提示）';
-        //   content.style.textAlign = 'center';
-        //   content.style.color = 'red';
-        //   content.style.position = 'relative';
-        //   content.style.padding = '10px 20px';
-        //   content.className = "blog-top-inform";
-        //   content.addEventListener('click',function(){
-        //     localStorage.setItem('click-top-inform','click');
-        //     document.querySelector('.blog-top-inform').style.display='none';
-        //   },false)
-        //   wrap.insertBefore(content,wrap.querySelector('script'));
-        // }
-    })();
-  </script>
 
 
 
@@ -189,29 +180,33 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">三省吾身丶丶</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">三省吾身丶丶</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">兴趣遍地都是，专注和持之以恒才是真正稀缺的。</p>
+      
   </div>
-  <p class="site-subtitle">兴趣遍地都是，专注和持之以恒才是真正稀缺的。</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -268,6 +263,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -281,49 +278,64 @@
     
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guowenfh.github.io/2015/12/31/jQuery-03-DetailedEvent/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="guowenfh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewv9toa2xj206y06ygnp.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三省吾身丶丶">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                jQuery入门笔记之（三）事件详解
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">jQuery入门笔记之（三）事件详解</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-31T11:42:43+08:00" content="2015-12-31">
-              2015-12-31
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-31T11:42:43+08:00">
+                2015-12-31
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/jQuery/" itemprop="url" rel="index">
                     <span itemprop="name">jQuery</span>
                   </a>
@@ -331,7 +343,6 @@
 
                 
                 
-
               
             </span>
           
@@ -339,29 +350,34 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/31/jQuery-03-DetailedEvent/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/31/jQuery-03-DetailedEvent/" itemprop="commentsCount"></span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2015/12/31/jQuery-03-DetailedEvent/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
-              &nbsp; | &nbsp;
-              <span class="page-pv"><i class="fa fa-file-o"></i>
-              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-              </span>
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -748,7 +764,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"button"</span>).bind(<span class="string">'click.abc'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    alert(<span class="string">"abc"</span>);</div><div class="line">&#125;);</div><div class="line">$(<span class="string">"button"</span>).bind(<span class="string">'click.xyz'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    alert(<span class="string">"xyz"</span>);</div><div class="line">&#125;);</div><div class="line">$(<span class="string">"button"</span>).unbind(<span class="string">'click.abc'</span> );<span class="comment">//处理过后只弹出xyz。</span></div></pre></td></tr></table></figure>
 <p><strong>注意：</strong>也可以直接使用<code>(&#39;.abc&#39;)</code>，这样的话，可以移除<strong>相同命名空间的不同事件</strong>。对于模拟操作<code>.trigger()</code>和.<code>triggerHandler()</code>，用法也是一样的。<code>$(&#39;input&#39;).trigger(&#39;click.abc&#39;)</code></p>
 <h3 id="三-事件委托"><a href="#三-事件委托" class="headerlink" title="三.事件委托"></a>三.事件委托</h3><blockquote>
-<p>事件委托也就是事件代理。我在<a href="//guowenfh.github.io/2015/12/16/task0002-DOM&amp;&amp;event/">task0002（二）- DOM + 事件</a>已经谈过了。而且也自己实现了一下事件代理，这里稍微再介绍一下:</p>
+<p>事件委托也就是事件代理。我在<a href="https://guowenfh.github.io/2015/12/16/task0002-DOM&amp;&amp;event/">task0002（二）- DOM + 事件</a>已经谈过了。而且也自己实现了一下事件代理，这里稍微再介绍一下:</p>
 </blockquote>
 <ol>
 <li>“事件代理” 的本质是利用了事件冒泡的特性。当一个元素上的事件被触发的时候，比如说鼠标点击了一个按钮，同样的事件将会在那个元素的所有祖先元素中被触发。这一过程被称为事件冒泡；</li>
@@ -840,13 +856,39 @@
       
     </div>
 
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      guowenfh
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://guowenfh.github.io/2015/12/31/jQuery-03-DetailedEvent/" title="jQuery入门笔记之（三）事件详解">http://guowenfh.github.io/2015/12/31/jQuery-03-DetailedEvent/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/jQuery/" rel="tag">#jQuery</a>
+            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
           
         </div>
+      
+
+      
+        
       
 
       
@@ -858,6 +900,8 @@
               </a>
             
           </div>
+
+          <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
@@ -878,25 +922,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/12/31/jQuery-03-DetailedEvent/"
-     data-title="jQuery入门笔记之（三）事件详解"
-     data-content=""
-     data-url="http://guowenfh.github.io/2015/12/31/jQuery-03-DetailedEvent/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -904,16 +929,11 @@
           </div>
           
 
-  <p>热评文章</p>
-  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
-
 
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/31/jQuery-03-DetailedEvent/"
-           data-title="jQuery入门笔记之（三）事件详解" data-url="http://guowenfh.github.io/2015/12/31/jQuery-03-DetailedEvent/">
-      </div>
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     
   </div>
 
@@ -946,34 +966,43 @@
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://ws1.sinaimg.cn/large/82d12951gy1fewv9toa2xj206y06ygnp.jpg"
                alt="guowenfh" />
           <p class="site-author-name" itemprop="name">guowenfh</p>
-          <p class="site-description motion-element" itemprop="description">芝兰生于深林，不以无人而不芳。</p>
+           
+              <p class="site-description motion-element" itemprop="description">芝兰生于深林，不以无人而不芳。</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">54</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -1073,19 +1102,29 @@
           </div>
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础事件"><span class="nav-number">1.</span> <span class="nav-text">基础事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-绑定事件"><span class="nav-number">1.1.</span> <span class="nav-text">一. 绑定事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-简写事件"><span class="nav-number">1.2.</span> <span class="nav-text">二. 简写事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-复合事件"><span class="nav-number">1.3.</span> <span class="nav-text">三. 复合事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#event对象"><span class="nav-number">2.</span> <span class="nav-text">event对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-事件对象"><span class="nav-number">2.1.</span> <span class="nav-text">一. 事件对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-冒泡和默认行为"><span class="nav-number">2.2.</span> <span class="nav-text">二. 冒泡和默认行为</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级事件"><span class="nav-number">3.</span> <span class="nav-text">高级事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-模拟操作"><span class="nav-number">3.1.</span> <span class="nav-text">一. 模拟操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-trigger"><span class="nav-number">3.1.1.</span> <span class="nav-text">1. .trigger()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-triggerHandler"><span class="nav-number">3.1.2.</span> <span class="nav-text">2. .triggerHandler()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-命名空间"><span class="nav-number">3.2.</span> <span class="nav-text">二. 命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-事件委托"><span class="nav-number">3.3.</span> <span class="nav-text">三.事件委托</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强大的on-、off-和one"><span class="nav-number">4.</span> <span class="nav-text">强大的on 、off 和one</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-on"><span class="nav-number">4.1.</span> <span class="nav-text">一. on</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-off"><span class="nav-number">4.2.</span> <span class="nav-text">二.off</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-one"><span class="nav-number">4.3.</span> <span class="nav-text">三. one</span></a></li></ol></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -1108,6 +1147,7 @@
   <span class="author" itemprop="copyrightHolder">guowenfh</span>
 </div>
 
+
 <div class="powered-by">
   由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
@@ -1119,31 +1159,40 @@
   </a>
 </div>
 
+
         
-
 <div class="busuanzi-count">
-
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
   
 
   
-    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
-  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
   
 </div>
-
 
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -1163,6 +1212,15 @@
 
 
   
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1188,67 +1246,95 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
 
 
   
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"guowenfh"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
 
   
-    
-    <script src="//cdn.bootcss.com/UAParser.js/0.7.12/ua-parser.min.js"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+
   
 
+
+
+
+	
 
 
 
 
 
   
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "c500c0eb4c10453886b4c541529f172f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
   
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 

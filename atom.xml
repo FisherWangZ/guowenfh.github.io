@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guowenfh.github.io/"/>
-  <updated>2017-04-23T12:11:01.000Z</updated>
+  <updated>2017-05-05T06:02:36.000Z</updated>
   <id>http://guowenfh.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://guowenfh.github.io/2017/04/21/2017/html5-label-category/"/>
     <id>http://guowenfh.github.io/2017/04/21/2017/html5-label-category/</id>
     <published>2017-04-21T15:45:12.000Z</published>
-    <updated>2017-04-23T12:11:01.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>文章是很早之前的笔记，做了一些属性上的补充，现发布到博客中来</p>
@@ -43,13 +43,13 @@
 <li>某些属性值可以省略，比如 required,readonly</li>
 </ul>
 <hr>
-<h2 id="HTML5常用标签分类"><a href="#HTML5常用标签分类" class="headerlink" title="HTML5常用标签分类"></a>HTML5常用标签分类</h2><p>如何选择标签：<br> <img src="//p3.ssl.qhimg.com/t01d712cd34f492117d.png" alt="如何选择标签"><br>图片来自：<a href="//www.h5jun.com/post/html5-element-flowchart.html?utm_source=tuicool&amp;utm_medium=referral">十年踪迹的博客</a></p>
+<h2 id="HTML5常用标签分类"><a href="#HTML5常用标签分类" class="headerlink" title="HTML5常用标签分类"></a>HTML5常用标签分类</h2><p>如何选择标签：<br> <img src="https://p3.ssl.qhimg.com/t01d712cd34f492117d.png" alt="如何选择标签"><br>图片来自：<a href="https://www.h5jun.com/post/html5-element-flowchart.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">十年踪迹的博客</a></p>
 <h3 id="一-HTML文档标签"><a href="#一-HTML文档标签" class="headerlink" title="一. HTML文档标签"></a>一. HTML文档标签</h3><ol>
 <li><code>&lt;!DOCTYPE&gt;</code>: 定义文档类型.</li>
 <li><code>&lt;html&gt;</code>: 定义HTML文档.</li>
 <li><code>&lt;head&gt;</code>: 定义文档的头部.(头部内包含)</li>
 <li><code>&lt;meta&gt;</code>: 定义元素可提供有关页面的元信息，比如针对搜索引擎和更新频度的描述和关键词(由于规范没有规定关于 mete 中各种属性的强制定义，所以不同的浏览器都都可以通过 mete 来声明一些规则)<ul>
-<li>参考：<a href="//github.com/yisibl/blog/issues/1">移动端的头部标签</a></li>
+<li>参考：<a href="https://github.com/yisibl/blog/issues/1" target="_blank" rel="external">移动端的头部标签</a></li>
 <li><code>&lt;meta charset =&quot;UtF-8&quot;&gt;</code></li>
 <li><code>&lt;meta name =&quot;keywords&quot; conten=&quot;关键词&quot;&gt;</code></li>
 <li><code>&lt;meta name =&quot;description&quot; conten=&quot;页面介绍&quot;&gt;</code></li>
@@ -64,7 +64,7 @@
 <li><code>&lt;script&gt;</code>: 定义客户端脚本，比如 JavaScript.</li>
 <li><code>&lt;noscript&gt;</code>:定义在脚本未被执行时的替代内容.（文本）</li>
 </ol>
-<h3 id="二-布局标签-amp-语义化"><a href="#二-布局标签-amp-语义化" class="headerlink" title="二. 布局标签&amp;语义化"></a>二. 布局标签&amp;语义化</h3><p><img src="//ws1.sinaimg.cn/large/82d12951gy1fevim1rbn6j20zq0tyjum.jpg" alt=""></p>
+<h3 id="二-布局标签-amp-语义化"><a href="#二-布局标签-amp-语义化" class="headerlink" title="二. 布局标签&amp;语义化"></a>二. 布局标签&amp;语义化</h3><p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fevim1rbn6j20zq0tyjum.jpg" alt=""></p>
 <ol>
 <li><code>&lt;div&gt;</code>:定义块级元素.</li>
 <li><code>&lt;span&gt;</code>:定义行业元素.</li>
@@ -72,7 +72,7 @@
 <li><code>&lt;footer&gt;</code>:定义区段或页面的页脚.(足部)</li>
 <li><code>&lt;section&gt;</code>:定义文档中的区段.</li>
 <li><code>&lt;article&gt;</code>:定义文章.（在<code>&lt;article&gt;</code>中也可以进行内容划分）<ul>
-<li><img src="//ws1.sinaimg.cn/large/82d12951gy1fevim24vmpj20n40lsgpn.jpg" alt=""></li>
+<li><img src="https://ws1.sinaimg.cn/large/82d12951gy1fevim24vmpj20n40lsgpn.jpg" alt=""></li>
 </ul>
 </li>
 <li><code>&lt;aside&gt;</code>:定义页面内容之外的内容.</li>
@@ -352,14 +352,14 @@
     <link href="http://guowenfh.github.io/2017/02/05/2017/es6-react-life-cycle/"/>
     <id>http://guowenfh.github.io/2017/02/05/2017/es6-react-life-cycle/</id>
     <published>2017-02-05T08:44:07.000Z</published>
-    <updated>2017-04-23T12:12:59.000Z</updated>
+    <updated>2017-05-05T06:06:06.000Z</updated>
     
-    <content type="html"><![CDATA[<p>如题。<br>一张图学习 ES6 中的 React 生命周期与流程。<br><img src="//ws1.sinaimg.cn/large/82d12951gy1fewvhi42dnj20z1152n23.jpg" alt="ES6中的React生命周期与流程"></p>
+    <content type="html"><![CDATA[<p>如题。<br>一张图学习 ES6 中的 React 生命周期与流程。<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fewvhi42dnj20z1152n23.jpg" alt="ES6中的React生命周期与流程"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;如题。&lt;br&gt;一张图学习 ES6 中的 React 生命周期与流程。&lt;br&gt;&lt;img src=&quot;//ws1.sinaimg.cn/large/82d12951gy1fewvhi42dnj20z1152n23.jpg&quot; alt=&quot;ES6中的React生命周期与流程&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;如题。&lt;br&gt;一张图学习 ES6 中的 React 生命周期与流程。&lt;br&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/82d12951gy1fewvhi42dnj20z1152n23.jpg&quot; alt=&quot;ES6中的React生命周期与流程
     
     </summary>
     
@@ -379,20 +379,20 @@
     <link href="http://guowenfh.github.io/2016/12/31/annual-report-2016/"/>
     <id>http://guowenfh.github.io/2016/12/31/annual-report-2016/</id>
     <published>2016-12-31T15:22:39.000Z</published>
-    <updated>2017-04-23T12:25:03.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
     <content type="html"><![CDATA[<p>又是一年结束，明天就是2017了，这一年做了很多事：实习、毕业、工作。广州、丽江、重庆、北京、长沙、杭州、走了5个城市。开心、懊恼、苦涩各种心境。从一个编程的门外汉真正成为了一个初级前端开发工程师。也算是人生又一个新的起点吧。</p>
 <h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>先说说博客，从第一篇博客开始到现在一年零一个月了。一共 50 篇，博客总字数为：338202，产量不算高。不过值得高兴的是一年下来总流量量有 <code>15W</code>，应该还算不错吧。不仅是对自己学习的一个记录，应该也帮助到了不少人。终于把域名买了 <a href="http://blog.guowenfh.com" target="_blank" rel="external">blog.guowenfh.com</a></p>
-<p><img src="//ww4.sinaimg.cn/large/006tKfTcgw1fbab295cyqj31kw1hah2h.jpg" alt="博客访问统计"></p>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcgw1fbab295cyqj31kw1hah2h.jpg" alt="博客访问统计"></p>
 <p>下面自我分析一下：</p>
 <ol>
 <li>内容：大多数是一些前端技术学习的笔记，也有寥寥几篇的摘抄和自我思考。在实际项目和代表编写过程中的积累根本没有，得好好加强。</li>
 <li>时间：博客基本上有很明确的时间区分，偶尔一个月发个四五篇，然后就沉寂几个月，工作的区间内也很少有博客，没有稳定的输出时间。</li>
 </ol>
 <p>需要改进的点：在完成项目编写代码的过程中多积累，多总结。把一些别人的优点或者不够优雅的地方都做一个记录，想想为什么要这样做而不是那样做。然后不能一阵一阵的热情，需要多投入！</p>
-<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p><img src="//ww3.sinaimg.cn/large/006tKfTcgw1fbab18w6evj315w0tyjxl.jpg" alt="GitHub"></p>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p><img src="https://ww3.sinaimg.cn/large/006tKfTcgw1fbab18w6evj315w0tyjxl.jpg" alt="GitHub"></p>
 <p>今年在 GitHub 上并没有一个特别拿得出手的开源项目，不过之前写的 <code>vue-webapck</code> 基础介绍教程居然能拿到160星，让我很惊讶，也让我更加想去为社区贡献一点自己的东西。正好公司要跨入 <code>react</code> 技术栈了，第一步先用它写个小项目吧。之后尝试去给出一些 <code>Pull requests</code></p>
-<h2 id="关于计划"><a href="#关于计划" class="headerlink" title="关于计划"></a>关于计划</h2><p>在今年年初，自己给自己定了几个小目标，内容之前在 <a href="//bolg.guowenfh.com/2016/07/03/thoughtReport-2016-07-03/">思想汇报</a>中也有提到，除了书只读了10多本之外，其他都算是实现了吧，至少来说不后悔。<br>2017 年的具体规划没想好，但也就那些吧，多沟通，多看书，去年一年30本的量没达到，今年需要努力把阅读习惯培养出来！<br>保持这种饥饿感，保持一种初学者的心态，坚持去坚持。</p>
+<h2 id="关于计划"><a href="#关于计划" class="headerlink" title="关于计划"></a>关于计划</h2><p>在今年年初，自己给自己定了几个小目标，内容之前在 <a href="https://bolg.guowenfh.com/2016/07/03/thoughtReport-2016-07-03/" target="_blank" rel="external">思想汇报</a>中也有提到，除了书只读了10多本之外，其他都算是实现了吧，至少来说不后悔。<br>2017 年的具体规划没想好，但也就那些吧，多沟通，多看书，去年一年30本的量没达到，今年需要努力把阅读习惯培养出来！<br>保持这种饥饿感，保持一种初学者的心态，坚持去坚持。</p>
 <hr>
 <p>毕业出来工作五个多月了，在工作之后感觉还是成长了很多，也越来越相信编程更多的是考验人的解决问题的能力，而不是局限于编程语言，所以新的一年需要多锻炼一下自己解决工程的能力，开始于前端，但不止前端。</p>
 <p>这篇没有什么章法的博客到这就结束了，没有很多的个人思考，更多的是在写的过程中回忆了一下一年间的发生种种，这样的回顾也是一种收获吧。</p>
@@ -649,7 +649,7 @@
     <link href="http://guowenfh.github.io/2016/10/15/node-http/"/>
     <id>http://guowenfh.github.io/2016/10/15/node-http/</id>
     <published>2016-10-15T04:38:52.000Z</published>
-    <updated>2017-04-23T12:11:01.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
     <content type="html"><![CDATA[<p>一个网站的加载流程粗略的流程大概如下：</p>
 <ol>
@@ -707,7 +707,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">'url'</span>);</div><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> server = http.createServer();</div><div class="line"><span class="comment">// 读取我们当前文件所在的目录下的 html 文件夹</span></div><div class="line"><span class="keyword">var</span> HtmlDir = __dirname + <span class="string">'/html/'</span>;</div><div class="line">server.on(<span class="string">'request'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> urlObj = url.parse(req.url);</div><div class="line">    <span class="keyword">switch</span> (urlObj.pathname) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="string">'/'</span>:</div><div class="line">            <span class="comment">//首页</span></div><div class="line">            sendData(HtmlDir + <span class="string">'index.html'</span>, req, res);</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="string">'/user'</span>:</div><div class="line">            <span class="comment">//用户首页</span></div><div class="line">            sendData(HtmlDir + <span class="string">'user.html'</span>, req, res);</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">            <span class="comment">//处理其他情况</span></div><div class="line">            sendData(HtmlDir + <span class="string">'err.html'</span>, req, res);</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 读取html文件，响应数据，发送给浏览器</div><div class="line"> * @param &#123;String&#125; file 文件路径</div><div class="line"> * @param &#123;Object&#125; req request</div><div class="line"> * @param &#123;Object&#125; res response 对象</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sendData</span>(<span class="params">file, req, res</span>) </span>&#123;</div><div class="line">    fs.readFile(file, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (err) &#123;</div><div class="line">            res.writeHead(<span class="number">404</span>, &#123;</div><div class="line">                <span class="string">'content-type'</span>: <span class="string">'text/html;charset=utf-8'</span></div><div class="line">            &#125;);</div><div class="line">            res.end(<span class="string">'&lt;h1&gt;你要找的页面不见了～&lt;/h1&gt;'</span>);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            res.writeHead(<span class="number">200</span>, &#123;</div><div class="line">                <span class="string">'content-type'</span>: <span class="string">'text/html;charset=utf-8'</span></div><div class="line">            &#125;);</div><div class="line">            res.end(data);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line">server.listen(<span class="number">8888</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Server is running at http://127.0.0.1:8888/'</span>);</div></pre></td></tr></table></figure>
 <p>运行文件，切换url，程序会将不同的页面返回。大家自己去试试吧！</p>
 <p>这是对于 node 的 http模块 的学习，理解有限，如果有错误之处，请指出，谢谢！</p>
-<p>本文地址：<a href="//guowenfh.github.io/2016/10/15/node-http/">//guowenfh.github.io/2016/10/15/node-http/</a></p>
+<p>本文地址：<a href="https://guowenfh.github.io/2016/10/15/node-http/">//guowenfh.github.io/2016/10/15/node-http/</a></p>
 ]]></content>
     
     <summary type="html">
@@ -733,7 +733,7 @@
     <link href="http://guowenfh.github.io/2016/10/15/node-file-system/"/>
     <id>http://guowenfh.github.io/2016/10/15/node-file-system/</id>
     <published>2016-10-15T04:12:48.000Z</published>
-    <updated>2017-04-23T12:11:01.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该模块是核心模块，需要使用 require 导入后使用</p>
@@ -840,7 +840,7 @@
 <li><code>fs.readdirSync(path)</code>:同步版的 readdir(). 返回文件名数组，其中不包括 ‘.’ 和 ‘..’ 目录.</li>
 </ol>
 <p>这是对于 node 的文件系统 的学习，仅仅过了一遍api，了解了一下处理流程，理解有限，如果有错误之处，请指出，谢谢！</p>
-<p>本文地址：<a href="//guowenfh.github.io/2016/10/15/node-file-system/">//guowenfh.github.io/2016/10/15/node-file-system/</a></p>
+<p>本文地址：<a href="https://guowenfh.github.io/2016/10/15/node-file-system/">//guowenfh.github.io/2016/10/15/node-file-system/</a></p>
 ]]></content>
     
     <summary type="html">
@@ -864,7 +864,7 @@
     <link href="http://guowenfh.github.io/2016/10/15/node-global-object/"/>
     <id>http://guowenfh.github.io/2016/10/15/node-global-object/</id>
     <published>2016-10-15T03:40:29.000Z</published>
-    <updated>2017-04-23T12:11:01.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>在上一篇博客中，我们一起对于 node 的模块机制有了一点点的了解，当时我们就知道了在 node 中的全局对象是 <code>global</code> 而不是浏览器中的 <code>window</code> 它们有一部分属性方法是相同的，<br>比如：<code>clearInterval</code> / <code>clearTimeout</code> / <code>setInterval</code> / <code>setTimeout</code> / <code>console</code>。他们的用法和在浏览器中的用法是一样的，接下来我们就来看看那些在 node 中所特有全局属性和方法。</p>
@@ -898,7 +898,7 @@
 </ul>
 </li>
 </ul>
-<p>这里主要是对于标准输入/输出流（IO）的理解，放上一个中文维基百科的解释：<a href="//zh.wikipedia.org/wiki/%E6%A8%99%E6%BA%96%E4%B8%B2%E6%B5%81">标准输入/输出流</a>，在这里关于 <code>stdout</code>就简单举例 <code>console.log</code>实现：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log = <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  process.stdout.write(d + <span class="string">'\n'</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>这里主要是对于标准输入/输出流（IO）的理解，放上一个中文维基百科的解释：<a href="https://zh.wikipedia.org/wiki/%E6%A8%99%E6%BA%96%E4%B8%B2%E6%B5%81" target="_blank" rel="external">标准输入/输出流</a>，在这里关于 <code>stdout</code>就简单举例 <code>console.log</code>实现：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log = <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  process.stdout.write(d + <span class="string">'\n'</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 <p>再看一个<code>stdin</code>的简单示例：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">process.stdout.write(<span class="string">'请输入内容：'</span>);</div><div class="line"><span class="comment">//默认情况下，输入流是关闭的，要监听处理输入流数据，首先要开启输入流</span></div><div class="line">process.stdin.resume();</div><div class="line"><span class="comment">//用于监听用户的输入数据12</span></div><div class="line">process.stdin.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">chunk</span>) </span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(<span class="string">'用户输入了：'</span> + chunk);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>在 <code>shell</code> 执行该文件后，输入内容并回车，会把你输入的内容打印出来</p>
@@ -964,7 +964,7 @@
 <p>在这里看来，我们接收到的用户输入 <code>chunk</code> ，就是一个字符串，实际上它是一个buffer对象，我们重写 <code>porcess.stdin</code> 方法，<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">process.stdin.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">chunk</span>) </span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(chunk);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <p>输入同样的内容打印出来的是 <code>&lt;Buffer 70 72 6f 63 65 73 73 0a&gt;</code> ,可以知道在标准输入输出流中，实际上也是进行二进制的数据传输。<br>在第一个示例中 <code>console.log(&#39;用户输入了：&#39; + chunk);</code> 因为 <code>chunk</code>与字符串相链接，所以 它实际上自动调用了 <code>toString()</code> 方法。</p>
 <p>这是对于 process 对象与 Buffer 类的简单学习，理解较为粗浅，如有错误之处请指出，谢谢！</p>
-<p>本文地址:<a href="//guowenfh.github.io/2016/10/15/node-global-object/">//guowenfh.github.io/2016/10/15/node-global-object/</a></p>
+<p>本文地址:<a href="https://guowenfh.github.io/2016/10/15/node-global-object/">//guowenfh.github.io/2016/10/15/node-global-object/</a></p>
 ]]></content>
     
     <summary type="html">
@@ -986,7 +986,7 @@
     <link href="http://guowenfh.github.io/2016/10/15/node-module-system/"/>
     <id>http://guowenfh.github.io/2016/10/15/node-module-system/</id>
     <published>2016-10-15T03:18:41.000Z</published>
-    <updated>2017-04-23T12:11:01.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>什么是模块?</p>
@@ -1033,7 +1033,7 @@
 <p><code>node module_b.js</code>输出:<code>printf: ok</code></p>
 <p>这样有一个需要注意的地方是：直接覆盖 <code>exports</code> 或者 <code>module.exports</code>让模块导出一个值，这样做会破坏 <code>exports</code> 和  <code>module.exports</code> 的引用关系。</p>
 <p>这是对于 node 的模块系统的学习，理解有限，如果有错误之处，请指出，谢谢！</p>
-<p>本文地址：<a href="//guowenfh.github.io/2016/10/15/node-module-system/">//guowenfh.github.io/2016/10/15/node-module-system/</a></p>
+<p>本文地址：<a href="https://guowenfh.github.io/2016/10/15/node-module-system/">//guowenfh.github.io/2016/10/15/node-module-system/</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1060,11 +1060,11 @@
     <link href="http://guowenfh.github.io/2016/09/29/eslint-config-npmbace/"/>
     <id>http://guowenfh.github.io/2016/09/29/eslint-config-npmbace/</id>
     <published>2016-09-28T16:32:14.000Z</published>
-    <updated>2017-04-23T12:25:04.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
-    <content type="html"><![CDATA[<p>本文地址：<a href="//guowenfh.github.io/2016/09/29/eslint-config-npmbace/">//guowenfh.github.io/2016/08/07/eslint-config-npmbace/</a></p>
+    <content type="html"><![CDATA[<p>本文地址：<a href="https://guowenfh.github.io/2016/09/29/eslint-config-npmbace/">//guowenfh.github.io/2016/08/07/eslint-config-npmbace/</a></p>
 <blockquote>
-<p>在上一篇博客<a href="//guowenfh.github.io/2016/08/07/ESLint-Rules/">详解 ESLint 规则，规范你的代码</a>中，经过对于 ESLint 规则的学习，当时就决定一定要将 ESLint 使用起来，进行语法校验，来减少我们在程序中可能出现的错误。<br>但在当时，我们仅仅是把 eslint 的规则过了一遍，并没有把 eslint 的使用过程描述出来，而且要真正的在实际中使用，以及想要在团队中推广开来，需要有一个渐渐的过程，所以反响平平，这篇博客十一个补充，我把一些常见的错误和最佳实践集合到了一起（最最基础的）。为了方便大家使用，还将配置作为一个 npm包 来方便大家使用～顺便也学了一下怎怎么发布</p>
+<p>在上一篇博客<a href="https://guowenfh.github.io/2016/08/07/ESLint-Rules/">详解 ESLint 规则，规范你的代码</a>中，经过对于 ESLint 规则的学习，当时就决定一定要将 ESLint 使用起来，进行语法校验，来减少我们在程序中可能出现的错误。<br>但在当时，我们仅仅是把 eslint 的规则过了一遍，并没有把 eslint 的使用过程描述出来，而且要真正的在实际中使用，以及想要在团队中推广开来，需要有一个渐渐的过程，所以反响平平，这篇博客十一个补充，我把一些常见的错误和最佳实践集合到了一起（最最基础的）。为了方便大家使用，还将配置作为一个 npm包 来方便大家使用～顺便也学了一下怎怎么发布</p>
 </blockquote>
 <h3 id="发布一个-eslint-规则的-npm-包"><a href="#发布一个-eslint-规则的-npm-包" class="headerlink" title="发布一个 eslint 规则的 npm 包"></a>发布一个 eslint 规则的 npm 包</h3><p>1.确保本地已经安装node和npm</p>
 <p>2.申请npm帐号，直接上官网注册一下就好，在输入下面的命令添加把帐号加到本地之前之前，确保你npm的源地址是官方的地址（我把源切成了淘宝结果在发布包的时候发布不了）</p>
@@ -1077,7 +1077,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install eslint -g</div></pre></td></tr></table></figure>
 <p>在全局安装定制的 eslint 包</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install eslint-config-3introspection -g</div></pre></td></tr></table></figure>
-<p>成功效果如下：<br><img src="//ww4.sinaimg.cn/large/801b780agw1f89ptaxh5wj20he035aaj.jpg" alt=""></p>
+<p>成功效果如下：<br><img src="https://ww4.sinaimg.cn/large/801b780agw1f89ptaxh5wj20he035aaj.jpg" alt=""></p>
 <p>依赖信息的错误不用去管，我们只是需要其中的配置文件而已。</p>
 <p>（windows的用户有可能出现无法引入eslint无法引用到全局模块的问题，请将 <code>eslint-config-3introspection</code>，安装在你的工作区目录，以便不同项目都可以引用到）</p>
 <h4 id="第二部：在项目的-根目录下-新建一个-eslintrc-文件"><a href="#第二部：在项目的-根目录下-新建一个-eslintrc-文件" class="headerlink" title="第二部：在项目的 根目录下 新建一个 .eslintrc 文件"></a>第二部：在项目的 <strong>根目录</strong>下 新建一个 <code>.eslintrc</code> 文件</h4><p>在文件内部添加下面这样的字段</p>
@@ -1085,15 +1085,15 @@
 <p>这样就将我们定制的规则导入到项目中了。</p>
 <h4 id="第三步：检查编辑器是否已经安装-eslint-插件"><a href="#第三步：检查编辑器是否已经安装-eslint-插件" class="headerlink" title="第三步：检查编辑器是否已经安装 eslint 插件"></a>第三步：检查编辑器是否已经安装 eslint 插件</h4><p>下面是sublimeText的：</p>
 <p>打开<code>command+shift+p</code>，打开命令窗口，输入 <code>pcl</code> ，回车</p>
-<p><img src="//ww1.sinaimg.cn/large/006y8mN6gw1f7aipmz6m4j30m503k0sx.jpg" alt="pcl"></p>
+<p><img src="https://ww1.sinaimg.cn/large/006y8mN6gw1f7aipmz6m4j30m503k0sx.jpg" alt="pcl"></p>
 <p>再输入 <code>sublimeLinter</code>,查看是否如下，不对的话一一安装这两个插件：</p>
-<p><img src="//ww4.sinaimg.cn/large/006y8mN6gw1f7aiqjjsnyj30kv0bdwfh.jpg" alt="sublimeLinter"></p>
+<p><img src="https://ww4.sinaimg.cn/large/006y8mN6gw1f7aiqjjsnyj30kv0bdwfh.jpg" alt="sublimeLinter"></p>
 <p>若上面两步成功，重启编辑器，再打开文件，应该就能看到 eslint 规则已经生效了，如下：</p>
-<p><img src="//ws1.sinaimg.cn/large/82d12951gy1fewvpuw01hj20jt083754.jpg" alt="错误"></p>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fewvpuw01hj20jt083754.jpg" alt="错误"></p>
 <p>这样就可以愉快的使用eslint进行语法校验拉😂😂😂</p>
-<p><strong>失败的情况：</strong> 打开<code>command+shift+p</code>，打开命令窗口，输入 <code>sublimeLinter</code> 找到这一项，回车后,找到 eslint 开启选项，重启编辑器再查看是不是已经好了。<br><img src="//ww1.sinaimg.cn/large/006y8mN6gw1f7aizq6abzj30me0dk75y.jpg" alt="sublimeLinter"></p>
+<p><strong>失败的情况：</strong> 打开<code>command+shift+p</code>，打开命令窗口，输入 <code>sublimeLinter</code> 找到这一项，回车后,找到 eslint 开启选项，重启编辑器再查看是不是已经好了。<br><img src="https://ww1.sinaimg.cn/large/006y8mN6gw1f7aizq6abzj30me0dk75y.jpg" alt="sublimeLinter"></p>
 <p>如果规则不不起效果又不知道是什么地方出了问题，参考附录1</p>
-<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><p>附录1：vscode<br>安装<br><img src="//ws1.sinaimg.cn/large/82d12951gy1fewvoy93juj20cp0g6dgm.jpg" alt=""><br>.eslintrc将<code>{&quot;extends&quot;: &quot;3introspection&quot;}</code>，引入，重启，不起效果的话，vscode会有很明显的报错信息<br><img src="//ww4.sinaimg.cn/large/801b780agw1f89r0bv5zmj210o027aal.jpg" alt=""><br>还是查找路径的问题，最简单的解决办法，在项目执行一次<code>npm i eslint-config-3introspection</code>，把配置按照到node_modul<br><img src="//ww4.sinaimg.cn/large/801b780agw1f89qt0mzskj20pd06qjs9.jpg" alt=""><br>其他编辑器都类似</p>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><p>附录1：vscode<br>安装<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fewvoy93juj20cp0g6dgm.jpg" alt=""><br>.eslintrc将<code>{&quot;extends&quot;: &quot;3introspection&quot;}</code>，引入，重启，不起效果的话，vscode会有很明显的报错信息<br><img src="https://ww4.sinaimg.cn/large/801b780agw1f89r0bv5zmj210o027aal.jpg" alt=""><br>还是查找路径的问题，最简单的解决办法，在项目执行一次<code>npm i eslint-config-3introspection</code>，把配置按照到node_modul<br><img src="https://ww4.sinaimg.cn/large/801b780agw1f89qt0mzskj20pd06qjs9.jpg" alt=""><br>其他编辑器都类似</p>
 <p>附录2：说明</p>
 <ol>
 <li>在项目目录中 <code>.eslintrc</code> 中的配置，会覆盖引入的配置，有兴趣的可以进行更详细的定制。例如加入以下字段，将项目的全局变量都列在这边。</li>
@@ -1114,14 +1114,13 @@
 <ol>
 <li><code>.eslintignore</code>,如同<code>.gitignore</code>一样忽略对于某些文件，文件夹的检查</li>
 </ol>
-<p><img src="//ww2.sinaimg.cn/large/801b780agw1f89rimlemyj211a03p74v.jpg" alt=""></p>
+<p><img src="https://ww2.sinaimg.cn/large/801b780agw1f89rimlemyj211a03p74v.jpg" alt=""></p>
 <p>附录3:eslinrc.js 配置<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="comment">// 环境定义了预定义的全局变量。更多在官网查看</span></div><div class="line">    <span class="string">'env'</span>: &#123;</div><div class="line">        <span class="string">'browser'</span>: <span class="literal">true</span>,</div><div class="line">        <span class="string">'node'</span>: <span class="literal">true</span>,</div><div class="line">        <span class="string">'commonjs'</span>: <span class="literal">true</span>,</div><div class="line">        <span class="string">'amd'</span>: <span class="literal">true</span>,</div><div class="line">    &#125;,</div><div class="line">    <span class="comment">// JavaScript 语言选项</span></div><div class="line">    <span class="string">'parserOptions'</span>: &#123;</div><div class="line">        <span class="comment">// ECMAScript 版本</span></div><div class="line">        <span class="string">'ecmaVersion'</span>: <span class="number">6</span>,</div><div class="line">        <span class="string">'sourceType'</span>: <span class="string">'script'</span>, <span class="comment">// module</span></div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    <span class="comment">/**</span></div><div class="line">     *  "off" 或 0 - 关闭规则</div><div class="line">     *  "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出),</div><div class="line">     *  "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)</div><div class="line">     */</div><div class="line">    <span class="string">'rules'</span>: &#123;</div><div class="line">        <span class="comment">// //////////////</span></div><div class="line">        <span class="comment">// 可能的错误 //</span></div><div class="line">        <span class="comment">// //////////////</span></div><div class="line">        <span class="string">'no-console'</span>: <span class="number">0</span>,</div><div class="line">        <span class="comment">// 禁止条件表达式中出现赋值操作符</span></div><div class="line">        <span class="string">'no-cond-assign'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止在条件中使用常量表达式</span></div><div class="line">        <span class="string">'no-constant-condition'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止 function 定义中出现重名参数</span></div><div class="line">        <span class="string">'no-dupe-args'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止对象字面量中出现重复的 key</span></div><div class="line">        <span class="string">'no-dupe-keys'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止重复的 case 标签</span></div><div class="line">        <span class="string">'no-duplicate-case'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止空语句块</span></div><div class="line">        <span class="string">'no-empty'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止在正则表达式中使用空字符集 (/^abc[]/)</span></div><div class="line">        <span class="string">'no-empty-character-class'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止对 catch 子句的参数重新赋值</span></div><div class="line">        <span class="string">'no-ex-assign'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止不必要的布尔转换</span></div><div class="line">        <span class="string">'no-extra-boolean-cast'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止对 function 声明重新赋值</span></div><div class="line">        <span class="string">'no-func-assign'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">//  禁止在嵌套的块中出现 function 或 var 声明</span></div><div class="line">        <span class="string">'no-inner-declarations'</span>: [<span class="number">2</span>, <span class="string">'functions'</span>],</div><div class="line">        <span class="comment">// 禁止 RegExp 构造函数中无效的正则表达式字符串</span></div><div class="line">        <span class="string">'no-invalid-regexp'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止在 in 表达式中出现否定的左操作数</span></div><div class="line">        <span class="string">'no-negated-in-lhs'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// !!!!!!!!!!!禁止出现令人困惑的多行表达式</span></div><div class="line">        <span class="string">'no-unexpected-multiline'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止在return、throw、continue 和 break语句之后出现不可达代码</span></div><div class="line">        <span class="string">'no-unreachable'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 要求使用 isNaN() 检查 NaN</span></div><div class="line">        <span class="string">'use-isnan'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 强制使用有效的 JSDoc 注释</span></div><div class="line">        <span class="string">'valid-jsdoc'</span>: [<span class="number">1</span>, &#123; <span class="string">'requireReturn'</span>: <span class="literal">false</span> &#125;],</div><div class="line">        <span class="comment">// 强制 typeof 表达式与有效的字符串进行比较</span></div><div class="line">        <span class="comment">// typeof foo === "undefimed" 错误</span></div><div class="line">        <span class="string">'valid-typeof'</span>: <span class="number">2</span>,</div><div class="line"></div><div class="line">        <span class="comment">// ////////////</span></div><div class="line">        <span class="comment">// 最佳实践 //</span></div><div class="line">        <span class="comment">// ////////////</span></div><div class="line"></div><div class="line">        <span class="comment">// 强制把变量的使用限制在其定义的作用域范围内</span></div><div class="line">        <span class="string">'block-scoped-var'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 强制所有控制语句使用一致的括号风格</span></div><div class="line">        <span class="string">'curly'</span>: [<span class="number">2</span>, <span class="string">'all'</span>],</div><div class="line">        <span class="comment">// switch 语句强制 default 分支，也可添加 // no default 注释取消此次警告</span></div><div class="line">        <span class="string">'default-case'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 使用 === 替代 == allow-null允许null和undefined==</span></div><div class="line">        <span class="string">'eqeqeq'</span>: [<span class="number">1</span>, <span class="string">'allow-null'</span>],</div><div class="line">        <span class="comment">// 不允许在 case 子句中使用词法声明</span></div><div class="line">        <span class="string">'no-case-declarations'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止除法操作符显式的出现在正则表达式开始的位置</span></div><div class="line">        <span class="string">'no-div-regex'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止在没有类型检查操作符的情况下与 null 进行比较</span></div><div class="line">        <span class="string">'no-eq-null'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止扩展原生类型</span></div><div class="line">        <span class="string">'no-extend-native'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止不必要的 .bind() 调用</span></div><div class="line">        <span class="string">'no-extra-bind'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止数字字面量中使用前导和末尾小数点</span></div><div class="line">        <span class="string">'no-floating-decimal'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁用不必要的嵌套块</span></div><div class="line">        <span class="string">'no-lone-blocks'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止在循环中出现 function 声明和表达式</span></div><div class="line">        <span class="string">'no-loop-func'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止对原生对象赋值</span></div><div class="line">        <span class="string">'no-native-reassign'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止在非赋值或条件语句中使用 new 操作符</span></div><div class="line">        <span class="string">'no-new'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 不允许对 function 的参数进行重新赋值</span></div><div class="line">        <span class="string">'no-param-reassign'</span>: [<span class="number">1</span>, &#123; <span class="string">'props'</span>: <span class="literal">true</span> &#125;],</div><div class="line">        <span class="comment">// 禁止使用 var 多次声明同一变量</span></div><div class="line">        <span class="string">'no-redeclare'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止自我赋值</span></div><div class="line">        <span class="string">'no-self-assign'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止自身比较</span></div><div class="line">        <span class="string">'no-self-compare'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁用一成不变的循环条件</span></div><div class="line">        <span class="string">'no-unmodified-loop-condition'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止不必要的 .call() 和 .apply()</span></div><div class="line">        <span class="string">'no-useless-call'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止不必要的字符串字面量或模板字面量的连接</span></div><div class="line">        <span class="string">'no-useless-concat'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 强制在parseInt()使用基数参数</span></div><div class="line">        <span class="string">'radix'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 要求所有的 var 声明出现在它们所在的作用域顶部</span></div><div class="line">        <span class="string">'vars-on-top'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 要求 IIFE 使用括号括起来</span></div><div class="line">        <span class="string">'wrap-iife'</span>: [<span class="number">2</span>, <span class="string">'any'</span>],</div><div class="line"></div><div class="line">        <span class="comment">// ////////////</span></div><div class="line">        <span class="comment">//  变量声明 //</span></div><div class="line">        <span class="comment">// ////////////</span></div><div class="line"></div><div class="line">        <span class="comment">// 禁止删除变量</span></div><div class="line">        <span class="string">'no-delete-var'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止 var 声明 与外层作用域的变量同名</span></div><div class="line">        <span class="string">'no-shadow'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止覆盖受限制的标识符</span></div><div class="line">        <span class="string">'no-shadow-restricted-names'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁用未声明的变量，除非它们在 /*global */ 注释中被提到</span></div><div class="line">        <span class="string">'no-undef'</span>: <span class="number">2</span>,</div><div class="line">        <span class="comment">// 禁止将变量初始化为 undefined</span></div><div class="line">        <span class="string">'no-undef-init'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止将 undefined 作为标识符</span></div><div class="line">        <span class="string">'no-undefined'</span>: <span class="number">1</span>,</div><div class="line">        <span class="comment">// 禁止出现未使用过的变量</span></div><div class="line">        <span class="string">'no-unused-vars'</span>: [<span class="number">1</span>, &#123; <span class="string">'vars'</span>: <span class="string">'all'</span>, <span class="string">'args'</span>: <span class="string">'none'</span> &#125;],</div><div class="line">        <span class="comment">// 不允许在变量定义之前使用它们</span></div><div class="line">        <span class="string">'no-use-before-define'</span>: <span class="number">2</span>,</div><div class="line">    &#125;,</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本文地址：&lt;a href=&quot;//guowenfh.github.io/2016/09/29/eslint-config-npmbace/&quot;&gt;//guowenfh.github.io/2016/08/07/eslint-config-npmbace/&lt;/a&gt;&lt;/p&gt;
-&lt;blo
+      &lt;p&gt;本文地址：&lt;a href=&quot;https://guowenfh.github.io/2016/09/29/eslint-config-npmbace/&quot;&gt;//guowenfh.github.io/2016/08/07/eslint-config-npmbace/&lt;/a&gt;&lt;/p
     
     </summary>
     
@@ -1139,13 +1138,13 @@
     <link href="http://guowenfh.github.io/2016/08/07/ESLint-Rules/"/>
     <id>http://guowenfh.github.io/2016/08/07/ESLint-Rules/</id>
     <published>2016-08-07T02:04:04.000Z</published>
-    <updated>2017-04-23T12:14:01.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>因为前几天发现 CSDN上有直接把我文章 复制过去然后标原创的情况，以后会统一在博客头部加入原文链接~</p>
-<p><a href="//guowenfh.github.io/2016/08/07/ESLint-Rules/">本文个人博客地址</a></p>
+<p><a href="https://guowenfh.github.io/2016/08/07/ESLint-Rules/">本文个人博客地址</a></p>
 </blockquote>
-<p>在很久之前就想通过工具来规范自己的代码风格，减少程序出错的概率，如果看过我的<a href="//guowenfh.github.io/2015/12/26/SublimeText/">一个前端程序猿的Sublime Text3的自我修养</a>，这篇博客的朋友，肯定知道在当时我使用<code>SublimeLinter-jshint</code>插件来规范风格，但是实际上一直懒癌发作也没去看它的文档，使用着它默认的规则。不过现在是时候切换到 ESLint 了！</p>
+<p>在很久之前就想通过工具来规范自己的代码风格，减少程序出错的概率，如果看过我的<a href="https://guowenfh.github.io/2015/12/26/SublimeText/">一个前端程序猿的Sublime Text3的自我修养</a>，这篇博客的朋友，肯定知道在当时我使用<code>SublimeLinter-jshint</code>插件来规范风格，但是实际上一直懒癌发作也没去看它的文档，使用着它默认的规则。不过现在是时候切换到 ESLint 了！</p>
 <p>作为一个<del>有理想有抱负</del>的前端工程师，只是使用默认规则，而不是看完文档了然于心，显然是不行滴 ^_^.. 团队协作时，若是团队的代码风格统一，能够大大减少沟通成本。（其实面试时和老大聊到代码规范，当时就说到用 JSHint ，或者 ESLint 等工具来统一的。。。这也算是我来填一个坑吧~）</p>
 <p>好了，前情摘要就到这，我们开始吧！</p>
 <h3 id="什么是-ESLint-？"><a href="#什么是-ESLint-？" class="headerlink" title="什么是 ESLint ？"></a>什么是 ESLint ？</h3><blockquote>
@@ -1191,7 +1190,7 @@
     
       &lt;blockquote&gt;
 &lt;p&gt;因为前几天发现 CSDN上有直接把我文章 复制过去然后标原创的情况，以后会统一在博客头部加入原文链接~&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;//guowenfh.github.io/2016/08/07/ESLint-Rules/&quot;&gt;本文个人博客地址&lt;
+&lt;p&gt;&lt;a href=&quot;https://guowenfh.github.io/2016/08/07/ESLint-Rules/&quot;&gt;本文个
     
     </summary>
     
@@ -1209,7 +1208,7 @@
     <link href="http://guowenfh.github.io/2016/08/03/javascript-this-closure/"/>
     <id>http://guowenfh.github.io/2016/08/03/javascript-this-closure/</id>
     <published>2016-08-02T16:30:29.000Z</published>
-    <updated>2017-04-23T12:18:46.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="理解-Javascript中的this"><a href="#理解-Javascript中的this" class="headerlink" title="理解 Javascript中的this"></a>理解 <code>Javascript</code>中的<code>this</code></h3><p>基于不同的调用方式this的指向也会有所不同，调用方式大致有如下几种：</p>
 <table>
@@ -1248,7 +1247,7 @@
 <p>下面就就可以看一下常见的两个方案：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 取消 handle函数的定义，直接在对象的方法中使用this</span></div><div class="line">double2: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.value = add(<span class="keyword">this</span>.value, <span class="keyword">this</span>.value);</div><div class="line">&#125;,</div><div class="line"><span class="comment">// 使用变量保存外部函数的this。</span></div><div class="line">double3: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">handle</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        that.value = add(that.value, that.value);</div><div class="line">    &#125;</div><div class="line">    handle();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="使用-call-apply与bind-手动改变-this"><a href="#使用-call-apply与bind-手动改变-this" class="headerlink" title="使用 call/apply与bind 手动改变 this"></a>使用 <code>call</code>/<code>apply</code>与<code>bind</code> 手动改变 this</h4><p>先来看下面这样一段代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x, y</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.x = x;</div><div class="line">    <span class="keyword">this</span>.y = y;</div><div class="line">&#125;</div><div class="line">Point.prototype.move = <span class="function"><span class="keyword">function</span>(<span class="params">stepX, stepY</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.x += stepX;</div><div class="line">    <span class="keyword">this</span>.y += stepY;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Point(<span class="number">0</span>, <span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(p);<span class="comment">//&#123;x: 0, y: 0&#125;</span></div><div class="line">p.move(<span class="number">2</span>,<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(p);<span class="comment">//&#123;x: 2, y: 2&#125;</span></div><div class="line"><span class="keyword">var</span> circle = &#123;<span class="attr">x</span>:<span class="number">1</span>,<span class="attr">y</span>:<span class="number">1</span>,<span class="attr">r</span>:<span class="number">1</span>&#125;;</div><div class="line">p.move.apply(circle, [<span class="number">2</span>,<span class="number">1</span>]);</div><div class="line"><span class="built_in">console</span>.info(circle);<span class="comment">//&#123;x: 3, y: 2, r: 1&#125;</span></div></pre></td></tr></table></figure></p>
-<p>我们使用<code>Point</code>构造函数可以创建出一个点，在其原型上有一个<code>move</code>方法可以使这个点坐标移动。<br>之后我们又创建<code>circle</code>对象，有x/y/r属性（把它想象成一个圆），之后我们的需求是：将这个圆的圆心移动，我们就使用了<code>apply</code>来借用<code>move</code>方法，最终将圆移动了位置，最终效果如下图：<br><img src="//ww4.sinaimg.cn/large/82d12951gw1f6emf8rigdj208l07tglm.jpg" alt="apply使用圆示意图"></p>
+<p>我们使用<code>Point</code>构造函数可以创建出一个点，在其原型上有一个<code>move</code>方法可以使这个点坐标移动。<br>之后我们又创建<code>circle</code>对象，有x/y/r属性（把它想象成一个圆），之后我们的需求是：将这个圆的圆心移动，我们就使用了<code>apply</code>来借用<code>move</code>方法，最终将圆移动了位置，最终效果如下图：<br><img src="https://ww4.sinaimg.cn/large/82d12951gw1f6emf8rigdj208l07tglm.jpg" alt="apply使用圆示意图"></p>
 <ul>
 <li><code>function.prototype.apply/call</code></li>
 </ul>
@@ -1678,21 +1677,21 @@
     <link href="http://guowenfh.github.io/2016/03/28/vue-webpack-06-router/"/>
     <id>http://guowenfh.github.io/2016/03/28/vue-webpack-06-router/</id>
     <published>2016-03-28T05:57:57.000Z</published>
-    <updated>2017-04-23T12:33:29.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
-    <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="//github.com/guowenfh/vue-webpack">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
+    <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
 <ul>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
-<li><a href="//guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
-<li><a href="//guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
 </ul>
 <p>在上面的练习当中我们已经成功的加载了一个<code>.vue</code>格式的单文件组件，并且实现了在使用vue情况下的自动刷新。</p>
-<p>但是我们最终的目的还是要实现单页面应用程序，这个时候我们就必不可少的需要使用到路由管理器来进行SPA的开发，vue官方为我们提供了一个官方库<a href="//github.com/vuejs/vue-router">vue-router</a>，并且配有对应的<a href="//vuejs.github.io/vue-router/zh-cn/index.html">中文文档</a>。关于里面的内容大家自行前去观看。在这里，只会把我们需要的东西拿出来讲。</p>
+<p>但是我们最终的目的还是要实现单页面应用程序，这个时候我们就必不可少的需要使用到路由管理器来进行SPA的开发，vue官方为我们提供了一个官方库<a href="https://github.com/vuejs/vue-router" target="_blank" rel="external">vue-router</a>，并且配有对应的<a href="https://vuejs.github.io/vue-router/zh-cn/index.html" target="_blank" rel="external">中文文档</a>。关于里面的内容大家自行前去观看。在这里，只会把我们需要的东西拿出来讲。</p>
 <h2 id="vue组件"><a href="#vue组件" class="headerlink" title="vue组件"></a>vue组件</h2><blockquote>
-<p><a href="//cn.vuejs.org/guide/components.html">官网对于组件讲解</a></p>
+<p><a href="https://cn.vuejs.org/guide/components.html" target="_blank" rel="external">官网对于组件讲解</a></p>
 </blockquote>
 <p>在<code>Vue</code>中定义一个组件非常简单，只需要一对<strong>自定义标签</strong>，在其中填入内容就可以进行我们的组件编写了，然后使用<code>Vue.component()</code>去注册我们的组件下面来看一个例子，来直观的看看vue的组件。</p>
 <h3 id="组件入门"><a href="#组件入门" class="headerlink" title="组件入门"></a>组件入门</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 自定义标签作为组件名称 --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 复用 --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">        <span class="comment">// 定义并且注册组件</span></div><div class="line">        <span class="comment">// 在官方的示例中使用 Vue.extend(&#123;&#125;)先注册了一个定义模板，再引用，看个人喜好吧</span></div><div class="line">        Vue.component(<span class="string">"my-component"</span>, &#123;</div><div class="line">            template:<span class="string">"&lt;h2&gt;hello Vue component&lt;/h2&gt;"</span></div><div class="line">        &#125;)</div><div class="line">        <span class="comment">// 创建根实例</span></div><div class="line">        <span class="comment">// 在这里 定义并且注册组件 必须创建根实例前，不然会报错，因为解析顺序的问题？</span></div><div class="line">        <span class="keyword">new</span> Vue(&#123;</div><div class="line">            el:<span class="string">"#app"</span></div><div class="line">        &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -1702,11 +1701,11 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 使用 template 并且添加选择器(只能使用id)--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">"myTemp"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is Template <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>add ...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">        Vue.component(<span class="string">"my-component"</span>, &#123;</div><div class="line">            template:<span class="string">"#myTemp"</span><span class="comment">//对应上面定义的template标签中的选择器</span></div><div class="line">        &#125;)</div><div class="line">        <span class="keyword">new</span> Vue(&#123;</div><div class="line">            el:<span class="string">"#app"</span></div><div class="line">        &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>可以看到在注册组件中，可以<code>template</code>可以使用选择器来获取到上面我们<code>&lt;template&gt;</code>标签中的内容。所以这里应该会被渲染为：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is Template <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>add ...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is Template <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>add ...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>组件的基础介绍就到这，更多详细内容请移步<a href="//cn.vuejs.org/guide/">官网</a></p>
+<p>组件的基础介绍就到这，更多详细内容请移步<a href="https://cn.vuejs.org/guide/" target="_blank" rel="external">官网</a></p>
 <h2 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h2><p>刚刚已经对于vue的组件有了一定的了解。现在来结合vue-router，来进行一下动态的切换。</p>
 <p>首先是安装，如果使用npm的形式的话，直接运行<code>npm install vue-router --save</code>,就可以看到<code>vue-router</code>，已经被添加到了项目依赖中。直接上<code>ES6</code>的语法来进行引入</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</div><div class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">"vue-router"</span>;</div><div class="line">Vue.use(VueRouter);</div></pre></td></tr></table></figure>
-<h3 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h3><p>其实这一部分<code>vue-router</code>的<a href="//vuejs.github.io/vue-router/zh-cn/basic.html">中文文档</a>中已经讲的非常详细了。。在这里与它不同的是它用的<code>CommonJS</code>的规范来进行模块安装，而我使用ES6的import，有兴趣自己去看- -。其他的内容我就直接扒下来了。</p>
+<h3 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h3><p>其实这一部分<code>vue-router</code>的<a href="https://vuejs.github.io/vue-router/zh-cn/basic.html" target="_blank" rel="external">中文文档</a>中已经讲的非常详细了。。在这里与它不同的是它用的<code>CommonJS</code>的规范来进行模块安装，而我使用ES6的import，有兴趣自己去看- -。其他的内容我就直接扒下来了。</p>
 <p>html:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello App!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 使用指令 v-link 进行导航。 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-link</span>=<span class="string">"&#123; path: '/foo' &#125;"</span>&gt;</span>Go to Foo<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-link</span>=<span class="string">"&#123; path: '/bar' &#125;"</span>&gt;</span>Go to Bar<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 路由外链 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>javascript:</p>
@@ -1714,7 +1713,7 @@
 <p>我个人感觉这部分还是很好理解的，官方也给了一个<a href="http://jsfiddle.net/yyx990803/xyu276sa/" target="_blank" rel="external">在线示例应用</a>。很好的展现了它的路由切换。</p>
 <p>简单的介绍到这，下面最重要的部分到了，看看如何结合我们定义的<code>.vue</code>单文件组件。</p>
 <p>首先来看我们的文件目录结构：</p>
-<p><img src="//ws1.sinaimg.cn/large/82d12951gy1fewippeybej205u0e2weg.jpg" alt="01-webpack-vuerouter"></p>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fewippeybej205u0e2weg.jpg" alt="01-webpack-vuerouter"></p>
 <h3 id="定义路由规则"><a href="#定义路由规则" class="headerlink" title="定义路由规则"></a>定义路由规则</h3><p><strong>最主要是<code>main.js</code></strong>的变化，直接在文件中讲解了：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 引入vue以及vue-router</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</div><div class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">"vue-router"</span>;</div><div class="line">Vue.use(VueRouter);</div><div class="line"><span class="comment">// 引入组件！直接使用es6的语法</span></div><div class="line"><span class="keyword">import</span> index <span class="keyword">from</span> <span class="string">'./components/app.vue'</span>;</div><div class="line"><span class="keyword">import</span> list <span class="keyword">from</span> <span class="string">'./components/list.vue'</span>;</div><div class="line"><span class="keyword">import</span> hello <span class="keyword">from</span> <span class="string">'./components/hello.vue'</span>;</div><div class="line"><span class="comment">//开启debug模式</span></div><div class="line">Vue.config.debug = <span class="literal">true</span>;</div><div class="line"><span class="comment">// new Vue(app);//这是上一篇用到的，新建一个vue实例，现在使用vue-router就不需要了。</span></div><div class="line"><span class="comment">// 路由器需要一个根组件。</span></div><div class="line"><span class="keyword">var</span> App = Vue.extend(&#123;&#125;);</div><div class="line"><span class="comment">// 创建一个路由器实例</span></div><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter();</div><div class="line"><span class="comment">// 每条路由规则应该映射到一个组件。这里的“组件”可以是一个使用 Vue.extend创建的组件构造函数，也可以是一个组件选项对象。</span></div><div class="line"><span class="comment">// 稍后我们会讲解嵌套路由</span></div><div class="line">router.map(&#123;<span class="comment">//定义路由映射</span></div><div class="line">    <span class="string">'/index'</span>:&#123;<span class="comment">//访问地址</span></div><div class="line">        name:<span class="string">'index'</span>,<span class="comment">//定义路由的名字。方便使用。</span></div><div class="line">        component:index,<span class="comment">//引用的组件名称，对应上面使用`import`导入的组件</span></div><div class="line">        <span class="comment">//component:require("components/app.vue")//还可以直接使用这样的方式也是没问题的。不过会没有import集中引入那么直观</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">'/list'</span>: &#123;</div><div class="line">        <span class="attr">name</span>:<span class="string">'list'</span>,</div><div class="line">        <span class="attr">component</span>: list</div><div class="line">    &#125;,</div><div class="line">&#125;);</div><div class="line">router.redirect(&#123;<span class="comment">//定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。</span></div><div class="line">    <span class="string">'*'</span>:<span class="string">"/index"</span><span class="comment">//重定向任意未匹配路径到/index</span></div><div class="line">&#125;);</div><div class="line"><span class="comment">// 现在我们可以启动应用了！</span></div><div class="line"><span class="comment">// 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。</span></div><div class="line">router.start(App, <span class="string">'#app'</span>);</div></pre></td></tr></table></figure>
 <p>在index.html需要有用于渲染匹配的组件，如下<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
@@ -1752,8 +1751,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;这是一系列文章，此系列所有的练习都存在了我的github仓库中&lt;a href=&quot;//github.com/guowenfh/vue-webpack&quot;&gt;vue-webpack&lt;/a&gt;，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：&lt;/p&gt;
-
+      &lt;p&gt;这是一系列文章，此系列所有的练习都存在了我的github仓库中&lt;a href=&quot;https://github.com/guowenfh/vue-webpack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vue-webpack&lt;/a&gt;，在本人有了新的理解
     
     </summary>
     
@@ -1771,16 +1769,16 @@
     <link href="http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/"/>
     <id>http://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/</id>
     <published>2016-03-25T03:57:50.000Z</published>
-    <updated>2017-04-23T12:14:01.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
-    <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="//github.com/guowenfh/vue-webpack">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
+    <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
 <ul>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
-<li><a href="//guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
-<li><a href="//guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
 </ul>
 <h2 id="需要什么？"><a href="#需要什么？" class="headerlink" title="需要什么？"></a>需要什么？</h2><p>在经过前面的四个练习，相信已经对于<code>webapck</code>有了一定的了解，现在我们就来一个综合案例，进一步加深对于<code>webpack</code>的理解。</p>
 <p>首先我们应该思考要解析<code>.vue</code>类型的文件，需要什么样的东西？应该按照什么样的步骤来？我们应该怎么去搭建这个项目？</p>
@@ -1818,8 +1816,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;这是一系列文章，此系列所有的练习都存在了我的github仓库中&lt;a href=&quot;//github.com/guowenfh/vue-webpack&quot;&gt;vue-webpack&lt;/a&gt;，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：&lt;/p&gt;
-
+      &lt;p&gt;这是一系列文章，此系列所有的练习都存在了我的github仓库中&lt;a href=&quot;https://github.com/guowenfh/vue-webpack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vue-webpack&lt;/a&gt;，在本人有了新的理解
     
     </summary>
     
@@ -1837,16 +1834,16 @@
     <link href="http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/"/>
     <id>http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/</id>
     <published>2016-03-24T09:28:34.000Z</published>
-    <updated>2017-04-23T12:33:17.000Z</updated>
+    <updated>2017-05-05T06:02:36.000Z</updated>
     
-    <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="//github.com/guowenfh/vue-webpack">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
+    <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
 <ul>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
-<li><a href="//guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
-<li><a href="//guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
-<li><a href="//guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
+<li><a href="https://guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
 </ul>
 <h2 id="加载图片"><a href="#加载图片" class="headerlink" title="加载图片"></a>加载图片</h2><p>现在来我们来试试加载图片，首先第一件事情，肯定是安装对应的<code>loader</code>。它会将样式中引用到的图片转为模块来处理，使用该加载器需要先进行安装：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install url-loader --save-dev</div></pre></td></tr></table></figure>
@@ -1872,7 +1869,7 @@
 <p>我反正不能忍，还要手动刷新浏览器。所以使用<code>webpack-dev-server</code>会是一个更好的办法！</p>
 <p>它将在<code>localhost:8080</code>启动一个express静态资源web服务器，并且会以监听模式自动运行<code>webpack</code>，在浏览器打开<code>http://localhost:8080/</code>或 <code>http://localhost:8080/webpack-dev-server/</code> 可以浏览项目中的页面和编译后的资源输出，并且通过一个<code>socket.io</code>服务实时监听它们的变化并自动刷新页面。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装</span></div><div class="line">npm install webpack-dev-server -g</div><div class="line"></div><div class="line"><span class="comment"># 运行</span></div><div class="line">webpack-dev-server</div></pre></td></tr></table></figure>
-<p>我们来试试使用vue能配合webpack能不能实现自动刷新。(有关vuejs的知识，大家可以可以先自行上<a href="//cn.vuejs.org/guide/">官网查看</a>，我在接下来可能也会一步一步的把vue的例子全部敲一遍，再放到github上来让点评)</p>
+<p>我们来试试使用vue能配合webpack能不能实现自动刷新。(有关vuejs的知识，大家可以可以先自行上<a href="https://cn.vuejs.org/guide/" target="_blank" rel="external">官网查看</a>，我在接下来可能也会一步一步的把vue的例子全部敲一遍，再放到github上来让点评)</p>
 <p>首先运行<code>npm install vue -save</code>将vue添加到我们的项目依赖中去。</p>
 <p>首先在我们的<code>entry.js</code>这个入口文件中进行添加：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// import Vue form ("vue") //如果你安装了babel-loader的话，可以直接使用ES6的语法</span></div><div class="line"><span class="keyword">var</span> Vue =<span class="built_in">require</span>(<span class="string">"vue"</span>);</div><div class="line">    <span class="keyword">new</span> Vue(&#123;</div><div class="line">        <span class="attr">el</span>: <span class="string">"body"</span>,</div><div class="line">        <span class="attr">data</span>: &#123;</div><div class="line">            <span class="attr">message</span>: <span class="string">"hello vue.js"</span></div><div class="line">        &#125;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
@@ -1884,8 +1881,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;这是一系列文章，此系列所有的练习都存在了我的github仓库中&lt;a href=&quot;//github.com/guowenfh/vue-webpack&quot;&gt;vue-webpack&lt;/a&gt;，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：&lt;/p&gt;
-
+      &lt;p&gt;这是一系列文章，此系列所有的练习都存在了我的github仓库中&lt;a href=&quot;https://github.com/guowenfh/vue-webpack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vue-webpack&lt;/a&gt;，在本人有了新的理解
     
     </summary>
     
