@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guowenfh.github.io/"/>
-  <updated>2017-05-29T16:27:53.000Z</updated>
+  <updated>2017-05-31T15:05:01.000Z</updated>
   <id>http://guowenfh.github.io/</id>
   
   <author>
@@ -14,6 +14,128 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FlexBox 布局详解</title>
+    <link href="http://guowenfh.github.io/2017/05/31/2017/flexLayout/"/>
+    <id>http://guowenfh.github.io/2017/05/31/2017/flexLayout/</id>
+    <published>2017-05-31T14:52:54.000Z</published>
+    <updated>2017-05-31T15:05:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>很久没有写博客了，这里把之前学习 flex 布局的一篇笔记整理了一下。发布到博客上。赶一个五月的末班车吧。还是得坚持啊!!</p>
+</blockquote>
+<p>flex 弹性布局<br>FlexBox 可控制子元素:</p>
+<ul>
+<li>水平或垂直排成一行</li>
+<li>控制子元素的对齐方式</li>
+<li>控制子元素的高度／宽度</li>
+<li>控制子元素的显示顺序</li>
+<li>控制子元素是否折行</li>
+</ul>
+<p><strong> <code>display:flex;</code> 创建  Flexbox 元素 </strong><br>在 flex 布局中必须理解的概念就是区分主轴和辅轴(侧轴):<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85jz1oj21420ei0ty.jpg" alt=""><br><a id="more"></a></p>
+<p>在项目中我们使用 <code>display:flex;</code> 创建  <code>Flexbox</code> 元素，那么该元素就成为了一个 <code>flex container</code>( 弹性的容器)。<br>其在<strong>文档流中的直接子元素</strong>将成为 <code>flex item</code>。<br> <code>flex item</code> 子元素<strong>在容器内 </strong>排列的方向称为<strong>主轴</strong>，跟主轴垂直的方向称为 <strong>辅轴</strong>。</p>
+<h2 id="方向相关属性"><a href="#方向相关属性" class="headerlink" title="方向相关属性"></a>方向相关属性</h2><h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a><code>flex-direction</code></h3><ul>
+<li>设置子元素排列方向 (其实也就是主轴的排列方向)</li>
+<li>取值 <code>row</code> | <code>row-reverse</code> | <code>column</code> | <code>column-reverse</code></li>
+<li>默认 <code>row</code>: </li>
+</ul>
+<p>其中不同的设置，效果大致如下 :<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85yqm6j21dc0fs761.jpg" alt=""></p>
+<h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a><code>flex-wrap</code></h3><ul>
+<li>元素在主轴方向排放时，能否换行</li>
+<li>取值:<code>nowrap</code> | <code>wrap</code> | <code>wrap-reverse</code></li>
+<li>默认 <code>nowrap</code>，不换行</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*base css*/</span></div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">40px</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">    <span class="attribute">display</span>:flex;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">10px</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">40px</span>;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x88k4xfj21ci0koah7.jpg" alt=""></p>
+<h3 id="合并属性-flex-flow-，-上面两个属性的缩写"><a href="#合并属性-flex-flow-，-上面两个属性的缩写" class="headerlink" title="合并属性: flex-flow ， 上面两个属性的缩写"></a>合并属性: <code>flex-flow</code> ， 上面两个属性的缩写</h3><ul>
+<li><code>&lt;&#39;flex-direction&#39;&gt;</code> ||  <code>&lt;&#39;flex-wrap&#39;&gt;</code></li>
+<li>默认:  <code>flex-flow: row nowrap;</code></li>
+</ul>
+<p>这里直接结合两个属性看就好。</p>
+<h3 id="order"><a href="#order" class="headerlink" title="order"></a><code>order</code></h3><ul>
+<li>指定摆放时的顺序，从小到大</li>
+<li>取值:默认 0 ，(支持负值和正值)</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x86pdw6j215c0eojv0.jpg" alt=""></p>
+<h2 id="弹性相关属性，都是设置在子元素上的"><a href="#弹性相关属性，都是设置在子元素上的" class="headerlink" title="弹性相关属性，都是设置在子元素上的"></a>弹性相关属性，都是设置在子元素上的</h2><h3 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a><code>flex-basis</code></h3><ul>
+<li>设置 <code>flex item</code> 的初始宽／高</li>
+<li>取值: <code>main-size</code> | <code>&lt;width&gt;</code></li>
+<li>默认: <code>main-size</code>: 主轴方向的宽度 (根据 <code>flex-direction</code>设置，水平排列时，设置的是宽度；垂直排列时，设置的高度)</li>
+</ul>
+<h3 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a><code>flex-grow</code></h3><ul>
+<li>定义每一个子元素在盒子内的弹性</li>
+<li><strong>拓展盒子剩余空间的能力</strong>(空间富余时)</li>
+<li>取值: <code>&lt;number&gt;</code></li>
+<li>取值:默认 0 ，整数小数都可</li>
+<li>剩余空间的分配规则 : <code>flex-basis + flow-grow/sum(flow-grow)*remain</code> remain 表示多余的空间</li>
+</ul>
+<p>这里可以看到 只设置 <code>flex-basis</code> 相当与设置元素的 <code>width</code></p>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x87orwsj21oo0i6tdg.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x89zp9dj21pg0i8tdl.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x894rf9j21os0heq7w.jpg" alt=""></p>
+<h3 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a><code>flex-shrink</code></h3><ul>
+<li><strong>定义元素收缩的能力</strong>(空间不足时)</li>
+<li>取值: <code>&lt;number&gt;</code></li>
+<li>取值 : 默认 1  ，平方(值为 0 时，不收缩)</li>
+<li>不足空间收缩的规则 : <code>flex-basis + flow-grow/sum(flow-grow)*remain</code> remain 表示不足的空间 (负值)</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x89licsj21jq0dm791.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x88lxkpj21ou0esdkp.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8ab53yj21k00eadld.jpg" alt=""></p>
+<h3 id="合并属性-flex"><a href="#合并属性-flex" class="headerlink" title="合并属性:  flex"></a>合并属性:  <code>flex</code></h3><ul>
+<li><code>&lt;&#39;flex-grow&#39;&gt;</code> ||  <code>&lt;&#39;flex-shrink&#39;&gt;</code> ||  <code>&lt;&#39;flex-basis&#39;&gt;</code></li>
+<li>默认:  <code>flex: 0 1 main-size;</code> 看上面</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8ahj86j21nm0jawjp.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8bk20gj21oq0jqgqz.jpg" alt=""></p>
+<h2 id="对齐-相关的属性"><a href="#对齐-相关的属性" class="headerlink" title="对齐 相关的属性"></a>对齐 相关的属性</h2><h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a><code>justify-content</code></h3><ul>
+<li>设置子元素在主轴方向上的对其方式</li>
+<li>取值: <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>space-between</code> | <code>space-around</code></li>
+<li>默认 <code>flex-start</code> </li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85umuij20u00wcwid.jpg" alt=""></p>
+<p>例子:切换主轴方向时<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8bqzo7j214m0xcahf.jpg" alt=""></p>
+<h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a><code>align-items</code></h3><ul>
+<li>设置在辅轴上的对齐方式。</li>
+<li>取值: <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>baseline</code> | <code>stretch</code></li>
+<li>默认 <code>stretch</code> </li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x86vni3j20uc0xc78v.jpg" alt=""></p>
+<h3 id="align-self-设置在子元素上"><a href="#align-self-设置在子元素上" class="headerlink" title="align-self 设置在子元素上"></a><code>align-self</code> 设置在子元素上</h3><ul>
+<li>单独设置子元素在辅轴方向的对齐方式</li>
+<li>取值: <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>baseline</code> | <code>stretch</code></li>
+<li>默认 <code>stretch</code> </li>
+</ul>
+<h3 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a><code>align-content</code></h3><ul>
+<li><strong>多行内容</strong> 设置在辅轴方向上，行的对齐方式</li>
+<li><ul>
+<li>取值: <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>space-between</code> |  <code>space-around</code> |<code>stretch</code></li>
+</ul>
+</li>
+<li>默认 <code>stretch</code>  拉伸</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x86wizij20ta0x2jww.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;很久没有写博客了，这里把之前学习 flex 布局的一篇笔记整理了一下。发布到博客上。赶一个五月的末班车吧。还是得坚持啊!!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;flex 弹性布局&lt;br&gt;FlexBox 可控制子元素:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;水平或垂直排成一行&lt;/li&gt;
+&lt;li&gt;控制子元素的对齐方式&lt;/li&gt;
+&lt;li&gt;控制子元素的高度／宽度&lt;/li&gt;
+&lt;li&gt;控制子元素的显示顺序&lt;/li&gt;
+&lt;li&gt;控制子元素是否折行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt; &lt;code&gt;display:flex;&lt;/code&gt; 创建  Flexbox 元素 &lt;/strong&gt;&lt;br&gt;在 flex 布局中必须理解的概念就是区分主轴和辅轴(侧轴):&lt;br&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/82d12951gy1fg4x85jz1oj21420ei0ty.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端技术" scheme="http://guowenfh.github.io/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="css" scheme="http://guowenfh.github.io/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>HTML5常用标签分类</title>
@@ -1813,71 +1935,6 @@
 <hr>
 <p>如果你按照我的步骤，并且，npm包安装没有错误的话，应该就能成功了。</p>
 <p>不行的话，请再仔细对照去看看有什么地方没有编写对吧！</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是一系列文章，此系列所有的练习都存在了我的github仓库中&lt;a href=&quot;https://github.com/guowenfh/vue-webpack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vue-webpack&lt;/a&gt;，在本人有了新的理解
-    
-    </summary>
-    
-      <category term="前端框架" scheme="http://guowenfh.github.io/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="webpack" scheme="http://guowenfh.github.io/tags/webpack/"/>
-    
-      <category term="vue" scheme="http://guowenfh.github.io/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>webpack入坑之旅（四）扬帆起航</title>
-    <link href="http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/"/>
-    <id>http://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/</id>
-    <published>2016-03-24T09:28:34.000Z</published>
-    <updated>2017-05-05T06:02:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是一系列文章，此系列所有的练习都存在了我的github仓库中<a href="https://github.com/guowenfh/vue-webpack" target="_blank" rel="external">vue-webpack</a>，在本人有了新的理解与认识之后,会对文章有不定时的更正与更新。下面是目前完成的列表：</p>
-<ul>
-<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-01-base/">webpack入坑之旅（一）不是开始的开始</a></li>
-<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-02-deploy/">webpack入坑之旅（二）loader入门</a></li>
-<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-03-config/">webpack入坑之旅（三）webpack.config入门</a></li>
-<li><a href="https://guowenfh.github.io/2016/03/24/vue-webpack-04-custom/">webpack入坑之旅（四）扬帆起航</a></li>
-<li><a href="https://guowenfh.github.io/2016/03/25/vue-webpack-05-vue/">webpack入坑之旅（五）加载vue单文件组件</a></li>
-<li><a href="https://guowenfh.github.io/2016/03/28/vue-webpack-06-router/">webpack入坑之旅（六）配合vue-router实现SPA</a></li>
-</ul>
-<h2 id="加载图片"><a href="#加载图片" class="headerlink" title="加载图片"></a>加载图片</h2><p>现在来我们来试试加载图片，首先第一件事情，肯定是安装对应的<code>loader</code>。它会将样式中引用到的图片转为模块来处理，使用该加载器需要先进行安装：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install url-loader --save-dev</div></pre></td></tr></table></figure>
-<p>当然你也可以在<code>package.json</code>添加依赖，然后再<code>npm nstall</code>一样的效果。</p>
-<p>现在去我们的项目目录中添加img文件夹，添加两张图片，一张大图jpg，一张小图png。</p>
-<p>然后在我们的<code>webpack.config.js</code>中添加这段：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">loaders: [</div><div class="line">    &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, <span class="attr">loader</span>: <span class="string">"style!css"</span> &#125;,</div><div class="line">    &#123; <span class="attr">test</span>: <span class="regexp">/\.(png|jpg)$/</span>, <span class="attr">loader</span>: <span class="string">"url-loader?limit=8192"</span> &#125;   <span class="comment">// 添加到这！并且会按照文件大小, 或者转化为 base64, 或者单独作为文件</span></div><div class="line">    <span class="comment">//在大小限制后可以加上&amp;name=./[name].[ext]，会将我们的文件生成在设定的文件夹下。</span></div><div class="line">]</div></pre></td></tr></table></figure>
-<p>在html中添加：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/logo.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"qwe"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"asd"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>在我们的css中添加：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*记得写宽高。。*/</span></div><div class="line"><span class="selector-id">#qwe</span>&#123;</div><div class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(img/logo.png);<span class="comment">/*3.2k*/</span></div><div class="line">&#125;</div><div class="line"><span class="selector-id">#asd</span>&#123;</div><div class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(img/5.jpg);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>继续运行<code>webpack</code>如果正确的话，打开我们的浏览器，就可以看到我们正确的图片显示。</p>
-<p>如果不正确，请运行<code>npm install file-loader -D</code>，再进行尝试。</p>
-<p>现在我们打开浏览器的调试工具，可以看到小于8K的 <strong>背景图片</strong> 图片已经被转化成了base64的编码，而大于8k的图片则并没有转化（<strong>注意它的地址的变化！</strong>）。<br>直接使用img导入的图也并没有进行base64的转化。</p>
-<h3 id="热加载"><a href="#热加载" class="headerlink" title="热加载"></a>热加载</h3><p>当项目逐渐变大，<code>webpack</code>的编译时间会变长，可以通过参数让编译的输出内容带有 <strong>进度</strong> 和 <strong>颜色</strong> 。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack --progress --colors</div></pre></td></tr></table></figure>
-<p>下面还有一些其他常用的命令：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">webpack <span class="comment">#最基本的启动webpack命令</span></div><div class="line">webpack -w <span class="comment">#提供watch方法，实时进行打包更新</span></div><div class="line">webpack -p <span class="comment">#对打包后的文件进行压缩</span></div><div class="line">webpack <span class="_">-d</span> <span class="comment">#提供SourceMaps，方便调试</span></div><div class="line">webpack --colors <span class="comment">#输出结果带彩色，比如：会用红色显示耗时较长的步骤</span></div><div class="line">webpack --profile <span class="comment">#输出性能数据，可以看到每一步的耗时</span></div><div class="line">webpack --display-modules <span class="comment">#默认情况下 node_modules 下的模块会被隐藏，加上这个参数可以显示这些被隐藏的模块</span></div></pre></td></tr></table></figure>
-<p>我们已经把webpack的内容了解了一部分了，那么在生产环境中，我不想每一次进行改变，都去命令行中运行我们的<code>webpack</code>的命令，我们应该怎么样实现改变后自动更新呢？</p>
-<p>webpack 为我们提供了一个<code>webpack --watch</code>，他会启动监听模式。开启监听模式后，没有变化的模块会在编译后缓存到内存中，而不会每次都被重新编译，所以监听模式的整体速度是很快的。</p>
-<p>去运行这个命令试试吧！！</p>
-<p>在我们改变代码之后，命令行中可以看到直接就自动编译了，但是显然不够智能，还需要我们手动去刷新浏览器，（其实用<code>liveload</code>hack成自动刷新！）。</p>
-<p>我反正不能忍，还要手动刷新浏览器。所以使用<code>webpack-dev-server</code>会是一个更好的办法！</p>
-<p>它将在<code>localhost:8080</code>启动一个express静态资源web服务器，并且会以监听模式自动运行<code>webpack</code>，在浏览器打开<code>http://localhost:8080/</code>或 <code>http://localhost:8080/webpack-dev-server/</code> 可以浏览项目中的页面和编译后的资源输出，并且通过一个<code>socket.io</code>服务实时监听它们的变化并自动刷新页面。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装</span></div><div class="line">npm install webpack-dev-server -g</div><div class="line"></div><div class="line"><span class="comment"># 运行</span></div><div class="line">webpack-dev-server</div></pre></td></tr></table></figure>
-<p>我们来试试使用vue能配合webpack能不能实现自动刷新。(有关vuejs的知识，大家可以可以先自行上<a href="https://cn.vuejs.org/guide/" target="_blank" rel="external">官网查看</a>，我在接下来可能也会一步一步的把vue的例子全部敲一遍，再放到github上来让点评)</p>
-<p>首先运行<code>npm install vue -save</code>将vue添加到我们的项目依赖中去。</p>
-<p>首先在我们的<code>entry.js</code>这个入口文件中进行添加：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// import Vue form ("vue") //如果你安装了babel-loader的话，可以直接使用ES6的语法</span></div><div class="line"><span class="keyword">var</span> Vue =<span class="built_in">require</span>(<span class="string">"vue"</span>);</div><div class="line">    <span class="keyword">new</span> Vue(&#123;</div><div class="line">        <span class="attr">el</span>: <span class="string">"body"</span>,</div><div class="line">        <span class="attr">data</span>: &#123;</div><div class="line">            <span class="attr">message</span>: <span class="string">"hello vue.js"</span></div><div class="line">        &#125;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
-<p>同样在<code>index.html</code>中添加<code></code>来响应vue的数据绑定。</p>
-<p>运行<code>webpack-dev-server</code>。去浏览器查看试试效果吧！任意改变<code>message</code>中的值，可以看到浏览器会自动刷新。并且将改变的值展示在眼前。（有可能只在<code>http://localhost:8080/webpack-dev-server/</code>才会自动刷新）</p>
-<p><strong>这里其实并没有完全对，不够全面，可能只能响应css的改变。将在下一篇继续调整该配置</strong></p>
-<p>自动刷新都配好了。下面我们就来试试怎么加载vue的文件，来实现单文件组件！</p>
 ]]></content>
     
     <summary type="html">

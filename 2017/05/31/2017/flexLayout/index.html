@@ -1,0 +1,1086 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.bootcss.com/fancybox/2.1.3/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="三省吾身丶丶" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="很久没有写博客了，这里把之前学习 flex 布局的一篇笔记整理了一下。发布到博客上。赶一个五月的末班车吧。还是得坚持啊!!  flex 弹性布局FlexBox 可控制子元素:  水平或垂直排成一行 控制子元素的对齐方式 控制子元素的高度／宽度 控制子元素的显示顺序 控制子元素是否折行   display:flex; 创建  Flexbox 元素 在 flex 布局中必须理解的概念就是区分主轴和辅">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlexBox 布局详解">
+<meta property="og:url" content="http://guowenfh.github.io/2017/05/31/2017/flexLayout/index.html">
+<meta property="og:site_name" content="三省吾身丶丶">
+<meta property="og:description" content="很久没有写博客了，这里把之前学习 flex 布局的一篇笔记整理了一下。发布到博客上。赶一个五月的末班车吧。还是得坚持啊!!  flex 弹性布局FlexBox 可控制子元素:  水平或垂直排成一行 控制子元素的对齐方式 控制子元素的高度／宽度 控制子元素的显示顺序 控制子元素是否折行   display:flex; 创建  Flexbox 元素 在 flex 布局中必须理解的概念就是区分主轴和辅">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85jz1oj21420ei0ty.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85yqm6j21dc0fs761.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x88k4xfj21ci0koah7.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x86pdw6j215c0eojv0.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x87orwsj21oo0i6tdg.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x89zp9dj21pg0i8tdl.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x894rf9j21os0heq7w.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x89licsj21jq0dm791.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x88lxkpj21ou0esdkp.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8ab53yj21k00eadld.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8ahj86j21nm0jawjp.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8bk20gj21oq0jqgqz.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85umuij20u00wcwid.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8bqzo7j214m0xcahf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x86vni3j20uc0xc78v.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x86wizij20ta0x2jww.jpg">
+<meta property="og:updated_time" content="2017-05-31T15:05:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FlexBox 布局详解">
+<meta name="twitter:description" content="很久没有写博客了，这里把之前学习 flex 布局的一篇笔记整理了一下。发布到博客上。赶一个五月的末班车吧。还是得坚持啊!!  flex 弹性布局FlexBox 可控制子元素:  水平或垂直排成一行 控制子元素的对齐方式 控制子元素的高度／宽度 控制子元素的显示顺序 控制子元素是否折行   display:flex; 创建  Flexbox 元素 在 flex 布局中必须理解的概念就是区分主轴和辅">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85jz1oj21420ei0ty.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://guowenfh.github.io/2017/05/31/2017/flexLayout/"/>
+
+
+
+
+
+  <title>FlexBox 布局详解 | 三省吾身丶丶</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?23a157b5fe12ea1f925808de31def828";
+      if( /blog.guowenfh.com/i.test(window.location.href)){
+        // 新博客的统计
+        hm.src = "//hm.baidu.com/hm.js?ec7ff4fe4cfe8e9b6c51e1b8e7a47b8b";
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">三省吾身丶丶</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">兴趣遍地都是，专注和持之以恒才是真正稀缺的。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guowenfh.github.io/2017/05/31/2017/flexLayout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="guowenfh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/82d12951gy1fewv9toa2xj206y06ygnp.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三省吾身丶丶">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">FlexBox 布局详解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-31T22:52:54+08:00">
+                2017-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/05/31/2017/flexLayout/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>很久没有写博客了，这里把之前学习 flex 布局的一篇笔记整理了一下。发布到博客上。赶一个五月的末班车吧。还是得坚持啊!!</p>
+</blockquote>
+<p>flex 弹性布局<br>FlexBox 可控制子元素:</p>
+<ul>
+<li>水平或垂直排成一行</li>
+<li>控制子元素的对齐方式</li>
+<li>控制子元素的高度／宽度</li>
+<li>控制子元素的显示顺序</li>
+<li>控制子元素是否折行</li>
+</ul>
+<p><strong> <code>display:flex;</code> 创建  Flexbox 元素 </strong><br>在 flex 布局中必须理解的概念就是区分主轴和辅轴(侧轴):<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85jz1oj21420ei0ty.jpg" alt=""><br><a id="more"></a></p>
+<p>在项目中我们使用 <code>display:flex;</code> 创建  <code>Flexbox</code> 元素，那么该元素就成为了一个 <code>flex container</code>( 弹性的容器)。<br>其在<strong>文档流中的直接子元素</strong>将成为 <code>flex item</code>。<br> <code>flex item</code> 子元素<strong>在容器内 </strong>排列的方向称为<strong>主轴</strong>，跟主轴垂直的方向称为 <strong>辅轴</strong>。</p>
+<h2 id="方向相关属性"><a href="#方向相关属性" class="headerlink" title="方向相关属性"></a>方向相关属性</h2><h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a><code>flex-direction</code></h3><ul>
+<li>设置子元素排列方向 (其实也就是主轴的排列方向)</li>
+<li>取值 <code>row</code> | <code>row-reverse</code> | <code>column</code> | <code>column-reverse</code></li>
+<li>默认 <code>row</code>: </li>
+</ul>
+<p>其中不同的设置，效果大致如下 :<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85yqm6j21dc0fs761.jpg" alt=""></p>
+<h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a><code>flex-wrap</code></h3><ul>
+<li>元素在主轴方向排放时，能否换行</li>
+<li>取值:<code>nowrap</code> | <code>wrap</code> | <code>wrap-reverse</code></li>
+<li>默认 <code>nowrap</code>，不换行</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*base css*/</span></div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">40px</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">    <span class="attribute">display</span>:flex;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">10px</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">40px</span>;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x88k4xfj21ci0koah7.jpg" alt=""></p>
+<h3 id="合并属性-flex-flow-，-上面两个属性的缩写"><a href="#合并属性-flex-flow-，-上面两个属性的缩写" class="headerlink" title="合并属性: flex-flow ， 上面两个属性的缩写"></a>合并属性: <code>flex-flow</code> ， 上面两个属性的缩写</h3><ul>
+<li><code>&lt;&#39;flex-direction&#39;&gt;</code> ||  <code>&lt;&#39;flex-wrap&#39;&gt;</code></li>
+<li>默认:  <code>flex-flow: row nowrap;</code></li>
+</ul>
+<p>这里直接结合两个属性看就好。</p>
+<h3 id="order"><a href="#order" class="headerlink" title="order"></a><code>order</code></h3><ul>
+<li>指定摆放时的顺序，从小到大</li>
+<li>取值:默认 0 ，(支持负值和正值)</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x86pdw6j215c0eojv0.jpg" alt=""></p>
+<h2 id="弹性相关属性，都是设置在子元素上的"><a href="#弹性相关属性，都是设置在子元素上的" class="headerlink" title="弹性相关属性，都是设置在子元素上的"></a>弹性相关属性，都是设置在子元素上的</h2><h3 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a><code>flex-basis</code></h3><ul>
+<li>设置 <code>flex item</code> 的初始宽／高</li>
+<li>取值: <code>main-size</code> | <code>&lt;width&gt;</code></li>
+<li>默认: <code>main-size</code>: 主轴方向的宽度 (根据 <code>flex-direction</code>设置，水平排列时，设置的是宽度；垂直排列时，设置的高度)</li>
+</ul>
+<h3 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a><code>flex-grow</code></h3><ul>
+<li>定义每一个子元素在盒子内的弹性</li>
+<li><strong>拓展盒子剩余空间的能力</strong>(空间富余时)</li>
+<li>取值: <code>&lt;number&gt;</code></li>
+<li>取值:默认 0 ，整数小数都可</li>
+<li>剩余空间的分配规则 : <code>flex-basis + flow-grow/sum(flow-grow)*remain</code> remain 表示多余的空间</li>
+</ul>
+<p>这里可以看到 只设置 <code>flex-basis</code> 相当与设置元素的 <code>width</code></p>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x87orwsj21oo0i6tdg.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x89zp9dj21pg0i8tdl.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x894rf9j21os0heq7w.jpg" alt=""></p>
+<h3 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a><code>flex-shrink</code></h3><ul>
+<li><strong>定义元素收缩的能力</strong>(空间不足时)</li>
+<li>取值: <code>&lt;number&gt;</code></li>
+<li>取值 : 默认 1  ，平方(值为 0 时，不收缩)</li>
+<li>不足空间收缩的规则 : <code>flex-basis + flow-grow/sum(flow-grow)*remain</code> remain 表示不足的空间 (负值)</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x89licsj21jq0dm791.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x88lxkpj21ou0esdkp.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8ab53yj21k00eadld.jpg" alt=""></p>
+<h3 id="合并属性-flex"><a href="#合并属性-flex" class="headerlink" title="合并属性:  flex"></a>合并属性:  <code>flex</code></h3><ul>
+<li><code>&lt;&#39;flex-grow&#39;&gt;</code> ||  <code>&lt;&#39;flex-shrink&#39;&gt;</code> ||  <code>&lt;&#39;flex-basis&#39;&gt;</code></li>
+<li>默认:  <code>flex: 0 1 main-size;</code> 看上面</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8ahj86j21nm0jawjp.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8bk20gj21oq0jqgqz.jpg" alt=""></p>
+<h2 id="对齐-相关的属性"><a href="#对齐-相关的属性" class="headerlink" title="对齐 相关的属性"></a>对齐 相关的属性</h2><h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a><code>justify-content</code></h3><ul>
+<li>设置子元素在主轴方向上的对其方式</li>
+<li>取值: <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>space-between</code> | <code>space-around</code></li>
+<li>默认 <code>flex-start</code> </li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x85umuij20u00wcwid.jpg" alt=""></p>
+<p>例子:切换主轴方向时<br><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x8bqzo7j214m0xcahf.jpg" alt=""></p>
+<h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a><code>align-items</code></h3><ul>
+<li>设置在辅轴上的对齐方式。</li>
+<li>取值: <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>baseline</code> | <code>stretch</code></li>
+<li>默认 <code>stretch</code> </li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x86vni3j20uc0xc78v.jpg" alt=""></p>
+<h3 id="align-self-设置在子元素上"><a href="#align-self-设置在子元素上" class="headerlink" title="align-self 设置在子元素上"></a><code>align-self</code> 设置在子元素上</h3><ul>
+<li>单独设置子元素在辅轴方向的对齐方式</li>
+<li>取值: <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>baseline</code> | <code>stretch</code></li>
+<li>默认 <code>stretch</code> </li>
+</ul>
+<h3 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a><code>align-content</code></h3><ul>
+<li><strong>多行内容</strong> 设置在辅轴方向上，行的对齐方式</li>
+<li><ul>
+<li>取值: <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>space-between</code> |  <code>space-around</code> |<code>stretch</code></li>
+</ul>
+</li>
+<li>默认 <code>stretch</code>  拉伸</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/82d12951gy1fg4x86wizij20ta0x2jww.jpg" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="https://ws1.sinaimg.cn/large/82d12951gy1fewv9a4ry8j20bn0bngmo.jpg" alt="guowenfh WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="https://ws1.sinaimg.cn/large/82d12951gy1fewv8ifdbjj20ee0eldh0.jpg" alt="guowenfh Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      guowenfh
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://guowenfh.github.io/2017/05/31/2017/flexLayout/" title="FlexBox 布局详解">http://guowenfh.github.io/2017/05/31/2017/flexLayout/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/21/2017/html5-label-category/" rel="next" title="HTML5常用标签分类">
+                <i class="fa fa-chevron-left"></i> HTML5常用标签分类
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://ws1.sinaimg.cn/large/82d12951gy1fewv9toa2xj206y06ygnp.jpg"
+               alt="guowenfh" />
+          <p class="site-author-name" itemprop="name">guowenfh</p>
+           
+              <p class="site-description motion-element" itemprop="description">芝兰生于深林，不以无人而不芳。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">55</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/guowenfh" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2194745681" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/guowen921" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://segmentfault.com/u/guowenfh" target="_blank" title="S F">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  S F
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.lxxyx.win/" title="Lxxyx" target="_blank">Lxxyx</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://u-hey.github.io/" title="uhey" target="_blank">uhey</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://indexof.site/" title="天桥" target="_blank">天桥</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://iwuly.com" title="老军医" target="_blank">老军医</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://tostring.site/" title="小强" target="_blank">小强</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://html-js.site" title="洋洋" target="_blank">洋洋</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方向相关属性"><span class="nav-number">1.</span> <span class="nav-text">方向相关属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-direction"><span class="nav-number">1.1.</span> <span class="nav-text">flex-direction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-wrap"><span class="nav-number">1.2.</span> <span class="nav-text">flex-wrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并属性-flex-flow-，-上面两个属性的缩写"><span class="nav-number">1.3.</span> <span class="nav-text">合并属性: flex-flow ， 上面两个属性的缩写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#order"><span class="nav-number">1.4.</span> <span class="nav-text">order</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弹性相关属性，都是设置在子元素上的"><span class="nav-number">2.</span> <span class="nav-text">弹性相关属性，都是设置在子元素上的</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-basis"><span class="nav-number">2.1.</span> <span class="nav-text">flex-basis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-grow"><span class="nav-number">2.2.</span> <span class="nav-text">flex-grow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-shrink"><span class="nav-number">2.3.</span> <span class="nav-text">flex-shrink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并属性-flex"><span class="nav-number">2.4.</span> <span class="nav-text">合并属性:  flex</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对齐-相关的属性"><span class="nav-number">3.</span> <span class="nav-text">对齐 相关的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#justify-content"><span class="nav-number">3.1.</span> <span class="nav-text">justify-content</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-items"><span class="nav-number">3.2.</span> <span class="nav-text">align-items</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-self-设置在子元素上"><span class="nav-number">3.3.</span> <span class="nav-text">align-self 设置在子元素上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-content"><span class="nav-number">3.4.</span> <span class="nav-text">align-content</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">guowenfh</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+
+
+  <script type="text/javascript">
+    (function() {
+        var oldUrl = window.location.href;
+        if(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i.test(oldUrl)){
+          window.location.href = oldUrl.replace(/https{0,1}\:\/\/(guowenfh.github.io|guowenfh.com)/i,'//blog.guowenfh.com');
+        }
+        // if( /blog.guowenfh.com/i.test(window.location.href)  && localStorage.getItem('click-top-inform')!=='click'){
+        //   var wrap = document.body;
+        //   var content = document.createElement('div');
+        //   content.innerHTML= '为了方便管理，本博客已购买该域名，访问原站，将自动跳转至该新地址。（点击此处删除该提示）';
+        //   content.style.textAlign = 'center';
+        //   content.style.color = 'red';
+        //   content.style.position = 'relative';
+        //   content.style.padding = '10px 20px';
+        //   content.className = "blog-top-inform";
+        //   content.addEventListener('click',function(){
+        //     localStorage.setItem('click-top-inform','click');
+        //     document.querySelector('.blog-top-inform').style.display='none';
+        //   },false)
+        //   wrap.insertBefore(content,wrap.querySelector('script'));
+        // }
+    })();
+  </script>
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/velocity/1.4.1/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/velocity/1.4.1/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "c500c0eb4c10453886b4c541529f172f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
